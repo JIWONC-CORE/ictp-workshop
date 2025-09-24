@@ -2,7 +2,7 @@
 ### Materials
 - The cross-section library set for the group activity 1 can be found [here](https://1drv.ms/f/c/bd8ce59fb4a7797c/Ek2lQcSNDAVKgJYmz0utZnwBtoMwPnaobaJQn53U8JjuxA?e=bT2PDs).
 - You can download OpenMC input files in the github.
-    - Download directories depending on version of OpenMC in you PC.
+    - Choose and download a directory depending on the version of OpenMC in your PC.
 - "First criticality core with 72 fuel SAs" and "operating core with 79 fuel SAs" are included.
 
 ### Exercises
