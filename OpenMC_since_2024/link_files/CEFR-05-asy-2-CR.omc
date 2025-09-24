@@ -1,0 +1,530 @@
+# --- Enriched B4C - Safety rod (u_CR_move_SAFT)
+
+# --- Moving CR1 (B4C enr) by changing Z-coordinate in trans. Z=0 --> bottom of the system
+#trans u_CR_move_SAFT 0.0 0.0 124.863 % Based on 250 deg-C
+pz_CR1_HEA = openmc.ZPlane( z0= 344.268, name='pz_CR1_HEA') # Head handling +gripper
+pz_CR1_HCO = openmc.ZPlane( z0= 331.314, name='pz_CR1_HCO') # Head connector
+pz_CR1_TRS = openmc.ZPlane( z0= 323.381, name='pz_CR1_TRS') # Transition
+pz_CR1_UPL = openmc.ZPlane( z0= 322.377, name='pz_CR1_UPL') # Upper plenum
+pz_CR1_WRA = openmc.ZPlane( z0= 255.702, name='pz_CR1_WRA') # Normal wrapper
+pz_CR1_SHL = openmc.ZPlane( z0= 190.735, name='pz_CR1_SHL') # Lower shield
+
+# --- Inside wrapper cells
+c_CR1_00 = openmc.Cell( name='c_CR1_00')
+c_CR1_01 = openmc.Cell( name='c_CR1_01')
+c_CR1_02 = openmc.Cell( name='c_CR1_02')
+c_CR1_03 = openmc.Cell( name='c_CR1_03')
+c_CR1_04 = openmc.Cell( name='c_CR1_04')
+c_CR1_05 = openmc.Cell( name='c_CR1_05')
+c_CR1_06 = openmc.Cell( name='c_CR1_06')
+
+# --- ARI
+c_CR1_00.region =                               +pz_CR_HEA  # Above
+c_CR1_01.region = -cyl_CR_HEA_IN & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR1_02.region = -cyl_CR_HCO_IN & -pz_CR_HCO & +pz_CR_TRS  # Head connector 
+c_CR1_03.region = -cone_CR_PH_IN & -pz_CR_TRS & +pz_CR_UPL  # Transition     
+c_CR1_04.region = -cyl_CR_UPL_IN & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum   
+c_CR1_05.region = -hex_WR_IN      & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper 
+c_CR1_06.region = -hex_WR_IN      & -pz_CR_SHL               # Lower shield   
+
+# --- ARO
+#c_CR1_00.region =                                +pz_CR1_HEA  # Above
+#c_CR1_01.region = -cyl_CR_HEA_IN & -pz_CR1_HEA & +pz_CR1_HCO  # Head connector +gripper
+#c_CR1_02.region = -cyl_CR_HCO_IN & -pz_CR1_HCO & +pz_CR1_TRS  # Head connector 
+#c_CR1_03.region = -cone_CR_PH_IN & -pz_CR1_TRS & +pz_CR1_UPL  # Transition     
+#c_CR1_04.region = -cyl_CR_UPL_IN & -pz_CR1_UPL & +pz_CR1_WRA  # Upper plenum   
+#c_CR1_05.region = -hex_WR_IN      & -pz_CR1_WRA & +pz_CR1_SHL  # Normal wrapper 
+#c_CR1_06.region = -hex_WR_IN      & -pz_CR1_SHL               # Lower shield   
+
+c_CR1_00.fill = u_CR_move_SAFT
+c_CR1_01.fill = u_CR_move_SAFT
+c_CR1_02.fill = u_CR_move_SAFT
+c_CR1_03.fill = u_CR_move_SAFT
+c_CR1_04.fill = u_CR_move_SAFT
+c_CR1_05.fill = u_CR_move_SAFT
+c_CR1_06.fill = u_CR_LSH 
+
+c_CR1_00.rotation = [0, 0, 90]
+c_CR1_01.rotation = [0, 0, 90]
+c_CR1_02.rotation = [0, 0, 90]
+c_CR1_03.rotation = [0, 0, 90]
+c_CR1_04.rotation = [0, 0, 90]
+c_CR1_05.rotation = [0, 0, 90]
+c_CR1_06.rotation = [0, 0, 90]
+
+# --- Wrapper cells
+#cell c_CR1_10  a_C1 SS                                                  pz_CR_HEA  # Above
+c_CR1_11 = openmc.Cell( name='c_CR1_11')
+c_CR1_12 = openmc.Cell( name='c_CR1_12')
+c_CR1_13 = openmc.Cell( name='c_CR1_13')
+c_CR1_14 = openmc.Cell( name='c_CR1_14')
+c_CR1_15 = openmc.Cell( name='c_CR1_15')
+c_CR1_16 = openmc.Cell( name='c_CR1_16')
+
+# --- Fixed
+c_CR1_11.region = -cyl_CR_HEA_OU & +cyl_CR_HEA_IN & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR1_12.region = -cyl_CR_HCO_OU & +cyl_CR_HCO_IN & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR1_13.region = -cone_CR_PH_OU & +cone_CR_PH_IN & -pz_CR_TRS & +pz_CR_UPL  # Transition    
+c_CR1_14.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum  
+c_CR1_15.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR1_16.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR_SHL               # Lower shield  
+
+# --- ARO
+#c_CR1_11.region = -cyl_CR_HEA_OU & +cyl_CR_HEA_IN & -pz_CR1_HEA & +pz_CR1_HCO  # Head connector +gripper
+#c_CR1_12.region = -cyl_CR_HCO_OU & +cyl_CR_HCO_IN & -pz_CR1_HCO & +pz_CR1_TRS  # Head connector
+#c_CR1_13.region = -cone_CR_PH_OU & +cone_CR_PH_IN & -pz_CR1_TRS & +pz_CR1_UPL  # Transition    
+#c_CR1_14.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN & -pz_CR1_UPL & +pz_CR1_WRA  # Upper plenum  
+#c_CR1_15.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR1_WRA & +pz_CR1_SHL  # Normal wrapper
+#c_CR1_16.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR1_SHL               # Lower shield  
+
+c_CR1_11.fill = SS
+c_CR1_12.fill = SS
+c_CR1_13.fill = SS
+c_CR1_14.fill = SS
+c_CR1_15.fill = SS
+c_CR1_16.fill = SS
+
+#why c_CR1_11.rotation = [0, 0, 90]
+#why c_CR1_12.rotation = [0, 0, 90]
+#why c_CR1_13.rotation = [0, 0, 90]
+#why c_CR1_14.rotation = [0, 0, 90]
+#why c_CR1_15.rotation = [0, 0, 90]
+#why c_CR1_16.rotation = [0, 0, 90]
+
+# --- Outside wrapper cells                               
+#cell c_CR1_20  a_C1 Na_CR_In                                            pz_CR_HEA  # Above
+c_CR1_21 = openmc.Cell( name='c_CR1_21')
+c_CR1_22 = openmc.Cell( name='c_CR1_22')
+c_CR1_23 = openmc.Cell( name='c_CR1_23')
+c_CR1_24 = openmc.Cell( name='c_CR1_24')
+c_CR1_25 = openmc.Cell( name='c_CR1_25')
+c_CR1_26 = openmc.Cell( name='c_CR1_26')
+
+c_CR1_21.region = +cyl_CR_HEA_OU & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR1_22.region = +cyl_CR_HCO_OU & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR1_23.region = +cone_CR_PH_OU & -pz_CR_TRS & +pz_CR_UPL  # Transition    
+c_CR1_24.region =  +hex_CR_UPL_OU & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum  
+c_CR1_25.region =  +hex_WR_OU     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR1_26.region =  +hex_WR_OU     & -pz_CR_SHL               # Lower shield  
+
+# --- ARO
+#c_CR1_21.region = +cyl_CR_HEA_OU & -pz_CR1_HEA & +pz_CR1_HCO  # Head connector +gripper
+#c_CR1_22.region = +cyl_CR_HCO_OU & -pz_CR1_HCO & +pz_CR1_TRS  # Head connector
+#c_CR1_23.region = +cone_CR_PH_OU & -pz_CR1_TRS & +pz_CR1_UPL  # Transition    
+#c_CR1_24.region =  +hex_CR_UPL_OU & -pz_CR1_UPL & +pz_CR1_WRA  # Upper plenum  
+#c_CR1_25.region =  +hex_WR_OU     & -pz_CR1_WRA & +pz_CR1_SHL  # Normal wrapper
+#c_CR1_26.region =  +hex_WR_OU     & -pz_CR1_SHL                # Lower shield  
+
+c_CR1_21.fill = Na_CR_In
+c_CR1_22.fill = Na_CR_In
+c_CR1_23.fill = Na_CR_In
+c_CR1_24.fill = Na_CR_In
+c_CR1_25.fill = Na_CR_In
+c_CR1_26.fill = Na_CR_In
+
+#why c_CR1_21.rotation = [0, 0, 90]
+#why c_CR1_22.rotation = [0, 0, 90]
+#why c_CR1_23.rotation = [0, 0, 90]
+#why c_CR1_24.rotation = [0, 0, 90]
+#why c_CR1_25.rotation = [0, 0, 90]
+#why c_CR1_26.rotation = [0, 0, 90]
+
+a_C1 = openmc.Universe()
+a_C1.add_cells([c_CR1_00,
+                c_CR1_01,
+                c_CR1_02,
+                c_CR1_03,
+                c_CR1_04,
+                c_CR1_05,
+                c_CR1_06,
+                c_CR1_11,
+                c_CR1_12,
+                c_CR1_13,
+                c_CR1_14,
+                c_CR1_15,
+                c_CR1_16,
+                c_CR1_21,
+                c_CR1_22,
+                c_CR1_23,
+                c_CR1_24,
+                c_CR1_25,
+                c_CR1_26])
+
+# --- Natural B4C - Regulating rod 1 (u_CR_move_REGL11)
+
+# --- Moving CR2-1 (B4C nat) by changing Z-coordinate in trans. Z=0 --> bottom of the system
+#trans u_CR_move_REGL1 0.0 0.0 124.863 % Based on 250 deg-C 
+pz_CR21_HEA = openmc.ZPlane( z0= 344.268, name='pz_CR21_HEA') # Head handling +gripper
+pz_CR21_HCO = openmc.ZPlane( z0= 331.314, name='pz_CR21_HCO') # Head connector
+pz_CR21_TRS = openmc.ZPlane( z0= 323.381, name='pz_CR21_TRS') # Transition
+pz_CR21_UPL = openmc.ZPlane( z0= 322.377, name='pz_CR21_UPL') # Upper plenum
+pz_CR21_WRA = openmc.ZPlane( z0= 255.702, name='pz_CR21_WRA') # Normal wrapper
+pz_CR21_SHL = openmc.ZPlane( z0= 190.735, name='pz_CR21_SHL') # Lower shield
+
+# --- Inside wrapper cells
+c_CR21_00 = openmc.Cell( name='c_CR21_00')
+c_CR21_01 = openmc.Cell( name='c_CR21_01')
+c_CR21_02 = openmc.Cell( name='c_CR21_02')
+c_CR21_03 = openmc.Cell( name='c_CR21_03')
+c_CR21_04 = openmc.Cell( name='c_CR21_04')
+c_CR21_05 = openmc.Cell( name='c_CR21_05')
+c_CR21_06 = openmc.Cell( name='c_CR21_06')
+
+c_CR21_00.region =                               +pz_CR_HEA  # Above
+c_CR21_01.region = -cyl_CR_HEA_IN & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR21_02.region = -cyl_CR_HCO_IN & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR21_03.region = -cone_CR_PH_IN & -pz_CR_TRS & +pz_CR_UPL  # Transition    
+c_CR21_04.region = -cyl_CR_UPL_IN & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum  
+c_CR21_05.region =  -hex_WR_IN     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR21_06.region =  -hex_WR_IN     & -pz_CR_SHL               # Lower shield  
+
+c_CR21_00.fill = u_CR_move_REGL1
+c_CR21_01.fill = u_CR_move_REGL1
+c_CR21_02.fill = u_CR_move_REGL1
+c_CR21_03.fill = u_CR_move_REGL1
+c_CR21_04.fill = u_CR_move_REGL1
+c_CR21_05.fill = u_CR_move_REGL1
+c_CR21_06.fill = u_CR_LSH       
+
+c_CR21_00.rotation = [0, 0, 90]
+c_CR21_01.rotation = [0, 0, 90]
+c_CR21_02.rotation = [0, 0, 90]
+c_CR21_03.rotation = [0, 0, 90]
+c_CR21_04.rotation = [0, 0, 90]
+c_CR21_05.rotation = [0, 0, 90]
+c_CR21_06.rotation = [0, 0, 90]
+
+# --- Wrapper cells
+#cell c_CR21_10  a_C21 SS                                                  pz_CR_HEA  # Above
+c_CR21_11 = openmc.Cell( name='c_CR21_11')
+c_CR21_12 = openmc.Cell( name='c_CR21_12')
+c_CR21_13 = openmc.Cell( name='c_CR21_13')
+c_CR21_14 = openmc.Cell( name='c_CR21_14')
+c_CR21_15 = openmc.Cell( name='c_CR21_15')
+c_CR21_16 = openmc.Cell( name='c_CR21_16')
+
+c_CR21_11.region = -cyl_CR_HEA_OU & +cyl_CR_HEA_IN & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR21_12.region = -cyl_CR_HCO_OU & +cyl_CR_HCO_IN & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR21_13.region = -cone_CR_PH_OU & +cone_CR_PH_IN & -pz_CR_TRS & +pz_CR_UPL  # Transition
+c_CR21_14.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum
+c_CR21_15.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR21_16.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR_SHL               # Lower shield
+
+c_CR21_11.fill = SS
+c_CR21_12.fill = SS
+c_CR21_13.fill = SS
+c_CR21_14.fill = SS
+c_CR21_15.fill = SS
+c_CR21_16.fill = SS
+
+#why c_CR21_11.rotation = [0, 0, 90]
+#why c_CR21_12.rotation = [0, 0, 90]
+#why c_CR21_13.rotation = [0, 0, 90]
+#why c_CR21_14.rotation = [0, 0, 90]
+#why c_CR21_15.rotation = [0, 0, 90]
+#why c_CR21_16.rotation = [0, 0, 90]
+
+# --- Outside wrapper cells                               
+#cell c_CR21_20  a_C21 Na_CR_In                                            pz_CR_HEA  # Above
+c_CR21_21 = openmc.Cell( name='c_CR21_21')
+c_CR21_22 = openmc.Cell( name='c_CR21_22')
+c_CR21_23 = openmc.Cell( name='c_CR21_23')
+c_CR21_24 = openmc.Cell( name='c_CR21_24')
+c_CR21_25 = openmc.Cell( name='c_CR21_25')
+c_CR21_26 = openmc.Cell( name='c_CR21_26')
+
+c_CR21_21.region = +cyl_CR_HEA_OU & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR21_22.region = +cyl_CR_HCO_OU & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR21_23.region = +cone_CR_PH_OU & -pz_CR_TRS & +pz_CR_UPL  # Transition    
+c_CR21_24.region =  +hex_CR_UPL_OU & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum  
+c_CR21_25.region =  +hex_WR_OU     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR21_26.region =  +hex_WR_OU     & -pz_CR_SHL               # Lower shield  
+
+c_CR21_21.fill = Na_CR_In
+c_CR21_22.fill = Na_CR_In
+c_CR21_23.fill = Na_CR_In
+c_CR21_24.fill = Na_CR_In
+c_CR21_25.fill = Na_CR_In
+c_CR21_26.fill = Na_CR_In
+
+#why c_CR21_21.rotation = [0, 0, 90]
+#why c_CR21_22.rotation = [0, 0, 90]
+#why c_CR21_23.rotation = [0, 0, 90]
+#why c_CR21_24.rotation = [0, 0, 90]
+#why c_CR21_25.rotation = [0, 0, 90]
+#why c_CR21_26.rotation = [0, 0, 90]
+
+a_C21 = openmc.Universe()
+a_C21.add_cells([c_CR21_00,
+                 c_CR21_01,
+                 c_CR21_02,
+                 c_CR21_03,
+                 c_CR21_04,
+                 c_CR21_05,
+                 c_CR21_06,
+                 c_CR21_11,
+                 c_CR21_12,
+                 c_CR21_13,
+                 c_CR21_14,
+                 c_CR21_15,
+                 c_CR21_16,
+                 c_CR21_21,
+                 c_CR21_22,
+                 c_CR21_23,
+                 c_CR21_24,
+                 c_CR21_25,
+                 c_CR21_26])
+
+
+# --- Natural B4C - Regulating rod 2 (u_CR_move_REGL2)
+
+# WP1 movable
+# --- Moving CR2-2 (B4C nat) by changing Z-coordinate in trans. Z=0 --> bottom of the system
+#trans u_CR_move_REGL2 0.0 0.0 81.863 % Based on 250 deg-C 
+pz_CR22_HEA = openmc.ZPlane( z0= 301.268, name='pz_CR22_HEA') # Head handling +gripper
+pz_CR22_HCO = openmc.ZPlane( z0= 288.314, name='pz_CR22_HCO') # Head connector
+pz_CR22_TRS = openmc.ZPlane( z0= 280.381, name='pz_CR22_TRS') # Transition
+pz_CR22_UPL = openmc.ZPlane( z0= 279.377, name='pz_CR22_UPL') # Upper plenum
+pz_CR22_WRA = openmc.ZPlane( z0= 212.702, name='pz_CR22_WRA') # Normal wrapper
+pz_CR22_SHL = openmc.ZPlane( z0= 147.735, name='pz_CR22_SHL') # Lower shield
+
+# --- Inside wrapper cells
+c_CR22_00 = openmc.Cell( name='c_CR22_00')
+c_CR22_01 = openmc.Cell( name='c_CR22_01')
+c_CR22_02 = openmc.Cell( name='c_CR22_02')
+c_CR22_03 = openmc.Cell( name='c_CR22_03')
+c_CR22_04 = openmc.Cell( name='c_CR22_04')
+c_CR22_05 = openmc.Cell( name='c_CR22_05')
+c_CR22_06 = openmc.Cell( name='c_CR22_06')
+
+c_CR22_00.region =                               +pz_CR_HEA  # Above
+c_CR22_01.region = -cyl_CR_HEA_IN & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR22_02.region = -cyl_CR_HCO_IN & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR22_03.region = -cone_CR_PH_IN & -pz_CR_TRS & +pz_CR_UPL  # Transition    
+c_CR22_04.region = -cyl_CR_UPL_IN & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum  
+c_CR22_05.region =  -hex_WR_IN     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR22_06.region =  -hex_WR_IN     & -pz_CR_SHL                 # Lower shield  
+
+c_CR22_00.fill = u_CR_move_REGL2
+c_CR22_01.fill = u_CR_move_REGL2
+c_CR22_02.fill = u_CR_move_REGL2
+c_CR22_03.fill = u_CR_move_REGL2
+c_CR22_04.fill = u_CR_move_REGL2
+c_CR22_05.fill = u_CR_move_REGL2
+c_CR22_06.fill = u_CR_LSH       
+
+c_CR22_00.rotation = [0, 0, 90]
+c_CR22_01.rotation = [0, 0, 90]
+c_CR22_02.rotation = [0, 0, 90]
+c_CR22_03.rotation = [0, 0, 90]
+c_CR22_04.rotation = [0, 0, 90]
+c_CR22_05.rotation = [0, 0, 90]
+c_CR22_06.rotation = [0, 0, 90]
+
+# --- Wrapper cells
+#cell c_CR22_10  a_C22 SS                                                  pz_CR_HEA  # Above
+c_CR22_11 = openmc.Cell( name='c_CR22_11')
+c_CR22_12 = openmc.Cell( name='c_CR22_12')
+c_CR22_13 = openmc.Cell( name='c_CR22_13')
+c_CR22_14 = openmc.Cell( name='c_CR22_14')
+c_CR22_15 = openmc.Cell( name='c_CR22_15')
+c_CR22_16 = openmc.Cell( name='c_CR22_16')
+
+c_CR22_11.region = -cyl_CR_HEA_OU & +cyl_CR_HEA_IN & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR22_12.region = -cyl_CR_HCO_OU & +cyl_CR_HCO_IN & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR22_13.region = -cone_CR_PH_OU & +cone_CR_PH_IN & -pz_CR_TRS & +pz_CR_UPL  # Transition
+c_CR22_14.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum
+c_CR22_15.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR22_16.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR_SHL               # Lower shield
+
+c_CR22_11.fill = SS
+c_CR22_12.fill = SS
+c_CR22_13.fill = SS
+c_CR22_14.fill = SS
+c_CR22_15.fill = SS
+c_CR22_16.fill = SS
+
+#why c_CR22_11.rotation = [0, 0, 90]
+#why c_CR22_12.rotation = [0, 0, 90]
+#why c_CR22_13.rotation = [0, 0, 90]
+#why c_CR22_14.rotation = [0, 0, 90]
+#why c_CR22_15.rotation = [0, 0, 90]
+#why c_CR22_16.rotation = [0, 0, 90]
+
+# --- Outside wrapper cells                               
+#cell c_CR22_20  a_C22 Na_CR_In                                            pz_CR_HEA  # Above
+c_CR22_21 = openmc.Cell( name='c_CR22_21')
+c_CR22_22 = openmc.Cell( name='c_CR22_22')
+c_CR22_23 = openmc.Cell( name='c_CR22_23')
+c_CR22_24 = openmc.Cell( name='c_CR22_24')
+c_CR22_25 = openmc.Cell( name='c_CR22_25')
+c_CR22_26 = openmc.Cell( name='c_CR22_26')
+
+c_CR22_21.region = +cyl_CR_HEA_OU & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR22_22.region = +cyl_CR_HCO_OU & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR22_23.region = +cone_CR_PH_OU & -pz_CR_TRS & +pz_CR_UPL  # Transition    
+c_CR22_24.region =  +hex_CR_UPL_OU & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum  
+c_CR22_25.region =  +hex_WR_OU     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR22_26.region =  +hex_WR_OU     & -pz_CR_SHL               # Lower shield  
+
+c_CR22_21.fill = Na_CR_In
+c_CR22_22.fill = Na_CR_In
+c_CR22_23.fill = Na_CR_In
+c_CR22_24.fill = Na_CR_In
+c_CR22_25.fill = Na_CR_In
+c_CR22_26.fill = Na_CR_In
+
+#why c_CR22_21.rotation = [0, 0, 90]
+#why c_CR22_22.rotation = [0, 0, 90]
+#why c_CR22_23.rotation = [0, 0, 90]
+#why c_CR22_24.rotation = [0, 0, 90]
+#why c_CR22_25.rotation = [0, 0, 90]
+#why c_CR22_26.rotation = [0, 0, 90]
+
+a_C22 = openmc.Universe()
+a_C22.add_cells([c_CR22_00,
+                 c_CR22_01,
+                 c_CR22_02,
+                 c_CR22_03,
+                 c_CR22_04,
+                 c_CR22_05,
+                 c_CR22_06,
+                 c_CR22_11,
+                 c_CR22_12,
+                 c_CR22_13,
+                 c_CR22_14,
+                 c_CR22_15,
+                 c_CR22_16,
+                 c_CR22_21,
+                 c_CR22_22,
+                 c_CR22_23,
+                 c_CR22_24,
+                 c_CR22_25,
+                 c_CR22_26])
+
+
+# --- Enriched B4C - Shim rod (u_CR_move_SHIM)
+
+# --- Moving CR3 (B4C enr) by changing Z-coordinate in trans. Z=0 --> bottom of the system
+#trans u_CR_move_SHIM 0.0 0.0 124.863 %  Based on 250 deg-C
+pz_CR3_HEA = openmc.ZPlane( z0= 344.268, name='pz_CR3_HEA') # Head handling +gripper
+pz_CR3_HCO = openmc.ZPlane( z0= 331.314, name='pz_CR3_HCO') # Head connector
+pz_CR3_TRS = openmc.ZPlane( z0= 323.381, name='pz_CR3_TRS') # Transition
+pz_CR3_UPL = openmc.ZPlane( z0= 322.377, name='pz_CR3_UPL') # Upper plenum
+pz_CR3_WRA = openmc.ZPlane( z0= 255.702, name='pz_CR3_WRA') # Normal wrapper
+pz_CR3_SHL = openmc.ZPlane( z0= 190.735, name='pz_CR3_SHL') # Lower shield
+
+# --- Inside wrapper cells
+c_CR3_00 = openmc.Cell( name='c_CR3_00')
+c_CR3_01 = openmc.Cell( name='c_CR3_01')
+c_CR3_02 = openmc.Cell( name='c_CR3_02')
+c_CR3_03 = openmc.Cell( name='c_CR3_03')
+c_CR3_04 = openmc.Cell( name='c_CR3_04')
+c_CR3_05 = openmc.Cell( name='c_CR3_05')
+c_CR3_06 = openmc.Cell( name='c_CR3_06')
+
+c_CR3_00.region =                                +pz_CR_HEA  # Above
+c_CR3_01.region = -cyl_CR_HEA_IN & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR3_02.region = -cyl_CR_HCO_IN & -pz_CR_HCO & +pz_CR_TRS  # Head connector 
+c_CR3_03.region = -cone_CR_PH_IN & -pz_CR_TRS & +pz_CR_UPL  # Transition     
+c_CR3_04.region = -cyl_CR_UPL_IN & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum   
+c_CR3_05.region =  -hex_WR_IN     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper 
+c_CR3_06.region =  -hex_WR_IN     & -pz_CR_SHL               # Lower shield   
+
+c_CR3_00.fill = u_CR_move_SHIM
+c_CR3_01.fill = u_CR_move_SHIM
+c_CR3_02.fill = u_CR_move_SHIM
+c_CR3_03.fill = u_CR_move_SHIM
+c_CR3_04.fill = u_CR_move_SHIM
+c_CR3_05.fill = u_CR_move_SHIM
+c_CR3_06.fill = u_CR_LSH
+
+c_CR3_00.rotation = [0, 0, 90]
+c_CR3_01.rotation = [0, 0, 90]
+c_CR3_02.rotation = [0, 0, 90]
+c_CR3_03.rotation = [0, 0, 90]
+c_CR3_04.rotation = [0, 0, 90]
+c_CR3_05.rotation = [0, 0, 90]
+c_CR3_06.rotation = [0, 0, 90]
+
+# --- Wrapper cells
+#cell c_CR3_10  a_C3 SS                                                  pz_CR_HEA  # Above
+c_CR3_11 = openmc.Cell( name='c_CR3_11')
+c_CR3_12 = openmc.Cell( name='c_CR3_12')
+c_CR3_13 = openmc.Cell( name='c_CR3_13')
+c_CR3_14 = openmc.Cell( name='c_CR3_14')
+c_CR3_15 = openmc.Cell( name='c_CR3_15')
+c_CR3_16 = openmc.Cell( name='c_CR3_16')
+
+c_CR3_11.region = -cyl_CR_HEA_OU & +cyl_CR_HEA_IN & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR3_12.region = -cyl_CR_HCO_OU & +cyl_CR_HCO_IN & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR3_13.region = -cone_CR_PH_OU & +cone_CR_PH_IN & -pz_CR_TRS & +pz_CR_UPL  # Transition    
+c_CR3_14.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum  
+c_CR3_15.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR3_16.region =  -hex_WR_OU     &  +hex_WR_IN     & -pz_CR_SHL               # Lower shield  
+
+c_CR3_11.fill = SS
+c_CR3_12.fill = SS
+c_CR3_13.fill = SS
+c_CR3_14.fill = SS
+c_CR3_15.fill = SS
+c_CR3_16.fill = SS
+
+#why c_CR3_11.rotation = [0, 0, 90]
+#why c_CR3_12.rotation = [0, 0, 90]
+#why c_CR3_13.rotation = [0, 0, 90]
+#why c_CR3_14.rotation = [0, 0, 90]
+#why c_CR3_15.rotation = [0, 0, 90]
+#why c_CR3_16.rotation = [0, 0, 90]
+
+# --- Outside wrapper cells                               
+#cell c_CR3_20  a_C3 Na_CR_In                                            pz_CR_HEA  # Above
+c_CR3_21 = openmc.Cell( name='c_CR3_21')
+c_CR3_22 = openmc.Cell( name='c_CR3_22')
+c_CR3_23 = openmc.Cell( name='c_CR3_23')
+c_CR3_24 = openmc.Cell( name='c_CR3_24')
+c_CR3_25 = openmc.Cell( name='c_CR3_25')
+c_CR3_26 = openmc.Cell( name='c_CR3_26')
+
+c_CR3_21.region = +cyl_CR_HEA_OU & -pz_CR_HEA & +pz_CR_HCO  # Head connector +gripper
+c_CR3_22.region = +cyl_CR_HCO_OU & -pz_CR_HCO & +pz_CR_TRS  # Head connector
+c_CR3_23.region = +cone_CR_PH_OU & -pz_CR_TRS & +pz_CR_UPL  # Transition    
+c_CR3_24.region =  +hex_CR_UPL_OU & -pz_CR_UPL & +pz_CR_WRA  # Upper plenum  
+c_CR3_25.region =  +hex_WR_OU     & -pz_CR_WRA & +pz_CR_SHL  # Normal wrapper
+c_CR3_26.region =  +hex_WR_OU     & -pz_CR_SHL               # Lower shield  
+
+c_CR3_21.fill = Na_CR_In
+c_CR3_22.fill = Na_CR_In
+c_CR3_23.fill = Na_CR_In
+c_CR3_24.fill = Na_CR_In
+c_CR3_25.fill = Na_CR_In
+c_CR3_26.fill = Na_CR_In
+
+#why c_CR3_21.rotation = [0, 0, 90]
+#why c_CR3_22.rotation = [0, 0, 90]
+#why c_CR3_23.rotation = [0, 0, 90]
+#why c_CR3_24.rotation = [0, 0, 90]
+#why c_CR3_25.rotation = [0, 0, 90]
+#why c_CR3_26.rotation = [0, 0, 90]
+
+a_C3 = openmc.Universe()
+a_C3.add_cells([c_CR3_00,
+                c_CR3_01,
+                c_CR3_02,
+                c_CR3_03,
+                c_CR3_04,
+                c_CR3_05,
+                c_CR3_06,
+                c_CR3_11,
+                c_CR3_12,
+                c_CR3_13,
+                c_CR3_14,
+                c_CR3_15,
+                c_CR3_16,
+                c_CR3_21,
+                c_CR3_22,
+                c_CR3_23,
+                c_CR3_24,
+                c_CR3_25,
+                c_CR3_26])
+

@@ -1,0 +1,1178 @@
+# --- CR LATTICES and UNIVERSES
+
+## Safety Rods 
+# --- Shaft+HEA
+c_l_CR_SHA_HEA_SAFT01 = openmc.Cell( name='c_l_CR_SHA_HEA_SAFT01')
+c_l_CR_SHA_HEA_SAFT02 = openmc.Cell( name='c_l_CR_SHA_HEA_SAFT02')
+c_l_CR_SHA_HEA_SAFT03 = openmc.Cell( name='c_l_CR_SHA_HEA_SAFT03')
+c_l_CR_SHA_HEA_SAFT04 = openmc.Cell( name='c_l_CR_SHA_HEA_SAFT04')
+
+c_l_CR_SHA_HEA_SAFT01.region = -cyl_CR_SHAFT_IN                  # Shaft in 
+c_l_CR_SHA_HEA_SAFT02.region = -cyl_CR_HEA_IN & +cyl_CR_SHAFT_IN # Shaft out
+c_l_CR_SHA_HEA_SAFT03.region = -cyl_CR_HEA_OU & +cyl_CR_HEA_IN      # Head connector +gripper
+c_l_CR_SHA_HEA_SAFT04.region = +cyl_CR_HEA_OU                       # Head connector +gripper
+
+c_l_CR_SHA_HEA_SAFT01.fill = Ti316
+c_l_CR_SHA_HEA_SAFT02.fill = Na_CR_Out
+c_l_CR_SHA_HEA_SAFT03.fill = SS
+c_l_CR_SHA_HEA_SAFT04.fill = Na_CR_In
+
+u_CR_SHA_HEA_SAFT = openmc.Universe()
+u_CR_SHA_HEA_SAFT.add_cells([
+c_l_CR_SHA_HEA_SAFT01, 
+c_l_CR_SHA_HEA_SAFT02,
+c_l_CR_SHA_HEA_SAFT03,
+c_l_CR_SHA_HEA_SAFT04
+])
+
+# --- Shaft+HCO
+c_l_CR_SHA_HCO_SAFT01 = openmc.Cell( name='c_l_CR_SHA_HCO_SAFT01')
+c_l_CR_SHA_HCO_SAFT02 = openmc.Cell( name='c_l_CR_SHA_HCO_SAFT02')
+c_l_CR_SHA_HCO_SAFT03 = openmc.Cell( name='c_l_CR_SHA_HCO_SAFT03')
+c_l_CR_SHA_HCO_SAFT04 = openmc.Cell( name='c_l_CR_SHA_HCO_SAFT04')
+
+c_l_CR_SHA_HCO_SAFT01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR_SHA_HCO_SAFT02.region = -cyl_CR_HCO_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR_SHA_HCO_SAFT03.region = -cyl_CR_HCO_OU & +cyl_CR_HCO_IN    # Head connector
+c_l_CR_SHA_HCO_SAFT04.region = +cyl_CR_HCO_OU                     # Head connector
+
+c_l_CR_SHA_HCO_SAFT01.fill = Ti316
+c_l_CR_SHA_HCO_SAFT02.fill = Na_CR_Out
+c_l_CR_SHA_HCO_SAFT03.fill = SS
+c_l_CR_SHA_HCO_SAFT04.fill = Na_CR_In
+
+u_CR_SHA_HCO_SAFT = openmc.Universe()
+u_CR_SHA_HCO_SAFT.add_cells([
+c_l_CR_SHA_HCO_SAFT01, 
+c_l_CR_SHA_HCO_SAFT02,
+c_l_CR_SHA_HCO_SAFT03,
+c_l_CR_SHA_HCO_SAFT04
+])
+
+# --- Shaft+TRS
+c_l_CR_SHA_TRS_SAFT01 = openmc.Cell( name='c_l_CR_SHA_TRS_SAFT01')
+c_l_CR_SHA_TRS_SAFT02 = openmc.Cell( name='c_l_CR_SHA_TRS_SAFT02')
+c_l_CR_SHA_TRS_SAFT03 = openmc.Cell( name='c_l_CR_SHA_TRS_SAFT03')
+c_l_CR_SHA_TRS_SAFT04 = openmc.Cell( name='c_l_CR_SHA_TRS_SAFT04')
+
+c_l_CR_SHA_TRS_SAFT01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR_SHA_TRS_SAFT02.region = -cone_CR_PH_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR_SHA_TRS_SAFT03.region = -cone_CR_PH_OU & +cone_CR_PH_IN    # Transition
+c_l_CR_SHA_TRS_SAFT04.region = +cone_CR_PH_OU                     # Transition
+
+c_l_CR_SHA_TRS_SAFT01.fill = Ti316
+c_l_CR_SHA_TRS_SAFT02.fill = Na_CR_Out
+c_l_CR_SHA_TRS_SAFT03.fill = SS
+c_l_CR_SHA_TRS_SAFT04.fill = Na_CR_In
+
+u_CR_SHA_TRS_SAFT = openmc.Universe()
+u_CR_SHA_TRS_SAFT.add_cells([
+c_l_CR_SHA_TRS_SAFT01, 
+c_l_CR_SHA_TRS_SAFT02,
+c_l_CR_SHA_TRS_SAFT03,
+c_l_CR_SHA_TRS_SAFT04
+])
+
+# --- Shaft+UPL
+c_l_CR_SHA_UPL_SAFT01 = openmc.Cell( name='c_l_CR_SHA_UPL_SAFT01')
+c_l_CR_SHA_UPL_SAFT02 = openmc.Cell( name='c_l_CR_SHA_UPL_SAFT02')
+c_l_CR_SHA_UPL_SAFT03 = openmc.Cell( name='c_l_CR_SHA_UPL_SAFT03')
+c_l_CR_SHA_UPL_SAFT04 = openmc.Cell( name='c_l_CR_SHA_UPL_SAFT04')
+
+c_l_CR_SHA_UPL_SAFT01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR_SHA_UPL_SAFT02.region = -cyl_CR_UPL_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR_SHA_UPL_SAFT03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN    # Upper plenum
+c_l_CR_SHA_UPL_SAFT04.region =  +hex_CR_UPL_OU                     # Upper plenum
+
+c_l_CR_SHA_UPL_SAFT01.fill = Ti316
+c_l_CR_SHA_UPL_SAFT02.fill = Na_CR_Out
+c_l_CR_SHA_UPL_SAFT03.fill = SS
+c_l_CR_SHA_UPL_SAFT04.fill = Na_CR_In
+
+u_CR_SHA_UPL_SAFT = openmc.Universe()
+u_CR_SHA_UPL_SAFT.add_cells([
+c_l_CR_SHA_UPL_SAFT01, 
+c_l_CR_SHA_UPL_SAFT02,
+c_l_CR_SHA_UPL_SAFT03,
+c_l_CR_SHA_UPL_SAFT04
+])
+
+
+# --- UCO+UPL
+c_l_CR_UCO_UPL_SAFT01 = openmc.Cell( name='c_l_CR_UCO_UPL_SAFT01')
+c_l_CR_UCO_UPL_SAFT02 = openmc.Cell( name='c_l_CR_UCO_UPL_SAFT02')
+c_l_CR_UCO_UPL_SAFT03 = openmc.Cell( name='c_l_CR_UCO_UPL_SAFT03')
+c_l_CR_UCO_UPL_SAFT04 = openmc.Cell( name='c_l_CR_UCO_UPL_SAFT04')
+
+c_l_CR_UCO_UPL_SAFT01.region = -cyl_CR_CON_OU                      # Upper connector
+c_l_CR_UCO_UPL_SAFT02.region = +cyl_CR_CON_OU & -cyl_CR_UPL_IN     # Upper connector
+c_l_CR_UCO_UPL_SAFT03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN     # Upper plenum   
+c_l_CR_UCO_UPL_SAFT04.region =  +hex_CR_UPL_OU                      # Upper plenum
+
+c_l_CR_UCO_UPL_SAFT01.fill = HOMOG_CR_CON
+c_l_CR_UCO_UPL_SAFT02.fill = Na_CR_Out
+c_l_CR_UCO_UPL_SAFT03.fill = SS
+c_l_CR_UCO_UPL_SAFT04.fill = Na_CR_In
+
+u_CR_UCO_UPL_SAFT = openmc.Universe()
+u_CR_UCO_UPL_SAFT.add_cells([
+c_l_CR_UCO_UPL_SAFT01,
+c_l_CR_UCO_UPL_SAFT02,
+c_l_CR_UCO_UPL_SAFT03,
+c_l_CR_UCO_UPL_SAFT04 
+])
+
+
+# --- PLE+UPL
+c_l_CR_PLE_UPL_SAFT01 = openmc.Cell( name='c_l_CR_PLE_UPL_SAFT01')
+c_l_CR_PLE_UPL_SAFT02 = openmc.Cell( name='c_l_CR_PLE_UPL_SAFT02')
+c_l_CR_PLE_UPL_SAFT03 = openmc.Cell( name='c_l_CR_PLE_UPL_SAFT03')
+c_l_CR_PLE_UPL_SAFT04 = openmc.Cell( name='c_l_CR_PLE_UPL_SAFT04')
+c_l_CR_PLE_UPL_SAFT05 = openmc.Cell( name='c_l_CR_PLE_UPL_SAFT05')
+
+c_l_CR_PLE_UPL_SAFT01.region = -cyl_CR_WR_IN                    # Plenum
+c_l_CR_PLE_UPL_SAFT02.region = -cyl_CR_WR_OU  & +cyl_CR_WR_IN   # Plenum
+c_l_CR_PLE_UPL_SAFT03.region = -cyl_CR_UPL_IN & +cyl_CR_WR_OU   # Plenum
+c_l_CR_PLE_UPL_SAFT04.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN  # Upper plenum  
+c_l_CR_PLE_UPL_SAFT05.region =  +hex_CR_UPL_OU                   # Upper plenum  
+
+c_l_CR_PLE_UPL_SAFT01.fill = Na_CR_Out
+c_l_CR_PLE_UPL_SAFT02.fill = Ti316
+c_l_CR_PLE_UPL_SAFT03.fill = Na_CR_Out
+c_l_CR_PLE_UPL_SAFT04.fill = SS
+c_l_CR_PLE_UPL_SAFT05.fill = Na_CR_In
+
+u_CR_PLE_UPL_SAFT = openmc.Universe()
+u_CR_PLE_UPL_SAFT.add_cells([
+c_l_CR_PLE_UPL_SAFT01,
+c_l_CR_PLE_UPL_SAFT02,
+c_l_CR_PLE_UPL_SAFT03,
+c_l_CR_PLE_UPL_SAFT04,
+c_l_CR_PLE_UPL_SAFT05 
+])
+
+# --- ABS+UPL,  Enriched B4C - safety rod (u_CR_move_SAFT)
+l_CR_SAFT = openmc.HexLattice()
+l_CR_SAFT.center = [0., 0.]
+l_CR_SAFT.pitch  = [1.5500]
+l_CR_SAFT.universes = \
+       [ [p_CR2_BENR]*6, [p_CR1_BENR] ]
+l_CR_SAFT.outer  = p_CR2_NaOU
+l_CR_SAFT.rotation = [0, 0,-30]
+
+c_l_CR_ABS_UPL_SAFT01 = openmc.Cell( name='c_l_CR_ABS_UPL_SAFT01')
+c_l_CR_ABS_UPL_SAFT02 = openmc.Cell( name='c_l_CR_ABS_UPL_SAFT02')
+c_l_CR_ABS_UPL_SAFT03 = openmc.Cell( name='c_l_CR_ABS_UPL_SAFT03')
+c_l_CR_ABS_UPL_SAFT04 = openmc.Cell( name='c_l_CR_ABS_UPL_SAFT04')
+c_l_CR_ABS_UPL_SAFT05 = openmc.Cell( name='c_l_CR_ABS_UPL_SAFT05')
+
+c_l_CR_ABS_UPL_SAFT01.region = -cyl_CR_WR_IN                       # Absorber
+c_l_CR_ABS_UPL_SAFT02.region = -cyl_CR_WR_OU  & +cyl_CR_WR_IN      # Absorber
+c_l_CR_ABS_UPL_SAFT03.region = -cyl_CR_UPL_IN & +cyl_CR_WR_OU      # Absorber
+c_l_CR_ABS_UPL_SAFT04.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN    # Upper plenum  
+c_l_CR_ABS_UPL_SAFT05.region =  +hex_CR_UPL_OU                     # Upper plenum  
+
+c_l_CR_ABS_UPL_SAFT01.fill = l_CR_SAFT
+c_l_CR_ABS_UPL_SAFT02.fill = Ti316
+c_l_CR_ABS_UPL_SAFT03.fill = Na_CR_Out
+c_l_CR_ABS_UPL_SAFT04.fill = SS
+c_l_CR_ABS_UPL_SAFT05.fill = Na_CR_In
+
+u_CR_ABS_UPL_SAFT = openmc.Universe()
+u_CR_ABS_UPL_SAFT.add_cells([
+c_l_CR_ABS_UPL_SAFT01,
+c_l_CR_ABS_UPL_SAFT02,
+c_l_CR_ABS_UPL_SAFT03,
+c_l_CR_ABS_UPL_SAFT04,
+c_l_CR_ABS_UPL_SAFT05
+])
+
+# --- LCO+UPL
+c_l_CR_LCO_UPL_SAFT01 = openmc.Cell( name='c_l_CR_LCO_UPL_SAFT01')
+c_l_CR_LCO_UPL_SAFT02 = openmc.Cell( name='c_l_CR_LCO_UPL_SAFT02')
+c_l_CR_LCO_UPL_SAFT03 = openmc.Cell( name='c_l_CR_LCO_UPL_SAFT03')
+c_l_CR_LCO_UPL_SAFT04 = openmc.Cell( name='c_l_CR_LCO_UPL_SAFT04')
+
+c_l_CR_LCO_UPL_SAFT01.region = -cyl_CR_CON_OU                      # Lower connector
+c_l_CR_LCO_UPL_SAFT02.region = -cyl_CR_UPL_IN & +cyl_CR_CON_OU     # Lower connector
+c_l_CR_LCO_UPL_SAFT03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN  # Upper plenum  
+c_l_CR_LCO_UPL_SAFT04.region =  +hex_CR_UPL_OU                   # Upper plenum  
+
+c_l_CR_LCO_UPL_SAFT01.fill = HOMOG_CR_CON
+c_l_CR_LCO_UPL_SAFT02.fill = Na_CR_In
+c_l_CR_LCO_UPL_SAFT03.fill = SS
+c_l_CR_LCO_UPL_SAFT04.fill = Na_CR_In
+
+u_CR_LCO_UPL_SAFT = openmc.Universe()
+u_CR_LCO_UPL_SAFT.add_cells([
+c_l_CR_LCO_UPL_SAFT01,
+c_l_CR_LCO_UPL_SAFT02,
+c_l_CR_LCO_UPL_SAFT03,
+c_l_CR_LCO_UPL_SAFT04 
+])
+
+# --- LCO+WRA
+c_l_CR_LCO_WRA_SAFT01 = openmc.Cell( name='c_l_CR_LCO_WRA_SAFT01')
+c_l_CR_LCO_WRA_SAFT02 = openmc.Cell( name='c_l_CR_LCO_WRA_SAFT02')
+c_l_CR_LCO_WRA_SAFT03 = openmc.Cell( name='c_l_CR_LCO_WRA_SAFT03')
+c_l_CR_LCO_WRA_SAFT04 = openmc.Cell( name='c_l_CR_LCO_WRA_SAFT04')
+
+c_l_CR_LCO_WRA_SAFT01.region = -cyl_CR_CON_OU                      # Lower connector
+c_l_CR_LCO_WRA_SAFT02.region =  -hex_WR_IN     & +cyl_CR_CON_OU     # Lower connector
+c_l_CR_LCO_WRA_SAFT03.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper
+c_l_CR_LCO_WRA_SAFT04.region =  +hex_WR_OU                   # Normal wrapper
+
+c_l_CR_LCO_WRA_SAFT01.fill = HOMOG_CR_CON
+c_l_CR_LCO_WRA_SAFT02.fill = Na_CR_In
+c_l_CR_LCO_WRA_SAFT03.fill = SS
+c_l_CR_LCO_WRA_SAFT04.fill = Na_CR_In
+
+u_CR_LCO_WRA_SAFT = openmc.Universe()
+u_CR_LCO_WRA_SAFT.add_cells([
+c_l_CR_LCO_WRA_SAFT01,
+c_l_CR_LCO_WRA_SAFT02,
+c_l_CR_LCO_WRA_SAFT03,
+c_l_CR_LCO_WRA_SAFT04 
+])
+
+# --- BAF+WRA
+c_l_CR_BAF_WRA_SAFT01 = openmc.Cell( name='c_l_CR_BAF_WRA_SAFT01')
+c_l_CR_BAF_WRA_SAFT02 = openmc.Cell( name='c_l_CR_BAF_WRA_SAFT02')
+c_l_CR_BAF_WRA_SAFT03 = openmc.Cell( name='c_l_CR_BAF_WRA_SAFT03')
+c_l_CR_BAF_WRA_SAFT04 = openmc.Cell( name='c_l_CR_BAF_WRA_SAFT04')
+c_l_CR_BAF_WRA_SAFT05 = openmc.Cell( name='c_l_CR_BAF_WRA_SAFT05')
+
+c_l_CR_BAF_WRA_SAFT01.region =                  -cyl_CR_BAF_IN    # Baffle
+c_l_CR_BAF_WRA_SAFT02.region = +cyl_CR_BAF_IN & -cyl_CR_BAF_OU    # Baffle
+c_l_CR_BAF_WRA_SAFT03.region =  -hex_WR_IN     & +cyl_CR_BAF_OU    # Baffle
+c_l_CR_BAF_WRA_SAFT04.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper 
+c_l_CR_BAF_WRA_SAFT05.region =  +hex_WR_OU                   # Normal wrapper 
+
+c_l_CR_BAF_WRA_SAFT01.fill = Na_CR_In
+c_l_CR_BAF_WRA_SAFT02.fill = Ti316   
+c_l_CR_BAF_WRA_SAFT03.fill = Na_CR_In
+c_l_CR_BAF_WRA_SAFT04.fill = SS
+c_l_CR_BAF_WRA_SAFT05.fill = Na_CR_In
+
+u_CR_BAF_WRA_SAFT = openmc.Universe()
+u_CR_BAF_WRA_SAFT.add_cells([
+c_l_CR_BAF_WRA_SAFT01,
+c_l_CR_BAF_WRA_SAFT02,
+c_l_CR_BAF_WRA_SAFT03,
+c_l_CR_BAF_WRA_SAFT04,
+c_l_CR_BAF_WRA_SAFT05
+])
+
+# --- BOT+WRA
+
+c_l_CR_BOT_WRA_SAFT01 = openmc.Cell( name='c_l_CR_BOT_WRA_SAFT01')
+c_l_CR_BOT_WRA_SAFT02 = openmc.Cell( name='c_l_CR_BOT_WRA_SAFT02')
+c_l_CR_BOT_WRA_SAFT03 = openmc.Cell( name='c_l_CR_BOT_WRA_SAFT03')
+
+c_l_CR_BOT_WRA_SAFT01.region =  -hex_WR_IN                   # Normal wrapper 
+c_l_CR_BOT_WRA_SAFT02.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper
+c_l_CR_BOT_WRA_SAFT03.region =  +hex_WR_OU                   # Normal wrapper
+
+c_l_CR_BOT_WRA_SAFT01.fill = Na_CR_In
+c_l_CR_BOT_WRA_SAFT02.fill = SS
+c_l_CR_BOT_WRA_SAFT03.fill = Na_CR_In
+
+
+u_CR_BOT_WRA_SAFT = openmc.Universe()
+u_CR_BOT_WRA_SAFT.add_cells([
+c_l_CR_BOT_WRA_SAFT01,
+c_l_CR_BOT_WRA_SAFT02,
+c_l_CR_BOT_WRA_SAFT03
+])
+
+
+## Regulating Rod 1
+# --- Shaft+HEA
+c_l_CR1_SHA_HEA_BNAT01 = openmc.Cell( name='c_l_CR1_SHA_HEA_BNAT01')
+c_l_CR1_SHA_HEA_BNAT02 = openmc.Cell( name='c_l_CR1_SHA_HEA_BNAT02')
+c_l_CR1_SHA_HEA_BNAT03 = openmc.Cell( name='c_l_CR1_SHA_HEA_BNAT03')
+c_l_CR1_SHA_HEA_BNAT04 = openmc.Cell( name='c_l_CR1_SHA_HEA_BNAT04')
+
+c_l_CR1_SHA_HEA_BNAT01.region = -cyl_CR_SHAFT_IN                  # Shaft in 
+c_l_CR1_SHA_HEA_BNAT02.region = -cyl_CR_HEA_IN & +cyl_CR_SHAFT_IN # Shaft out
+c_l_CR1_SHA_HEA_BNAT03.region = -cyl_CR_HEA_OU & +cyl_CR_HEA_IN      # Head connector +gripper
+c_l_CR1_SHA_HEA_BNAT04.region = +cyl_CR_HEA_OU                       # Head connector +gripper
+
+c_l_CR1_SHA_HEA_BNAT01.fill = Ti316
+c_l_CR1_SHA_HEA_BNAT02.fill = Na_CR_Out
+c_l_CR1_SHA_HEA_BNAT03.fill = SS
+c_l_CR1_SHA_HEA_BNAT04.fill = Na_CR_In
+
+u_CR_SHA_HEA_REGL1 = openmc.Universe()
+u_CR_SHA_HEA_REGL1.add_cells([
+c_l_CR1_SHA_HEA_BNAT01, 
+c_l_CR1_SHA_HEA_BNAT02,
+c_l_CR1_SHA_HEA_BNAT03,
+c_l_CR1_SHA_HEA_BNAT04
+])
+
+# --- Shaft+HCO
+c_l_CR1_SHA_HCO_BNAT01 = openmc.Cell( name='c_l_CR1_SHA_HCO_BNAT01')
+c_l_CR1_SHA_HCO_BNAT02 = openmc.Cell( name='c_l_CR1_SHA_HCO_BNAT02')
+c_l_CR1_SHA_HCO_BNAT03 = openmc.Cell( name='c_l_CR1_SHA_HCO_BNAT03')
+c_l_CR1_SHA_HCO_BNAT04 = openmc.Cell( name='c_l_CR1_SHA_HCO_BNAT04')
+
+c_l_CR1_SHA_HCO_BNAT01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR1_SHA_HCO_BNAT02.region = -cyl_CR_HCO_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR1_SHA_HCO_BNAT03.region = -cyl_CR_HCO_OU & +cyl_CR_HCO_IN    # Head connector
+c_l_CR1_SHA_HCO_BNAT04.region = +cyl_CR_HCO_OU                     # Head connector
+
+c_l_CR1_SHA_HCO_BNAT01.fill = Ti316
+c_l_CR1_SHA_HCO_BNAT02.fill = Na_CR_Out
+c_l_CR1_SHA_HCO_BNAT03.fill = SS
+c_l_CR1_SHA_HCO_BNAT04.fill = Na_CR_In
+
+u_CR_SHA_HCO_REGL1 = openmc.Universe()
+u_CR_SHA_HCO_REGL1.add_cells([
+c_l_CR1_SHA_HCO_BNAT01, 
+c_l_CR1_SHA_HCO_BNAT02,
+c_l_CR1_SHA_HCO_BNAT03,
+c_l_CR1_SHA_HCO_BNAT04
+])
+
+# --- Shaft+TRS
+c_l_CR1_SHA_TRS_BNAT01 = openmc.Cell( name='c_l_CR1_SHA_TRS_BNAT01')
+c_l_CR1_SHA_TRS_BNAT02 = openmc.Cell( name='c_l_CR1_SHA_TRS_BNAT02')
+c_l_CR1_SHA_TRS_BNAT03 = openmc.Cell( name='c_l_CR1_SHA_TRS_BNAT03')
+c_l_CR1_SHA_TRS_BNAT04 = openmc.Cell( name='c_l_CR1_SHA_TRS_BNAT04')
+
+c_l_CR1_SHA_TRS_BNAT01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR1_SHA_TRS_BNAT02.region = -cone_CR_PH_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR1_SHA_TRS_BNAT03.region = -cone_CR_PH_OU & +cone_CR_PH_IN    # Transition
+c_l_CR1_SHA_TRS_BNAT04.region = +cone_CR_PH_OU                     # Transition
+
+c_l_CR1_SHA_TRS_BNAT01.fill = Ti316
+c_l_CR1_SHA_TRS_BNAT02.fill = Na_CR_Out
+c_l_CR1_SHA_TRS_BNAT03.fill = SS
+c_l_CR1_SHA_TRS_BNAT04.fill = Na_CR_In
+
+u_CR_SHA_TRS_REGL1 = openmc.Universe()
+u_CR_SHA_TRS_REGL1.add_cells([
+c_l_CR1_SHA_TRS_BNAT01, 
+c_l_CR1_SHA_TRS_BNAT02,
+c_l_CR1_SHA_TRS_BNAT03,
+c_l_CR1_SHA_TRS_BNAT04
+])
+
+# --- Shaft+UPL
+c_l_CR1_SHA_UPL_BNAT01 = openmc.Cell( name='c_l_CR1_SHA_UPL_BNAT01')
+c_l_CR1_SHA_UPL_BNAT02 = openmc.Cell( name='c_l_CR1_SHA_UPL_BNAT02')
+c_l_CR1_SHA_UPL_BNAT03 = openmc.Cell( name='c_l_CR1_SHA_UPL_BNAT03')
+c_l_CR1_SHA_UPL_BNAT04 = openmc.Cell( name='c_l_CR1_SHA_UPL_BNAT04')
+
+c_l_CR1_SHA_UPL_BNAT01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR1_SHA_UPL_BNAT02.region = -cyl_CR_UPL_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR1_SHA_UPL_BNAT03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN    # Upper plenum
+c_l_CR1_SHA_UPL_BNAT04.region =  +hex_CR_UPL_OU                     # Upper plenum
+
+c_l_CR1_SHA_UPL_BNAT01.fill = Ti316
+c_l_CR1_SHA_UPL_BNAT02.fill = Na_CR_Out
+c_l_CR1_SHA_UPL_BNAT03.fill = SS
+c_l_CR1_SHA_UPL_BNAT04.fill = Na_CR_In
+
+u_CR_SHA_UPL_REGL1 = openmc.Universe()
+u_CR_SHA_UPL_REGL1.add_cells([
+c_l_CR1_SHA_UPL_BNAT01, 
+c_l_CR1_SHA_UPL_BNAT02,
+c_l_CR1_SHA_UPL_BNAT03,
+c_l_CR1_SHA_UPL_BNAT04
+])
+
+
+# --- UCO+UPL
+c_l_CR1_UCO_UPL_BNAT01 = openmc.Cell( name='c_l_CR1_UCO_UPL_BNAT01')
+c_l_CR1_UCO_UPL_BNAT02 = openmc.Cell( name='c_l_CR1_UCO_UPL_BNAT02')
+c_l_CR1_UCO_UPL_BNAT03 = openmc.Cell( name='c_l_CR1_UCO_UPL_BNAT03')
+c_l_CR1_UCO_UPL_BNAT04 = openmc.Cell( name='c_l_CR1_UCO_UPL_BNAT04')
+
+c_l_CR1_UCO_UPL_BNAT01.region = -cyl_CR_CON_OU                      # Upper connector
+c_l_CR1_UCO_UPL_BNAT02.region = +cyl_CR_CON_OU & -cyl_CR_UPL_IN     # Upper connector
+c_l_CR1_UCO_UPL_BNAT03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN     # Upper plenum   
+c_l_CR1_UCO_UPL_BNAT04.region =  +hex_CR_UPL_OU                      # Upper plenum
+
+c_l_CR1_UCO_UPL_BNAT01.fill = HOMOG_CR_CON
+c_l_CR1_UCO_UPL_BNAT02.fill = Na_CR_Out
+c_l_CR1_UCO_UPL_BNAT03.fill = SS
+c_l_CR1_UCO_UPL_BNAT04.fill = Na_CR_In
+
+u_CR_UCO_UPL_REGL1 = openmc.Universe()
+u_CR_UCO_UPL_REGL1.add_cells([
+c_l_CR1_UCO_UPL_BNAT01,
+c_l_CR1_UCO_UPL_BNAT02,
+c_l_CR1_UCO_UPL_BNAT03,
+c_l_CR1_UCO_UPL_BNAT04 
+])
+
+
+# --- PLE+UPL
+c_l_CR1_PLE_UPL_BNAT01 = openmc.Cell( name='c_l_CR1_PLE_UPL_BNAT01')
+c_l_CR1_PLE_UPL_BNAT02 = openmc.Cell( name='c_l_CR1_PLE_UPL_BNAT02')
+c_l_CR1_PLE_UPL_BNAT03 = openmc.Cell( name='c_l_CR1_PLE_UPL_BNAT03')
+c_l_CR1_PLE_UPL_BNAT04 = openmc.Cell( name='c_l_CR1_PLE_UPL_BNAT04')
+c_l_CR1_PLE_UPL_BNAT05 = openmc.Cell( name='c_l_CR1_PLE_UPL_BNAT05')
+
+c_l_CR1_PLE_UPL_BNAT01.region = -cyl_CR_WR_IN                    # Plenum
+c_l_CR1_PLE_UPL_BNAT02.region = -cyl_CR_WR_OU  & +cyl_CR_WR_IN   # Plenum
+c_l_CR1_PLE_UPL_BNAT03.region = -cyl_CR_UPL_IN & +cyl_CR_WR_OU   # Plenum
+c_l_CR1_PLE_UPL_BNAT04.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN  # Upper plenum  
+c_l_CR1_PLE_UPL_BNAT05.region =  +hex_CR_UPL_OU                   # Upper plenum  
+
+c_l_CR1_PLE_UPL_BNAT01.fill = Na_CR_Out
+c_l_CR1_PLE_UPL_BNAT02.fill = Ti316
+c_l_CR1_PLE_UPL_BNAT03.fill = Na_CR_Out
+c_l_CR1_PLE_UPL_BNAT04.fill = SS
+c_l_CR1_PLE_UPL_BNAT05.fill = Na_CR_In
+
+u_CR_PLE_UPL_REGL1 = openmc.Universe()
+u_CR_PLE_UPL_REGL1.add_cells([
+c_l_CR1_PLE_UPL_BNAT01,
+c_l_CR1_PLE_UPL_BNAT02,
+c_l_CR1_PLE_UPL_BNAT03,
+c_l_CR1_PLE_UPL_BNAT04,
+c_l_CR1_PLE_UPL_BNAT05 
+])
+
+# --- ABS+UPL,  Natural B4C - regulating rod 1 (u_CR_move_REGL1)
+l_CR_BNAT1 = openmc.HexLattice()
+l_CR_BNAT1.center = [0., 0.]
+l_CR_BNAT1.pitch  = [1.5500]
+l_CR_BNAT1.universes = \
+       [ [p_CR2_BNAT]*6, [p_CR1_BNAT] ]
+l_CR_BNAT1.outer  = p_CR2_NaOU
+l_CR_BNAT1.rotation = [0, 0,-30]
+
+c_l_CR1_ABS_UPL_BNAT01 = openmc.Cell( name='c_l_CR1_ABS_UPL_BNAT01')
+c_l_CR1_ABS_UPL_BNAT02 = openmc.Cell( name='c_l_CR1_ABS_UPL_BNAT02')
+c_l_CR1_ABS_UPL_BNAT03 = openmc.Cell( name='c_l_CR1_ABS_UPL_BNAT03')
+c_l_CR1_ABS_UPL_BNAT04 = openmc.Cell( name='c_l_CR1_ABS_UPL_BNAT04')
+c_l_CR1_ABS_UPL_BNAT05 = openmc.Cell( name='c_l_CR1_ABS_UPL_BNAT05')
+
+c_l_CR1_ABS_UPL_BNAT01.region = -cyl_CR_WR_IN                       # Absorber
+c_l_CR1_ABS_UPL_BNAT02.region = -cyl_CR_WR_OU  & +cyl_CR_WR_IN      # Absorber
+c_l_CR1_ABS_UPL_BNAT03.region = -cyl_CR_UPL_IN & +cyl_CR_WR_OU      # Absorber
+c_l_CR1_ABS_UPL_BNAT04.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN    # Upper plenum  
+c_l_CR1_ABS_UPL_BNAT05.region =  +hex_CR_UPL_OU                     # Upper plenum  
+
+c_l_CR1_ABS_UPL_BNAT01.fill = l_CR_BNAT1
+c_l_CR1_ABS_UPL_BNAT02.fill = Ti316
+c_l_CR1_ABS_UPL_BNAT03.fill = Na_CR_Out
+c_l_CR1_ABS_UPL_BNAT04.fill = SS
+c_l_CR1_ABS_UPL_BNAT05.fill = Na_CR_In
+
+u_CR_ABS_UPL_REGL1 = openmc.Universe()
+u_CR_ABS_UPL_REGL1.add_cells([
+c_l_CR1_ABS_UPL_BNAT01,
+c_l_CR1_ABS_UPL_BNAT02,
+c_l_CR1_ABS_UPL_BNAT03,
+c_l_CR1_ABS_UPL_BNAT04,
+c_l_CR1_ABS_UPL_BNAT05
+])
+
+# --- LCO+UPL
+c_l_CR1_LCO_UPL_BNAT01 = openmc.Cell( name='c_l_CR1_LCO_UPL_BNAT01')
+c_l_CR1_LCO_UPL_BNAT02 = openmc.Cell( name='c_l_CR1_LCO_UPL_BNAT02')
+c_l_CR1_LCO_UPL_BNAT03 = openmc.Cell( name='c_l_CR1_LCO_UPL_BNAT03')
+c_l_CR1_LCO_UPL_BNAT04 = openmc.Cell( name='c_l_CR1_LCO_UPL_BNAT04')
+
+c_l_CR1_LCO_UPL_BNAT01.region = -cyl_CR_CON_OU                      # Lower connector
+c_l_CR1_LCO_UPL_BNAT02.region = -cyl_CR_UPL_IN & +cyl_CR_CON_OU     # Lower connector
+c_l_CR1_LCO_UPL_BNAT03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN  # Upper plenum  
+c_l_CR1_LCO_UPL_BNAT04.region =  +hex_CR_UPL_OU                   # Upper plenum  
+
+c_l_CR1_LCO_UPL_BNAT01.fill = HOMOG_CR_CON
+c_l_CR1_LCO_UPL_BNAT02.fill = Na_CR_In
+c_l_CR1_LCO_UPL_BNAT03.fill = SS
+c_l_CR1_LCO_UPL_BNAT04.fill = Na_CR_In
+
+u_CR_LCO_UPL_REGL1 = openmc.Universe()
+u_CR_LCO_UPL_REGL1.add_cells([
+c_l_CR1_LCO_UPL_BNAT01,
+c_l_CR1_LCO_UPL_BNAT02,
+c_l_CR1_LCO_UPL_BNAT03,
+c_l_CR1_LCO_UPL_BNAT04 
+])
+
+# --- LCO+WRA
+c_l_CR1_LCO_WRA_BNAT01 = openmc.Cell( name='c_l_CR1_LCO_WRA_BNAT01')
+c_l_CR1_LCO_WRA_BNAT02 = openmc.Cell( name='c_l_CR1_LCO_WRA_BNAT02')
+c_l_CR1_LCO_WRA_BNAT03 = openmc.Cell( name='c_l_CR1_LCO_WRA_BNAT03')
+c_l_CR1_LCO_WRA_BNAT04 = openmc.Cell( name='c_l_CR1_LCO_WRA_BNAT04')
+
+c_l_CR1_LCO_WRA_BNAT01.region = -cyl_CR_CON_OU                      # Lower connector
+c_l_CR1_LCO_WRA_BNAT02.region =  -hex_WR_IN     & +cyl_CR_CON_OU     # Lower connector
+c_l_CR1_LCO_WRA_BNAT03.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper
+c_l_CR1_LCO_WRA_BNAT04.region =  +hex_WR_OU                   # Normal wrapper
+
+c_l_CR1_LCO_WRA_BNAT01.fill = HOMOG_CR_CON
+c_l_CR1_LCO_WRA_BNAT02.fill = Na_CR_In
+c_l_CR1_LCO_WRA_BNAT03.fill = SS
+c_l_CR1_LCO_WRA_BNAT04.fill = Na_CR_In
+
+u_CR_LCO_WRA_REGL1 = openmc.Universe()
+u_CR_LCO_WRA_REGL1.add_cells([
+c_l_CR1_LCO_WRA_BNAT01,
+c_l_CR1_LCO_WRA_BNAT02,
+c_l_CR1_LCO_WRA_BNAT03,
+c_l_CR1_LCO_WRA_BNAT04 
+])
+
+# --- BAF+WRA
+c_l_CR1_BAF_WRA_BNAT01 = openmc.Cell( name='c_l_CR1_BAF_WRA_BNAT01')
+c_l_CR1_BAF_WRA_BNAT02 = openmc.Cell( name='c_l_CR1_BAF_WRA_BNAT02')
+c_l_CR1_BAF_WRA_BNAT03 = openmc.Cell( name='c_l_CR1_BAF_WRA_BNAT03')
+c_l_CR1_BAF_WRA_BNAT04 = openmc.Cell( name='c_l_CR1_BAF_WRA_BNAT04')
+c_l_CR1_BAF_WRA_BNAT05 = openmc.Cell( name='c_l_CR1_BAF_WRA_BNAT05')
+
+c_l_CR1_BAF_WRA_BNAT01.region =                  -cyl_CR_BAF_IN    # Baffle
+c_l_CR1_BAF_WRA_BNAT02.region = +cyl_CR_BAF_IN & -cyl_CR_BAF_OU    # Baffle
+c_l_CR1_BAF_WRA_BNAT03.region =  -hex_WR_IN     & +cyl_CR_BAF_OU    # Baffle
+c_l_CR1_BAF_WRA_BNAT04.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper 
+c_l_CR1_BAF_WRA_BNAT05.region =  +hex_WR_OU                   # Normal wrapper 
+
+c_l_CR1_BAF_WRA_BNAT01.fill = Na_CR_In
+c_l_CR1_BAF_WRA_BNAT02.fill = Ti316   
+c_l_CR1_BAF_WRA_BNAT03.fill = Na_CR_In
+c_l_CR1_BAF_WRA_BNAT04.fill = SS
+c_l_CR1_BAF_WRA_BNAT05.fill = Na_CR_In
+
+u_CR_BAF_WRA_REGL1 = openmc.Universe()
+u_CR_BAF_WRA_REGL1.add_cells([
+c_l_CR1_BAF_WRA_BNAT01,
+c_l_CR1_BAF_WRA_BNAT02,
+c_l_CR1_BAF_WRA_BNAT03,
+c_l_CR1_BAF_WRA_BNAT04,
+c_l_CR1_BAF_WRA_BNAT05
+])
+
+# --- BOT+WRA
+
+c_l_CR1_BOT_WRA_BNAT01 = openmc.Cell( name='c_l_CR1_BOT_WRA_BNAT01')
+c_l_CR1_BOT_WRA_BNAT02 = openmc.Cell( name='c_l_CR1_BOT_WRA_BNAT02')
+c_l_CR1_BOT_WRA_BNAT03 = openmc.Cell( name='c_l_CR1_BOT_WRA_BNAT03')
+
+c_l_CR1_BOT_WRA_BNAT01.region =  -hex_WR_IN                   # Normal wrapper 
+c_l_CR1_BOT_WRA_BNAT02.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper
+c_l_CR1_BOT_WRA_BNAT03.region =  +hex_WR_OU                   # Normal wrapper
+
+c_l_CR1_BOT_WRA_BNAT01.fill = Na_CR_In
+c_l_CR1_BOT_WRA_BNAT02.fill = SS
+c_l_CR1_BOT_WRA_BNAT03.fill = Na_CR_In
+
+
+u_CR_BOT_WRA_REGL1 = openmc.Universe()
+u_CR_BOT_WRA_REGL1.add_cells([
+c_l_CR1_BOT_WRA_BNAT01,
+c_l_CR1_BOT_WRA_BNAT02,
+c_l_CR1_BOT_WRA_BNAT03
+])
+
+
+
+## Regulating Rod 2
+# --- Shaft+HEA
+c_l_CR2_SHA_HEA_BNAT01 = openmc.Cell( name='c_l_CR2_SHA_HEA_BNAT01')
+c_l_CR2_SHA_HEA_BNAT02 = openmc.Cell( name='c_l_CR2_SHA_HEA_BNAT02')
+c_l_CR2_SHA_HEA_BNAT03 = openmc.Cell( name='c_l_CR2_SHA_HEA_BNAT03')
+c_l_CR2_SHA_HEA_BNAT04 = openmc.Cell( name='c_l_CR2_SHA_HEA_BNAT04')
+
+c_l_CR2_SHA_HEA_BNAT01.region = -cyl_CR_SHAFT_IN                  # Shaft in 
+c_l_CR2_SHA_HEA_BNAT02.region = -cyl_CR_HEA_IN & +cyl_CR_SHAFT_IN # Shaft out
+c_l_CR2_SHA_HEA_BNAT03.region = -cyl_CR_HEA_OU & +cyl_CR_HEA_IN      # Head connector +gripper
+c_l_CR2_SHA_HEA_BNAT04.region = +cyl_CR_HEA_OU                       # Head connector +gripper
+
+c_l_CR2_SHA_HEA_BNAT01.fill = Ti316
+c_l_CR2_SHA_HEA_BNAT02.fill = Na_CR_Out
+c_l_CR2_SHA_HEA_BNAT03.fill = SS
+c_l_CR2_SHA_HEA_BNAT04.fill = Na_CR_In
+
+u_CR_SHA_HEA_REGL2 = openmc.Universe()
+u_CR_SHA_HEA_REGL2.add_cells([
+c_l_CR2_SHA_HEA_BNAT01, 
+c_l_CR2_SHA_HEA_BNAT02,
+c_l_CR2_SHA_HEA_BNAT03,
+c_l_CR2_SHA_HEA_BNAT04
+])
+
+# --- Shaft+HCO
+c_l_CR2_SHA_HCO_BNAT01 = openmc.Cell( name='c_l_CR2_SHA_HCO_BNAT01')
+c_l_CR2_SHA_HCO_BNAT02 = openmc.Cell( name='c_l_CR2_SHA_HCO_BNAT02')
+c_l_CR2_SHA_HCO_BNAT03 = openmc.Cell( name='c_l_CR2_SHA_HCO_BNAT03')
+c_l_CR2_SHA_HCO_BNAT04 = openmc.Cell( name='c_l_CR2_SHA_HCO_BNAT04')
+
+c_l_CR2_SHA_HCO_BNAT01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR2_SHA_HCO_BNAT02.region = -cyl_CR_HCO_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR2_SHA_HCO_BNAT03.region = -cyl_CR_HCO_OU & +cyl_CR_HCO_IN    # Head connector
+c_l_CR2_SHA_HCO_BNAT04.region = +cyl_CR_HCO_OU                     # Head connector
+
+c_l_CR2_SHA_HCO_BNAT01.fill = Ti316
+c_l_CR2_SHA_HCO_BNAT02.fill = Na_CR_Out
+c_l_CR2_SHA_HCO_BNAT03.fill = SS
+c_l_CR2_SHA_HCO_BNAT04.fill = Na_CR_In
+
+u_CR_SHA_HCO_REGL2 = openmc.Universe()
+u_CR_SHA_HCO_REGL2.add_cells([
+c_l_CR2_SHA_HCO_BNAT01, 
+c_l_CR2_SHA_HCO_BNAT02,
+c_l_CR2_SHA_HCO_BNAT03,
+c_l_CR2_SHA_HCO_BNAT04
+])
+
+# --- Shaft+TRS
+c_l_CR2_SHA_TRS_BNAT01 = openmc.Cell( name='c_l_CR2_SHA_TRS_BNAT01')
+c_l_CR2_SHA_TRS_BNAT02 = openmc.Cell( name='c_l_CR2_SHA_TRS_BNAT02')
+c_l_CR2_SHA_TRS_BNAT03 = openmc.Cell( name='c_l_CR2_SHA_TRS_BNAT03')
+c_l_CR2_SHA_TRS_BNAT04 = openmc.Cell( name='c_l_CR2_SHA_TRS_BNAT04')
+
+c_l_CR2_SHA_TRS_BNAT01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR2_SHA_TRS_BNAT02.region = -cone_CR_PH_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR2_SHA_TRS_BNAT03.region = -cone_CR_PH_OU & +cone_CR_PH_IN    # Transition
+c_l_CR2_SHA_TRS_BNAT04.region = +cone_CR_PH_OU                     # Transition
+
+c_l_CR2_SHA_TRS_BNAT01.fill = Ti316
+c_l_CR2_SHA_TRS_BNAT02.fill = Na_CR_Out
+c_l_CR2_SHA_TRS_BNAT03.fill = SS
+c_l_CR2_SHA_TRS_BNAT04.fill = Na_CR_In
+
+u_CR_SHA_TRS_REGL2 = openmc.Universe()
+u_CR_SHA_TRS_REGL2.add_cells([
+c_l_CR2_SHA_TRS_BNAT01, 
+c_l_CR2_SHA_TRS_BNAT02,
+c_l_CR2_SHA_TRS_BNAT03,
+c_l_CR2_SHA_TRS_BNAT04
+])
+
+# --- Shaft+UPL
+c_l_CR2_SHA_UPL_BNAT01 = openmc.Cell( name='c_l_CR2_SHA_UPL_BNAT01')
+c_l_CR2_SHA_UPL_BNAT02 = openmc.Cell( name='c_l_CR2_SHA_UPL_BNAT02')
+c_l_CR2_SHA_UPL_BNAT03 = openmc.Cell( name='c_l_CR2_SHA_UPL_BNAT03')
+c_l_CR2_SHA_UPL_BNAT04 = openmc.Cell( name='c_l_CR2_SHA_UPL_BNAT04')
+
+c_l_CR2_SHA_UPL_BNAT01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR2_SHA_UPL_BNAT02.region = -cyl_CR_UPL_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR2_SHA_UPL_BNAT03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN    # Upper plenum
+c_l_CR2_SHA_UPL_BNAT04.region =  +hex_CR_UPL_OU                     # Upper plenum
+
+c_l_CR2_SHA_UPL_BNAT01.fill = Ti316
+c_l_CR2_SHA_UPL_BNAT02.fill = Na_CR_Out
+c_l_CR2_SHA_UPL_BNAT03.fill = SS
+c_l_CR2_SHA_UPL_BNAT04.fill = Na_CR_In
+
+u_CR_SHA_UPL_REGL2 = openmc.Universe()
+u_CR_SHA_UPL_REGL2.add_cells([
+c_l_CR2_SHA_UPL_BNAT01, 
+c_l_CR2_SHA_UPL_BNAT02,
+c_l_CR2_SHA_UPL_BNAT03,
+c_l_CR2_SHA_UPL_BNAT04
+])
+
+
+# --- UCO+UPL
+c_l_CR2_UCO_UPL_BNAT01 = openmc.Cell( name='c_l_CR2_UCO_UPL_BNAT01')
+c_l_CR2_UCO_UPL_BNAT02 = openmc.Cell( name='c_l_CR2_UCO_UPL_BNAT02')
+c_l_CR2_UCO_UPL_BNAT03 = openmc.Cell( name='c_l_CR2_UCO_UPL_BNAT03')
+c_l_CR2_UCO_UPL_BNAT04 = openmc.Cell( name='c_l_CR2_UCO_UPL_BNAT04')
+
+c_l_CR2_UCO_UPL_BNAT01.region = -cyl_CR_CON_OU                      # Upper connector
+c_l_CR2_UCO_UPL_BNAT02.region = +cyl_CR_CON_OU & -cyl_CR_UPL_IN     # Upper connector
+c_l_CR2_UCO_UPL_BNAT03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN     # Upper plenum   
+c_l_CR2_UCO_UPL_BNAT04.region =  +hex_CR_UPL_OU                      # Upper plenum
+
+c_l_CR2_UCO_UPL_BNAT01.fill = HOMOG_CR_CON
+c_l_CR2_UCO_UPL_BNAT02.fill = Na_CR_Out
+c_l_CR2_UCO_UPL_BNAT03.fill = SS
+c_l_CR2_UCO_UPL_BNAT04.fill = Na_CR_In
+
+u_CR_UCO_UPL_REGL2 = openmc.Universe()
+u_CR_UCO_UPL_REGL2.add_cells([
+c_l_CR2_UCO_UPL_BNAT01,
+c_l_CR2_UCO_UPL_BNAT02,
+c_l_CR2_UCO_UPL_BNAT03,
+c_l_CR2_UCO_UPL_BNAT04 
+])
+
+
+# --- PLE+UPL
+c_l_CR2_PLE_UPL_BNAT01 = openmc.Cell( name='c_l_CR2_PLE_UPL_BNAT01')
+c_l_CR2_PLE_UPL_BNAT02 = openmc.Cell( name='c_l_CR2_PLE_UPL_BNAT02')
+c_l_CR2_PLE_UPL_BNAT03 = openmc.Cell( name='c_l_CR2_PLE_UPL_BNAT03')
+c_l_CR2_PLE_UPL_BNAT04 = openmc.Cell( name='c_l_CR2_PLE_UPL_BNAT04')
+c_l_CR2_PLE_UPL_BNAT05 = openmc.Cell( name='c_l_CR2_PLE_UPL_BNAT05')
+
+c_l_CR2_PLE_UPL_BNAT01.region = -cyl_CR_WR_IN                    # Plenum
+c_l_CR2_PLE_UPL_BNAT02.region = -cyl_CR_WR_OU  & +cyl_CR_WR_IN   # Plenum
+c_l_CR2_PLE_UPL_BNAT03.region = -cyl_CR_UPL_IN & +cyl_CR_WR_OU   # Plenum
+c_l_CR2_PLE_UPL_BNAT04.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN  # Upper plenum  
+c_l_CR2_PLE_UPL_BNAT05.region =  +hex_CR_UPL_OU                   # Upper plenum  
+
+c_l_CR2_PLE_UPL_BNAT01.fill = Na_CR_Out
+c_l_CR2_PLE_UPL_BNAT02.fill = Ti316
+c_l_CR2_PLE_UPL_BNAT03.fill = Na_CR_Out
+c_l_CR2_PLE_UPL_BNAT04.fill = SS
+c_l_CR2_PLE_UPL_BNAT05.fill = Na_CR_In
+
+u_CR_PLE_UPL_REGL2 = openmc.Universe()
+u_CR_PLE_UPL_REGL2.add_cells([
+c_l_CR2_PLE_UPL_BNAT01,
+c_l_CR2_PLE_UPL_BNAT02,
+c_l_CR2_PLE_UPL_BNAT03,
+c_l_CR2_PLE_UPL_BNAT04,
+c_l_CR2_PLE_UPL_BNAT05 
+])
+
+# --- ABS+UPL,  Natural B4C - regulating rod 2 (u_CR_move_REGL2)
+l_CR_BNAT2 = openmc.HexLattice()
+l_CR_BNAT2.center = [0., 0.]
+l_CR_BNAT2.pitch  = [1.5500]
+l_CR_BNAT2.universes = \
+       [ [p_CR2_BNAT]*6, [p_CR1_BNAT] ]
+l_CR_BNAT2.outer  = p_CR2_NaOU
+l_CR_BNAT2.rotation = [0, 0,-30]
+
+c_l_CR2_ABS_UPL_BNAT01 = openmc.Cell( name='c_l_CR2_ABS_UPL_BNAT01')
+c_l_CR2_ABS_UPL_BNAT02 = openmc.Cell( name='c_l_CR2_ABS_UPL_BNAT02')
+c_l_CR2_ABS_UPL_BNAT03 = openmc.Cell( name='c_l_CR2_ABS_UPL_BNAT03')
+c_l_CR2_ABS_UPL_BNAT04 = openmc.Cell( name='c_l_CR2_ABS_UPL_BNAT04')
+c_l_CR2_ABS_UPL_BNAT05 = openmc.Cell( name='c_l_CR2_ABS_UPL_BNAT05')
+
+c_l_CR2_ABS_UPL_BNAT01.region = -cyl_CR_WR_IN                       # Absorber
+c_l_CR2_ABS_UPL_BNAT02.region = -cyl_CR_WR_OU  & +cyl_CR_WR_IN      # Absorber
+c_l_CR2_ABS_UPL_BNAT03.region = -cyl_CR_UPL_IN & +cyl_CR_WR_OU      # Absorber
+c_l_CR2_ABS_UPL_BNAT04.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN    # Upper plenum  
+c_l_CR2_ABS_UPL_BNAT05.region =  +hex_CR_UPL_OU                     # Upper plenum  
+
+c_l_CR2_ABS_UPL_BNAT01.fill = l_CR_BNAT2
+c_l_CR2_ABS_UPL_BNAT02.fill = Ti316
+c_l_CR2_ABS_UPL_BNAT03.fill = Na_CR_Out
+c_l_CR2_ABS_UPL_BNAT04.fill = SS
+c_l_CR2_ABS_UPL_BNAT05.fill = Na_CR_In
+
+u_CR_ABS_UPL_REGL2 = openmc.Universe()
+u_CR_ABS_UPL_REGL2.add_cells([
+c_l_CR2_ABS_UPL_BNAT01,
+c_l_CR2_ABS_UPL_BNAT02,
+c_l_CR2_ABS_UPL_BNAT03,
+c_l_CR2_ABS_UPL_BNAT04,
+c_l_CR2_ABS_UPL_BNAT05
+])
+
+# --- ABS+WRA,  Natural B4C - regulating rod 2 (u_CR_move_REGL2)
+
+c_l_CR2_ABS_WRA_BNAT01 = openmc.Cell( name='c_l_CR2_ABS_WRA_BNAT01')
+c_l_CR2_ABS_WRA_BNAT02 = openmc.Cell( name='c_l_CR2_ABS_WRA_BNAT02')
+c_l_CR2_ABS_WRA_BNAT03 = openmc.Cell( name='c_l_CR2_ABS_WRA_BNAT03')
+c_l_CR2_ABS_WRA_BNAT04 = openmc.Cell( name='c_l_CR2_ABS_WRA_BNAT04')
+c_l_CR2_ABS_WRA_BNAT05 = openmc.Cell( name='c_l_CR2_ABS_WRA_BNAT05')
+
+c_l_CR2_ABS_WRA_BNAT01.region = -cyl_CR_WR_IN                       # Absorber
+c_l_CR2_ABS_WRA_BNAT02.region = -cyl_CR_WR_OU  & +cyl_CR_WR_IN      # Absorber
+c_l_CR2_ABS_WRA_BNAT03.region =  -hex_WR_IN     & +cyl_CR_WR_OU      # Absorber
+c_l_CR2_ABS_WRA_BNAT04.region =  -hex_WR_OU     &  +hex_WR_IN        # Upper plenum  
+c_l_CR2_ABS_WRA_BNAT05.region =  +hex_WR_OU                         # Upper plenum  
+
+c_l_CR2_ABS_WRA_BNAT01.fill = l_CR_BNAT2
+c_l_CR2_ABS_WRA_BNAT02.fill = Ti316
+c_l_CR2_ABS_WRA_BNAT03.fill = Na_CR_Out
+c_l_CR2_ABS_WRA_BNAT04.fill = SS
+c_l_CR2_ABS_WRA_BNAT05.fill = Na_CR_In
+
+u_CR_ABS_WRA_REGL2 = openmc.Universe()
+u_CR_ABS_WRA_REGL2.add_cells([
+c_l_CR2_ABS_WRA_BNAT01,
+c_l_CR2_ABS_WRA_BNAT02,
+c_l_CR2_ABS_WRA_BNAT03,
+c_l_CR2_ABS_WRA_BNAT04,
+c_l_CR2_ABS_WRA_BNAT05
+])
+
+# --- LCO+WRA
+c_l_CR2_LCO_WRA_BNAT01 = openmc.Cell( name='c_l_CR2_LCO_WRA_BNAT01')
+c_l_CR2_LCO_WRA_BNAT02 = openmc.Cell( name='c_l_CR2_LCO_WRA_BNAT02')
+c_l_CR2_LCO_WRA_BNAT03 = openmc.Cell( name='c_l_CR2_LCO_WRA_BNAT03')
+c_l_CR2_LCO_WRA_BNAT04 = openmc.Cell( name='c_l_CR2_LCO_WRA_BNAT04')
+
+c_l_CR2_LCO_WRA_BNAT01.region = -cyl_CR_CON_OU                      # Lower connector
+c_l_CR2_LCO_WRA_BNAT02.region =  -hex_WR_IN     & +cyl_CR_CON_OU     # Lower connector
+c_l_CR2_LCO_WRA_BNAT03.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper
+c_l_CR2_LCO_WRA_BNAT04.region =  +hex_WR_OU                   # Normal wrapper
+
+c_l_CR2_LCO_WRA_BNAT01.fill = HOMOG_CR_CON
+c_l_CR2_LCO_WRA_BNAT02.fill = Na_CR_In
+c_l_CR2_LCO_WRA_BNAT03.fill = SS
+c_l_CR2_LCO_WRA_BNAT04.fill = Na_CR_In
+
+u_CR_LCO_WRA_REGL2 = openmc.Universe()
+u_CR_LCO_WRA_REGL2.add_cells([
+c_l_CR2_LCO_WRA_BNAT01,
+c_l_CR2_LCO_WRA_BNAT02,
+c_l_CR2_LCO_WRA_BNAT03,
+c_l_CR2_LCO_WRA_BNAT04 
+])
+
+# --- BAF+WRA
+c_l_CR2_BAF_WRA_BNAT01 = openmc.Cell( name='c_l_CR2_BAF_WRA_BNAT01')
+c_l_CR2_BAF_WRA_BNAT02 = openmc.Cell( name='c_l_CR2_BAF_WRA_BNAT02')
+c_l_CR2_BAF_WRA_BNAT03 = openmc.Cell( name='c_l_CR2_BAF_WRA_BNAT03')
+c_l_CR2_BAF_WRA_BNAT04 = openmc.Cell( name='c_l_CR2_BAF_WRA_BNAT04')
+c_l_CR2_BAF_WRA_BNAT05 = openmc.Cell( name='c_l_CR2_BAF_WRA_BNAT05')
+
+c_l_CR2_BAF_WRA_BNAT01.region =                  -cyl_CR_BAF_IN    # Baffle
+c_l_CR2_BAF_WRA_BNAT02.region = +cyl_CR_BAF_IN & -cyl_CR_BAF_OU    # Baffle
+c_l_CR2_BAF_WRA_BNAT03.region =  -hex_WR_IN     & +cyl_CR_BAF_OU    # Baffle
+c_l_CR2_BAF_WRA_BNAT04.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper 
+c_l_CR2_BAF_WRA_BNAT05.region =  +hex_WR_OU                   # Normal wrapper 
+
+c_l_CR2_BAF_WRA_BNAT01.fill = Na_CR_In
+c_l_CR2_BAF_WRA_BNAT02.fill = Ti316   
+c_l_CR2_BAF_WRA_BNAT03.fill = Na_CR_In
+c_l_CR2_BAF_WRA_BNAT04.fill = SS
+c_l_CR2_BAF_WRA_BNAT05.fill = Na_CR_In
+
+u_CR_BAF_WRA_REGL2 = openmc.Universe()
+u_CR_BAF_WRA_REGL2.add_cells([
+c_l_CR2_BAF_WRA_BNAT01,
+c_l_CR2_BAF_WRA_BNAT02,
+c_l_CR2_BAF_WRA_BNAT03,
+c_l_CR2_BAF_WRA_BNAT04,
+c_l_CR2_BAF_WRA_BNAT05
+])
+
+# --- BOT+WRA
+
+c_l_CR2_BOT_WRA_BNAT01 = openmc.Cell( name='c_l_CR2_BOT_WRA_BNAT01')
+c_l_CR2_BOT_WRA_BNAT02 = openmc.Cell( name='c_l_CR2_BOT_WRA_BNAT02')
+c_l_CR2_BOT_WRA_BNAT03 = openmc.Cell( name='c_l_CR2_BOT_WRA_BNAT03')
+
+c_l_CR2_BOT_WRA_BNAT01.region =  -hex_WR_IN                   # Normal wrapper 
+c_l_CR2_BOT_WRA_BNAT02.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper
+c_l_CR2_BOT_WRA_BNAT03.region =  +hex_WR_OU                   # Normal wrapper
+
+c_l_CR2_BOT_WRA_BNAT01.fill = Na_CR_In
+c_l_CR2_BOT_WRA_BNAT02.fill = SS
+c_l_CR2_BOT_WRA_BNAT03.fill = Na_CR_In
+
+
+u_CR_BOT_WRA_REGL2 = openmc.Universe()
+u_CR_BOT_WRA_REGL2.add_cells([
+c_l_CR2_BOT_WRA_BNAT01,
+c_l_CR2_BOT_WRA_BNAT02,
+c_l_CR2_BOT_WRA_BNAT03
+])
+
+
+
+## Shim Rods 
+# --- Shaft+HEA
+c_l_CR_SHA_HEA_SHIM01 = openmc.Cell( name='c_l_CR_SHA_HEA_SHIM01')
+c_l_CR_SHA_HEA_SHIM02 = openmc.Cell( name='c_l_CR_SHA_HEA_SHIM02')
+c_l_CR_SHA_HEA_SHIM03 = openmc.Cell( name='c_l_CR_SHA_HEA_SHIM03')
+c_l_CR_SHA_HEA_SHIM04 = openmc.Cell( name='c_l_CR_SHA_HEA_SHIM04')
+
+c_l_CR_SHA_HEA_SHIM01.region = -cyl_CR_SHAFT_IN                  # Shaft in 
+c_l_CR_SHA_HEA_SHIM02.region = -cyl_CR_HEA_IN & +cyl_CR_SHAFT_IN # Shaft out
+c_l_CR_SHA_HEA_SHIM03.region = -cyl_CR_HEA_OU & +cyl_CR_HEA_IN      # Head connector +gripper
+c_l_CR_SHA_HEA_SHIM04.region = +cyl_CR_HEA_OU                       # Head connector +gripper
+
+c_l_CR_SHA_HEA_SHIM01.fill = Ti316
+c_l_CR_SHA_HEA_SHIM02.fill = Na_CR_Out
+c_l_CR_SHA_HEA_SHIM03.fill = SS
+c_l_CR_SHA_HEA_SHIM04.fill = Na_CR_In
+
+u_CR_SHA_HEA_SHIM = openmc.Universe()
+u_CR_SHA_HEA_SHIM.add_cells([
+c_l_CR_SHA_HEA_SHIM01, 
+c_l_CR_SHA_HEA_SHIM02,
+c_l_CR_SHA_HEA_SHIM03,
+c_l_CR_SHA_HEA_SHIM04
+])
+
+# --- Shaft+HCO
+c_l_CR_SHA_HCO_SHIM01 = openmc.Cell( name='c_l_CR_SHA_HCO_SHIM01')
+c_l_CR_SHA_HCO_SHIM02 = openmc.Cell( name='c_l_CR_SHA_HCO_SHIM02')
+c_l_CR_SHA_HCO_SHIM03 = openmc.Cell( name='c_l_CR_SHA_HCO_SHIM03')
+c_l_CR_SHA_HCO_SHIM04 = openmc.Cell( name='c_l_CR_SHA_HCO_SHIM04')
+
+c_l_CR_SHA_HCO_SHIM01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR_SHA_HCO_SHIM02.region = -cyl_CR_HCO_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR_SHA_HCO_SHIM03.region = -cyl_CR_HCO_OU & +cyl_CR_HCO_IN    # Head connector
+c_l_CR_SHA_HCO_SHIM04.region = +cyl_CR_HCO_OU                     # Head connector
+
+c_l_CR_SHA_HCO_SHIM01.fill = Ti316
+c_l_CR_SHA_HCO_SHIM02.fill = Na_CR_Out
+c_l_CR_SHA_HCO_SHIM03.fill = SS
+c_l_CR_SHA_HCO_SHIM04.fill = Na_CR_In
+
+u_CR_SHA_HCO_SHIM = openmc.Universe()
+u_CR_SHA_HCO_SHIM.add_cells([
+c_l_CR_SHA_HCO_SHIM01, 
+c_l_CR_SHA_HCO_SHIM02,
+c_l_CR_SHA_HCO_SHIM03,
+c_l_CR_SHA_HCO_SHIM04
+])
+
+# --- Shaft+TRS
+c_l_CR_SHA_TRS_SHIM01 = openmc.Cell( name='c_l_CR_SHA_TRS_SHIM01')
+c_l_CR_SHA_TRS_SHIM02 = openmc.Cell( name='c_l_CR_SHA_TRS_SHIM02')
+c_l_CR_SHA_TRS_SHIM03 = openmc.Cell( name='c_l_CR_SHA_TRS_SHIM03')
+c_l_CR_SHA_TRS_SHIM04 = openmc.Cell( name='c_l_CR_SHA_TRS_SHIM04')
+
+c_l_CR_SHA_TRS_SHIM01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR_SHA_TRS_SHIM02.region = -cone_CR_PH_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR_SHA_TRS_SHIM03.region = -cone_CR_PH_OU & +cone_CR_PH_IN    # Transition
+c_l_CR_SHA_TRS_SHIM04.region = +cone_CR_PH_OU                     # Transition
+
+c_l_CR_SHA_TRS_SHIM01.fill = Ti316
+c_l_CR_SHA_TRS_SHIM02.fill = Na_CR_Out
+c_l_CR_SHA_TRS_SHIM03.fill = SS
+c_l_CR_SHA_TRS_SHIM04.fill = Na_CR_In
+
+u_CR_SHA_TRS_SHIM = openmc.Universe()
+u_CR_SHA_TRS_SHIM.add_cells([
+c_l_CR_SHA_TRS_SHIM01, 
+c_l_CR_SHA_TRS_SHIM02,
+c_l_CR_SHA_TRS_SHIM03,
+c_l_CR_SHA_TRS_SHIM04
+])
+
+# --- Shaft+UPL
+c_l_CR_SHA_UPL_SHIM01 = openmc.Cell( name='c_l_CR_SHA_UPL_SHIM01')
+c_l_CR_SHA_UPL_SHIM02 = openmc.Cell( name='c_l_CR_SHA_UPL_SHIM02')
+c_l_CR_SHA_UPL_SHIM03 = openmc.Cell( name='c_l_CR_SHA_UPL_SHIM03')
+c_l_CR_SHA_UPL_SHIM04 = openmc.Cell( name='c_l_CR_SHA_UPL_SHIM04')
+
+c_l_CR_SHA_UPL_SHIM01.region = -cyl_CR_SHAFT_IN                   # Shaft in 
+c_l_CR_SHA_UPL_SHIM02.region = -cyl_CR_UPL_IN & +cyl_CR_SHAFT_IN  # Shaft out
+c_l_CR_SHA_UPL_SHIM03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN    # Upper plenum
+c_l_CR_SHA_UPL_SHIM04.region =  +hex_CR_UPL_OU                     # Upper plenum
+
+c_l_CR_SHA_UPL_SHIM01.fill = Ti316
+c_l_CR_SHA_UPL_SHIM02.fill = Na_CR_Out
+c_l_CR_SHA_UPL_SHIM03.fill = SS
+c_l_CR_SHA_UPL_SHIM04.fill = Na_CR_In
+
+u_CR_SHA_UPL_SHIM = openmc.Universe()
+u_CR_SHA_UPL_SHIM.add_cells([
+c_l_CR_SHA_UPL_SHIM01, 
+c_l_CR_SHA_UPL_SHIM02,
+c_l_CR_SHA_UPL_SHIM03,
+c_l_CR_SHA_UPL_SHIM04
+])
+
+
+# --- UCO+UPL
+c_l_CR_UCO_UPL_SHIM01 = openmc.Cell( name='c_l_CR_UCO_UPL_SHIM01')
+c_l_CR_UCO_UPL_SHIM02 = openmc.Cell( name='c_l_CR_UCO_UPL_SHIM02')
+c_l_CR_UCO_UPL_SHIM03 = openmc.Cell( name='c_l_CR_UCO_UPL_SHIM03')
+c_l_CR_UCO_UPL_SHIM04 = openmc.Cell( name='c_l_CR_UCO_UPL_SHIM04')
+
+c_l_CR_UCO_UPL_SHIM01.region = -cyl_CR_CON_OU                      # Upper connector
+c_l_CR_UCO_UPL_SHIM02.region = +cyl_CR_CON_OU & -cyl_CR_UPL_IN     # Upper connector
+c_l_CR_UCO_UPL_SHIM03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN     # Upper plenum   
+c_l_CR_UCO_UPL_SHIM04.region =  +hex_CR_UPL_OU                      # Upper plenum
+
+c_l_CR_UCO_UPL_SHIM01.fill = HOMOG_CR_CON
+c_l_CR_UCO_UPL_SHIM02.fill = Na_CR_Out
+c_l_CR_UCO_UPL_SHIM03.fill = SS
+c_l_CR_UCO_UPL_SHIM04.fill = Na_CR_In
+
+u_CR_UCO_UPL_SHIM = openmc.Universe()
+u_CR_UCO_UPL_SHIM.add_cells([
+c_l_CR_UCO_UPL_SHIM01,
+c_l_CR_UCO_UPL_SHIM02,
+c_l_CR_UCO_UPL_SHIM03,
+c_l_CR_UCO_UPL_SHIM04 
+])
+
+
+# --- PLE+UPL
+c_l_CR_PLE_UPL_SHIM01 = openmc.Cell( name='c_l_CR_PLE_UPL_SHIM01')
+c_l_CR_PLE_UPL_SHIM02 = openmc.Cell( name='c_l_CR_PLE_UPL_SHIM02')
+c_l_CR_PLE_UPL_SHIM03 = openmc.Cell( name='c_l_CR_PLE_UPL_SHIM03')
+c_l_CR_PLE_UPL_SHIM04 = openmc.Cell( name='c_l_CR_PLE_UPL_SHIM04')
+c_l_CR_PLE_UPL_SHIM05 = openmc.Cell( name='c_l_CR_PLE_UPL_SHIM05')
+
+c_l_CR_PLE_UPL_SHIM01.region = -cyl_CR_WR_IN                    # Plenum
+c_l_CR_PLE_UPL_SHIM02.region = -cyl_CR_WR_OU  & +cyl_CR_WR_IN   # Plenum
+c_l_CR_PLE_UPL_SHIM03.region = -cyl_CR_UPL_IN & +cyl_CR_WR_OU   # Plenum
+c_l_CR_PLE_UPL_SHIM04.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN  # Upper plenum  
+c_l_CR_PLE_UPL_SHIM05.region =  +hex_CR_UPL_OU                   # Upper plenum  
+
+c_l_CR_PLE_UPL_SHIM01.fill = Na_CR_Out
+c_l_CR_PLE_UPL_SHIM02.fill = Ti316
+c_l_CR_PLE_UPL_SHIM03.fill = Na_CR_Out
+c_l_CR_PLE_UPL_SHIM04.fill = SS
+c_l_CR_PLE_UPL_SHIM05.fill = Na_CR_In
+
+u_CR_PLE_UPL_SHIM = openmc.Universe()
+u_CR_PLE_UPL_SHIM.add_cells([
+c_l_CR_PLE_UPL_SHIM01,
+c_l_CR_PLE_UPL_SHIM02,
+c_l_CR_PLE_UPL_SHIM03,
+c_l_CR_PLE_UPL_SHIM04,
+c_l_CR_PLE_UPL_SHIM05 
+])
+
+# --- ABS+UPL,  Enriched B4C - shim rod (u_CR_move_SHIM)
+l_CR_SHIM = openmc.HexLattice()
+l_CR_SHIM.center = [0., 0.]
+l_CR_SHIM.pitch  = [1.5500]
+l_CR_SHIM.universes = \
+       [ [p_CR2_BENR]*6, [p_CR1_BENR] ]
+l_CR_SHIM.outer  = p_CR2_NaOU
+l_CR_SHIM.rotation = [0, 0,-30]
+
+c_l_CR_ABS_UPL_SHIM01 = openmc.Cell( name='c_l_CR_ABS_UPL_SHIM01')
+c_l_CR_ABS_UPL_SHIM02 = openmc.Cell( name='c_l_CR_ABS_UPL_SHIM02')
+c_l_CR_ABS_UPL_SHIM03 = openmc.Cell( name='c_l_CR_ABS_UPL_SHIM03')
+c_l_CR_ABS_UPL_SHIM04 = openmc.Cell( name='c_l_CR_ABS_UPL_SHIM04')
+c_l_CR_ABS_UPL_SHIM05 = openmc.Cell( name='c_l_CR_ABS_UPL_SHIM05')
+
+c_l_CR_ABS_UPL_SHIM01.region = -cyl_CR_WR_IN                       # Absorber
+c_l_CR_ABS_UPL_SHIM02.region = -cyl_CR_WR_OU  & +cyl_CR_WR_IN      # Absorber
+c_l_CR_ABS_UPL_SHIM03.region = -cyl_CR_UPL_IN & +cyl_CR_WR_OU      # Absorber
+c_l_CR_ABS_UPL_SHIM04.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN    # Upper plenum  
+c_l_CR_ABS_UPL_SHIM05.region =  +hex_CR_UPL_OU                     # Upper plenum  
+
+c_l_CR_ABS_UPL_SHIM01.fill = l_CR_SHIM
+c_l_CR_ABS_UPL_SHIM02.fill = Ti316
+c_l_CR_ABS_UPL_SHIM03.fill = Na_CR_Out
+c_l_CR_ABS_UPL_SHIM04.fill = SS
+c_l_CR_ABS_UPL_SHIM05.fill = Na_CR_In
+
+u_CR_ABS_UPL_SHIM = openmc.Universe()
+u_CR_ABS_UPL_SHIM.add_cells([
+c_l_CR_ABS_UPL_SHIM01,
+c_l_CR_ABS_UPL_SHIM02,
+c_l_CR_ABS_UPL_SHIM03,
+c_l_CR_ABS_UPL_SHIM04,
+c_l_CR_ABS_UPL_SHIM05
+])
+
+# --- LCO+UPL
+c_l_CR_LCO_UPL_SHIM01 = openmc.Cell( name='c_l_CR_LCO_UPL_SHIM01')
+c_l_CR_LCO_UPL_SHIM02 = openmc.Cell( name='c_l_CR_LCO_UPL_SHIM02')
+c_l_CR_LCO_UPL_SHIM03 = openmc.Cell( name='c_l_CR_LCO_UPL_SHIM03')
+c_l_CR_LCO_UPL_SHIM04 = openmc.Cell( name='c_l_CR_LCO_UPL_SHIM04')
+
+c_l_CR_LCO_UPL_SHIM01.region = -cyl_CR_CON_OU                      # Lower connector
+c_l_CR_LCO_UPL_SHIM02.region = -cyl_CR_UPL_IN & +cyl_CR_CON_OU     # Lower connector
+c_l_CR_LCO_UPL_SHIM03.region =  -hex_CR_UPL_OU & +cyl_CR_UPL_IN  # Upper plenum  
+c_l_CR_LCO_UPL_SHIM04.region =  +hex_CR_UPL_OU                   # Upper plenum  
+
+c_l_CR_LCO_UPL_SHIM01.fill = HOMOG_CR_CON
+c_l_CR_LCO_UPL_SHIM02.fill = Na_CR_In
+c_l_CR_LCO_UPL_SHIM03.fill = SS
+c_l_CR_LCO_UPL_SHIM04.fill = Na_CR_In
+
+u_CR_LCO_UPL_SHIM = openmc.Universe()
+u_CR_LCO_UPL_SHIM.add_cells([
+c_l_CR_LCO_UPL_SHIM01,
+c_l_CR_LCO_UPL_SHIM02,
+c_l_CR_LCO_UPL_SHIM03,
+c_l_CR_LCO_UPL_SHIM04 
+])
+
+# --- LCO+WRA
+c_l_CR_LCO_WRA_SHIM01 = openmc.Cell( name='c_l_CR_LCO_WRA_SHIM01')
+c_l_CR_LCO_WRA_SHIM02 = openmc.Cell( name='c_l_CR_LCO_WRA_SHIM02')
+c_l_CR_LCO_WRA_SHIM03 = openmc.Cell( name='c_l_CR_LCO_WRA_SHIM03')
+c_l_CR_LCO_WRA_SHIM04 = openmc.Cell( name='c_l_CR_LCO_WRA_SHIM04')
+
+c_l_CR_LCO_WRA_SHIM01.region = -cyl_CR_CON_OU                      # Lower connector
+c_l_CR_LCO_WRA_SHIM02.region =  -hex_WR_IN     & +cyl_CR_CON_OU     # Lower connector
+c_l_CR_LCO_WRA_SHIM03.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper
+c_l_CR_LCO_WRA_SHIM04.region =  +hex_WR_OU                   # Normal wrapper
+
+c_l_CR_LCO_WRA_SHIM01.fill = HOMOG_CR_CON
+c_l_CR_LCO_WRA_SHIM02.fill = Na_CR_In
+c_l_CR_LCO_WRA_SHIM03.fill = SS
+c_l_CR_LCO_WRA_SHIM04.fill = Na_CR_In
+
+u_CR_LCO_WRA_SHIM = openmc.Universe()
+u_CR_LCO_WRA_SHIM.add_cells([
+c_l_CR_LCO_WRA_SHIM01,
+c_l_CR_LCO_WRA_SHIM02,
+c_l_CR_LCO_WRA_SHIM03,
+c_l_CR_LCO_WRA_SHIM04 
+])
+
+# --- BAF+WRA
+c_l_CR_BAF_WRA_SHIM01 = openmc.Cell( name='c_l_CR_BAF_WRA_SHIM01')
+c_l_CR_BAF_WRA_SHIM02 = openmc.Cell( name='c_l_CR_BAF_WRA_SHIM02')
+c_l_CR_BAF_WRA_SHIM03 = openmc.Cell( name='c_l_CR_BAF_WRA_SHIM03')
+c_l_CR_BAF_WRA_SHIM04 = openmc.Cell( name='c_l_CR_BAF_WRA_SHIM04')
+c_l_CR_BAF_WRA_SHIM05 = openmc.Cell( name='c_l_CR_BAF_WRA_SHIM05')
+
+c_l_CR_BAF_WRA_SHIM01.region =                  -cyl_CR_BAF_IN    # Baffle
+c_l_CR_BAF_WRA_SHIM02.region = +cyl_CR_BAF_IN & -cyl_CR_BAF_OU    # Baffle
+c_l_CR_BAF_WRA_SHIM03.region =  -hex_WR_IN     & +cyl_CR_BAF_OU    # Baffle
+c_l_CR_BAF_WRA_SHIM04.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper 
+c_l_CR_BAF_WRA_SHIM05.region =  +hex_WR_OU                   # Normal wrapper 
+
+c_l_CR_BAF_WRA_SHIM01.fill = Na_CR_In
+c_l_CR_BAF_WRA_SHIM02.fill = Ti316   
+c_l_CR_BAF_WRA_SHIM03.fill = Na_CR_In
+c_l_CR_BAF_WRA_SHIM04.fill = SS
+c_l_CR_BAF_WRA_SHIM05.fill = Na_CR_In
+
+u_CR_BAF_WRA_SHIM = openmc.Universe()
+u_CR_BAF_WRA_SHIM.add_cells([
+c_l_CR_BAF_WRA_SHIM01,
+c_l_CR_BAF_WRA_SHIM02,
+c_l_CR_BAF_WRA_SHIM03,
+c_l_CR_BAF_WRA_SHIM04,
+c_l_CR_BAF_WRA_SHIM05
+])
+
+# --- BOT+WRA
+
+c_l_CR_BOT_WRA_SHIM01 = openmc.Cell( name='c_l_CR_BOT_WRA_SHIM01')
+c_l_CR_BOT_WRA_SHIM02 = openmc.Cell( name='c_l_CR_BOT_WRA_SHIM02')
+c_l_CR_BOT_WRA_SHIM03 = openmc.Cell( name='c_l_CR_BOT_WRA_SHIM03')
+
+c_l_CR_BOT_WRA_SHIM01.region =  -hex_WR_IN                   # Normal wrapper 
+c_l_CR_BOT_WRA_SHIM02.region =  -hex_WR_OU     &  +hex_WR_IN  # Normal wrapper
+c_l_CR_BOT_WRA_SHIM03.region =  +hex_WR_OU                   # Normal wrapper
+
+c_l_CR_BOT_WRA_SHIM01.fill = Na_CR_In
+c_l_CR_BOT_WRA_SHIM02.fill = SS
+c_l_CR_BOT_WRA_SHIM03.fill = Na_CR_In
+
+
+u_CR_BOT_WRA_SHIM = openmc.Universe()
+u_CR_BOT_WRA_SHIM.add_cells([
+c_l_CR_BOT_WRA_SHIM01,
+c_l_CR_BOT_WRA_SHIM02,
+c_l_CR_BOT_WRA_SHIM03
+])
+
+
+#-----------------------------------------------------------------------------------
+# --- CR assembly NON-movable part
+#-----------------------------------------------------------------------------------
+c_l_CR_LSH1 = openmc.Cell( name='c_l_CR_LSH1')
+c_l_CR_LSH2 = openmc.Cell( name='c_l_CR_LSH2')
+c_l_CR_LSH3 = openmc.Cell( name='c_l_CR_LSH3')
+c_l_CR_LSH4 = openmc.Cell( name='c_l_CR_LSH4')
+
+c_l_CR_LSH1.region =  -cyl_CR_LSH
+c_l_CR_LSH2.region =  -hex_WR_IN & +cyl_CR_LSH
+c_l_CR_LSH3.region =  -hex_WR_OU &  +hex_WR_IN
+c_l_CR_LSH4.region =  +hex_WR_OU
+
+c_l_CR_LSH1.fill = SS 
+c_l_CR_LSH2.fill = Na_CR_In
+c_l_CR_LSH3.fill = SS   
+c_l_CR_LSH4.fill = Na_CR_In
+
+u_CR_LSH = openmc.Universe()
+u_CR_LSH.add_cells([
+c_l_CR_LSH1,
+c_l_CR_LSH2,
+c_l_CR_LSH3,
+c_l_CR_LSH4
+])

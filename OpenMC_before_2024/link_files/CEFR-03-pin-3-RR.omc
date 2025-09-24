@@ -1,0 +1,126 @@
+# -------------------------------------------------------
+# --- Pins - RR (regulating, safety,shim )
+# Type   I and II
+# -------------------------------------------------------
+
+# --- Type   I
+c_RR11 = openmc.Cell( name='c_RR11')
+c_RR12 = openmc.Cell( name='c_RR12')
+
+c_RR11.region = -cyl_RR_SS_T1
+c_RR12.region = +cyl_RR_SS_T1
+
+c_RR11.fill = SS_R1
+c_RR12.fill = Na_RR_In
+
+p_RR_T1 = openmc.Universe()
+p_RR_T1.add_cells([
+c_RR11, 
+c_RR12
+])
+
+# --- Type II
+c_RR21 = openmc.Cell( name='c_RR21')
+c_RR22 = openmc.Cell( name='c_RR22')
+
+c_RR21.region = -cyl_RR_SS_T1
+c_RR22.region = +cyl_RR_SS_T1
+
+c_RR21.fill = SS_R2
+c_RR22.fill = Na_RR_In
+
+p_RR_T2 = openmc.Universe()
+p_RR_T2.add_cells([
+c_RR21,
+c_RR22
+])
+
+# ___ Na pins
+# RR1 Na outlet 
+c_RR_NaOU = openmc.Cell( name='c_RR_NaOU')
+c_RR_NaOU.fill = Na_RR_Out
+p_RR_NaOU = openmc.Universe() 
+p_RR_NaOU.add_cells([c_RR_NaOU])
+
+# RR1 Na inlet
+c_RR_NaIN = openmc.Cell( name='c_RR_NaIN')
+c_RR_NaIN.fill = Na_RR_In
+p_RR_NaIN = openmc.Universe() 
+p_RR_NaIN.add_cells([c_RR_NaIN])
+
+# -------------------------------------------------------
+# --- Pins - RB (radial shield)
+# Type   I and II
+# -------------------------------------------------------
+#pin18
+c_RB11 = openmc.Cell( name='c_RB11')
+c_RB12 = openmc.Cell( name='c_RB12')
+c_RB13 = openmc.Cell( name='c_RB13')
+c_RB14 = openmc.Cell( name='c_RB14')
+
+c_RB11.region = -cyl_RB_B4C
+c_RB12.region = +cyl_RB_B4C & -cyl_RB_He
+c_RB13.region = +cyl_RB_He  & -cyl_RB_SS
+c_RB14.region = +cyl_RB_SS
+
+c_RB11.fill = B4Cnat2
+c_RB12.fill = He
+c_RB13.fill = SS
+c_RB14.fill = Na_RR_In
+
+p_RB = openmc.Universe()
+p_RB.add_cells([
+c_RB11, 
+c_RB12, 
+c_RB13, 
+c_RB14
+])
+
+# ___ Na pins
+# RB1 Na outlet 
+c_RB_NaOU = openmc.Cell( name='c_RB_NaOU')
+c_RB_NaOU.fill = Na_RR_Out
+p_RB_NaOU = openmc.Universe() 
+p_RB_NaOU.add_cells([c_RB_NaOU])
+
+# RB1 Na inlet
+c_RB_NaIN = openmc.Cell( name='c_RB_NaIN')
+c_RB_NaIN.fill = Na_RR_In
+p_RB_NaIN = openmc.Universe() 
+p_RB_NaIN.add_cells([c_RB_NaIN])
+
+# -------------------------------------------------------
+# --- Pins - Neutron source
+# -------------------------------------------------------
+#pin23
+c_NS1 = openmc.Cell( name='c_NS1')
+c_NS2 = openmc.Cell( name='c_NS2')
+c_NS3 = openmc.Cell( name='c_NS3')
+
+c_NS1.region = -cyl_NS_IN
+c_NS2.region = +cyl_NS_IN & -cyl_RR_SS_T1
+c_NS3.region = +cyl_RR_SS_T1 
+
+c_NS1.fill = Na_RR_In
+c_NS2.fill = SS_R1
+c_NS3.fill = Na_RR_In
+
+p_NS = openmc.Universe()
+p_NS.add_cells([
+c_NS1, 
+c_NS2, 
+c_NS3
+])
+
+# ___ Na pins
+# NS1 Na outlet 
+c_NS_NaOU = openmc.Cell( name='c_NS_NaOU')
+c_NS_NaOU.fill = Na_RR_Out
+p_NS_NaOU = openmc.Universe() 
+p_NS_NaOU.add_cells([c_NS_NaOU])
+
+# NS1 Na inlet
+c_NS_NaIN = openmc.Cell( name='c_NS_NaIN')
+c_NS_NaIN.fill = Na_RR_In
+p_NS_NaIN = openmc.Universe() 
+p_NS_NaIN.add_cells([c_NS_NaIN])

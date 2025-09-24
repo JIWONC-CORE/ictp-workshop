@@ -1,0 +1,263 @@
+# --- FUEL ASSEMBLY LATTICES 
+#
+# 11. Head                26.00 cm
+# 10. Upper shield        44.00 cm
+#  9. Upper connector      6.00 cm
+# ------ Fuel pin top ------------
+#  8. Top end plug         2.00 cm
+#  7. Spring               4.50 cm
+#  6. Upper blanket       10.00 cm
+#  5. Fissile             45.00 cm
+#  4. Lower blanket       25.00 cm
+#  3. Lower gas plenum    45.00 cm
+#  2. Bottom end plug      3.50 cm
+# ------ Fuel pin bottom ---------
+#  1. Lower connector     10.00 cm
+
+
+# -------------------------------------------------------
+# --- HEAD
+# -------------------------------------------------------
+c_l_FU_HEA_01 = openmc.Cell( name='c_l_FU_HEA_01')
+c_l_FU_HEA_02 = openmc.Cell( name='c_l_FU_HEA_02')
+c_l_FU_HEA_03 = openmc.Cell( name='c_l_FU_HEA_03')
+
+c_l_FU_HEA_01.region =  hex_HEA_IN 
+c_l_FU_HEA_02.region = ~hex_HEA_IN & hex_WR_OU
+c_l_FU_HEA_03.region = ~hex_WR_OU  
+
+c_l_FU_HEA_01.fill = Na_FU_Out
+c_l_FU_HEA_02.fill = Ti316
+c_l_FU_HEA_03.fill = Na_FU_OUT_bypass
+
+u_FU_HEA = openmc.Universe()
+u_FU_HEA.add_cells([c_l_FU_HEA_01, c_l_FU_HEA_02, c_l_FU_HEA_03])
+
+# -------------------------------------------------------
+# --- Upper shield (USH)
+# -------------------------------------------------------
+c_l_FU_USH_01 = openmc.Cell( name='c_l_FU_USH_01')
+c_l_FU_USH_02 = openmc.Cell( name='c_l_FU_USH_02')
+c_l_FU_USH_03 = openmc.Cell( name='c_l_FU_USH_03')
+
+c_l_FU_USH_01.region = -cyl_USH_hole
+c_l_FU_USH_02.region =  hex_WR_OU & +cyl_USH_hole
+c_l_FU_USH_03.region = ~hex_WR_OU
+
+c_l_FU_USH_01.fill = Na_FU_Out
+c_l_FU_USH_02.fill = Ti316
+c_l_FU_USH_03.fill = Na_FU_OUT_bypass
+
+u_FU_USH = openmc.Universe()
+u_FU_USH.add_cells([c_l_FU_USH_01, c_l_FU_USH_02, c_l_FU_USH_03])
+
+# -------------------------------------------------------
+# --- Upper connector (UCN)
+# -------------------------------------------------------
+c_l_FU_UCN_01 = openmc.Cell( name='c_l_FU_UCN_01')
+c_l_FU_UCN_02 = openmc.Cell( name='c_l_FU_UCN_02')
+c_l_FU_UCN_03 = openmc.Cell( name='c_l_FU_UCN_03')
+
+c_l_FU_UCN_01.region =  hex_UCN_IN
+c_l_FU_UCN_02.region =  hex_WR_OU & ~hex_UCN_IN
+c_l_FU_UCN_03.region = ~hex_WR_OU
+
+c_l_FU_UCN_01.fill = Na_FU_Out
+c_l_FU_UCN_02.fill = Ti316
+c_l_FU_UCN_03.fill = Na_FU_OUT_bypass
+
+u_FU_UCN = openmc.Universe()
+u_FU_UCN.add_cells([c_l_FU_UCN_01, c_l_FU_UCN_02, c_l_FU_UCN_03])
+
+# -------------------------------------------------------
+# --- Top end plug (TEP) 
+# -------------------------------------------------------
+l_FU_TEP = openmc.HexLattice()
+l_FU_TEP.center = [0., 0.]
+l_FU_TEP.pitch  = [ 0.695]
+l_FU_TEP.universes = \
+       [ [p_FU_TEP]*24, [p_FU_TEP]*18, [p_FU_TEP]*12, [p_FU_TEP]*6, [p_FU_TEP] ]
+l_FU_TEP.outer  = p_FU_NOU
+
+c_l_FU_TEP_01 = openmc.Cell( name='c_l_FU_TEP_01')
+c_l_FU_TEP_02 = openmc.Cell( name='c_l_FU_TEP_02')
+c_l_FU_TEP_03 = openmc.Cell( name='c_l_FU_TEP_03')
+
+c_l_FU_TEP_01.region =  hex_WR_IN
+c_l_FU_TEP_02.region =  hex_WR_OU & ~hex_WR_IN
+c_l_FU_TEP_03.region = ~hex_WR_OU
+
+c_l_FU_TEP_01.fill = l_FU_TEP
+c_l_FU_TEP_02.fill = Ti316
+c_l_FU_TEP_03.fill = Na_FU_OUT_bypass
+
+u_FU_TEP = openmc.Universe()
+u_FU_TEP.add_cells([c_l_FU_TEP_01, c_l_FU_TEP_02, c_l_FU_TEP_03])
+
+# -------------------------------------------------------
+# --- Spring (SPR)
+# -------------------------------------------------------
+l_FU_SPR = openmc.HexLattice()
+l_FU_SPR.center = [0., 0.]
+l_FU_SPR.pitch  = [ 0.695]
+l_FU_SPR.universes = \
+       [ [p_FU_SPR]*24, [p_FU_SPR]*18, [p_FU_SPR]*12, [p_FU_SPR]*6, [p_FU_SPR] ]
+l_FU_SPR.outer  = p_FU_NOU
+
+c_l_FU_SPR_01 = openmc.Cell( name='c_l_FU_SPR_01')
+c_l_FU_SPR_02 = openmc.Cell( name='c_l_FU_SPR_02')
+c_l_FU_SPR_03 = openmc.Cell( name='c_l_FU_SPR_03')
+
+c_l_FU_SPR_01.region =  hex_WR_IN
+c_l_FU_SPR_02.region =  hex_WR_OU & ~hex_WR_IN
+c_l_FU_SPR_03.region = ~hex_WR_OU
+
+c_l_FU_SPR_01.fill = l_FU_SPR
+c_l_FU_SPR_02.fill = Ti316
+c_l_FU_SPR_03.fill = Na_FU_OUT_bypass
+
+u_FU_SPR = openmc.Universe()
+u_FU_SPR.add_cells([c_l_FU_SPR_01, c_l_FU_SPR_02, c_l_FU_SPR_03])
+
+# -------------------------------------------------------
+# --- Upper fuel fertile/blanket (UBL)
+# -------------------------------------------------------
+l_FU_UBL = openmc.HexLattice()
+l_FU_UBL.center = [0., 0.]
+l_FU_UBL.pitch  = [ 0.695]
+l_FU_UBL.universes = \
+       [ [p_FU_UBL]*24, [p_FU_UBL]*18, [p_FU_UBL]*12, [p_FU_UBL]*6, [p_FU_UBL] ]
+l_FU_UBL.outer  = p_FU_NFE
+
+c_l_FU_UBL_01 = openmc.Cell( name='c_l_FU_UBL_01')
+c_l_FU_UBL_02 = openmc.Cell( name='c_l_FU_UBL_02')
+c_l_FU_UBL_03 = openmc.Cell( name='c_l_FU_UBL_03')
+
+c_l_FU_UBL_01.region =  hex_WR_IN
+c_l_FU_UBL_02.region =  hex_WR_OU & ~hex_WR_IN
+c_l_FU_UBL_03.region = ~hex_WR_OU
+
+c_l_FU_UBL_01.fill = l_FU_UBL
+c_l_FU_UBL_02.fill = Ti316
+c_l_FU_UBL_03.fill = Na_FU_OUT_bypass
+
+u_FU_UBL = openmc.Universe()
+u_FU_UBL.add_cells([c_l_FU_UBL_01, c_l_FU_UBL_02, c_l_FU_UBL_03])
+
+# -------------------------------------------------------
+# --- Fuel fissile (FIS)
+# -------------------------------------------------------
+l_FU_FIS = openmc.HexLattice()
+l_FU_FIS.center = [0., 0.]
+l_FU_FIS.pitch  = [ 0.695]
+l_FU_FIS.universes = \
+       [ [p_FU_FIS]*24, [p_FU_FIS]*18, [p_FU_FIS]*12, [p_FU_FIS]*6, [p_FU_FIS] ]
+l_FU_FIS.outer  = p_FU_NFI
+
+c_l_FU_FIS_01 = openmc.Cell( name='c_l_FU_FIS_01')
+c_l_FU_FIS_02 = openmc.Cell( name='c_l_FU_FIS_02')
+c_l_FU_FIS_03 = openmc.Cell( name='c_l_FU_FIS_03')
+
+c_l_FU_FIS_01.region =  hex_WR_IN
+c_l_FU_FIS_02.region =  hex_WR_OU & ~hex_WR_IN
+c_l_FU_FIS_03.region = ~hex_WR_OU
+
+c_l_FU_FIS_01.fill = l_FU_FIS
+c_l_FU_FIS_02.fill = Ti316
+c_l_FU_FIS_03.fill = Na_FU_FI_bypass
+
+u_FU_FIS = openmc.Universe()
+u_FU_FIS.add_cells([c_l_FU_FIS_01, c_l_FU_FIS_02, c_l_FU_FIS_03])
+
+# -------------------------------------------------------
+# --- Lower fuel fertile/blanket (LBL)
+# -------------------------------------------------------
+l_FU_LBL = openmc.HexLattice()
+l_FU_LBL.center = [0., 0.]
+l_FU_LBL.pitch  = [ 0.695]
+l_FU_LBL.universes = \
+       [ [p_FU_LBL]*24, [p_FU_LBL]*18, [p_FU_LBL]*12, [p_FU_LBL]*6, [p_FU_LBL] ]
+l_FU_LBL.outer  = p_FU_NFE
+
+c_l_FU_LBL_01 = openmc.Cell( name='c_l_FU_LBL_01')
+c_l_FU_LBL_02 = openmc.Cell( name='c_l_FU_LBL_02')
+c_l_FU_LBL_03 = openmc.Cell( name='c_l_FU_LBL_03')
+
+c_l_FU_LBL_01.region =  hex_WR_IN
+c_l_FU_LBL_02.region =  hex_WR_OU & ~hex_WR_IN
+c_l_FU_LBL_03.region = ~hex_WR_OU
+
+c_l_FU_LBL_01.fill = l_FU_LBL
+c_l_FU_LBL_02.fill = Ti316
+c_l_FU_LBL_03.fill = Na_FU_FE_bypass
+
+u_FU_LBL = openmc.Universe()
+u_FU_LBL.add_cells([c_l_FU_LBL_01, c_l_FU_LBL_02, c_l_FU_LBL_03])
+
+# -------------------------------------------------------
+# --- Lower gas plenum (LGP)
+# -------------------------------------------------------
+l_FU_LGP = openmc.HexLattice()
+l_FU_LGP.center = [0., 0.]
+l_FU_LGP.pitch  = [ 0.695]
+l_FU_LGP.universes = \
+       [ [p_FU_LGP]*24, [p_FU_LGP]*18, [p_FU_LGP]*12, [p_FU_LGP]*6, [p_FU_LGP] ]
+l_FU_LGP.outer  = p_FU_NIN
+
+c_l_FU_LGP_01 = openmc.Cell( name='c_l_FU_LGP_01')
+c_l_FU_LGP_02 = openmc.Cell( name='c_l_FU_LGP_02')
+c_l_FU_LGP_03 = openmc.Cell( name='c_l_FU_LGP_03')
+
+c_l_FU_LGP_01.region =  hex_WR_IN
+c_l_FU_LGP_02.region =  hex_WR_OU & ~hex_WR_IN
+c_l_FU_LGP_03.region = ~hex_WR_OU
+
+c_l_FU_LGP_01.fill = l_FU_LGP
+c_l_FU_LGP_02.fill = Ti316
+c_l_FU_LGP_03.fill = Na_FU_In_bypass
+
+u_FU_LGP = openmc.Universe()
+u_FU_LGP.add_cells([c_l_FU_LGP_01, c_l_FU_LGP_02, c_l_FU_LGP_03])
+
+# -------------------------------------------------------
+# --- Bottop end plug (BEP) 
+# -------------------------------------------------------
+l_FU_BEP = openmc.HexLattice()
+l_FU_BEP.center = [0., 0.]
+l_FU_BEP.pitch  = [ 0.695]
+l_FU_BEP.universes = \
+       [ [p_FU_BEP]*24, [p_FU_BEP]*18, [p_FU_BEP]*12, [p_FU_BEP]*6, [p_FU_BEP] ]
+l_FU_BEP.outer  = p_FU_NIN
+
+c_l_FU_BEP_01 = openmc.Cell( name='c_l_FU_BEP_01')
+c_l_FU_BEP_02 = openmc.Cell( name='c_l_FU_BEP_02')
+c_l_FU_BEP_03 = openmc.Cell( name='c_l_FU_BEP_03')
+
+c_l_FU_BEP_01.region =  hex_WR_IN
+c_l_FU_BEP_02.region =  hex_WR_OU & ~hex_WR_IN
+c_l_FU_BEP_03.region = ~hex_WR_OU
+
+c_l_FU_BEP_01.fill = l_FU_BEP
+c_l_FU_BEP_02.fill = Ti316
+c_l_FU_BEP_03.fill = Na_FU_In_bypass
+
+u_FU_BEP = openmc.Universe()
+u_FU_BEP.add_cells([c_l_FU_BEP_01, c_l_FU_BEP_02, c_l_FU_BEP_03])
+
+# -------------------------------------------------------
+# --- Lower connector (LCN)
+# -------------------------------------------------------
+c_l_FU_LCN_01 = openmc.Cell( name='c_l_FU_LCN_01')
+c_l_FU_LCN_02 = openmc.Cell( name='c_l_FU_LCN_02')
+c_l_FU_LCN_03 = openmc.Cell( name='c_l_FU_LCN_03')
+
+c_l_FU_LCN_01.region =  hex_LCN_IN 
+c_l_FU_LCN_02.region =  hex_WR_OU & ~hex_LCN_IN
+c_l_FU_LCN_03.region = ~hex_WR_OU  
+
+c_l_FU_LCN_01.fill = Na_FU_Out
+c_l_FU_LCN_02.fill = Ti316
+c_l_FU_LCN_03.fill = Na_FU_OUT_bypass
+
+u_FU_LCN = openmc.Universe()
+u_FU_LCN.add_cells([c_l_FU_LCN_01, c_l_FU_LCN_02, c_l_FU_LCN_03])

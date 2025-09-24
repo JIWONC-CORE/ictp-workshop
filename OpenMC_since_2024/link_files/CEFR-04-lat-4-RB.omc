@@ -1,0 +1,86 @@
+# --- Radial shield LATTICES and UNIVERSES
+#
+# -------------------------------------------------------
+# --- Upper SS shield
+# -------------------------------------------------------
+c_l_RB_USH1 = openmc.Cell( name='c_l_RB_USH1')
+c_l_RB_USH2 = openmc.Cell( name='c_l_RB_USH2')
+c_l_RB_USH3 = openmc.Cell( name='c_l_RB_USH3')
+c_l_RB_USH4 = openmc.Cell( name='c_l_RB_USH4')
+
+c_l_RB_USH1.region =  -cyl_RR_SS_T3
+c_l_RB_USH2.region =  -hex_WR_IN & +cyl_RR_SS_T3
+c_l_RB_USH3.region =  -hex_WR_OU &  +hex_WR_IN
+c_l_RB_USH4.region =  +hex_WR_OU
+
+c_l_RB_USH1.fill = Ti316
+c_l_RB_USH2.fill = Na_RR_In
+c_l_RB_USH3.fill = Ti316
+c_l_RB_USH4.fill = Na_RR_Out
+
+u_RB_USH = openmc.Universe()
+u_RB_USH.add_cells([c_l_RB_USH1,c_l_RB_USH2,c_l_RB_USH3,c_l_RB_USH4])
+
+# -------------------------------------------------------
+# --- Radial boron shield (7 rods)
+# -------------------------------------------------------                                                                                                                                                                                                                   
+l_RB = openmc.HexLattice()
+l_RB.center = [0., 0.]
+l_RB.pitch  = [2.07]
+l_RB.universes = \
+       [ [p_RB]*6, [p_RB] ]
+l_RB.outer  = p_RB_NaOU
+
+c_l_RB1_01 = openmc.Cell( name='c_l_RB1_01')
+c_l_RB1_02 = openmc.Cell( name='c_l_RB1_02')
+c_l_RB1_03 = openmc.Cell( name='c_l_RB1_03')
+
+c_l_RB1_01.region =  -hex_WR_IN
+c_l_RB1_02.region =  -hex_WR_OU &  +hex_WR_IN 
+c_l_RB1_03.region =  +hex_WR_OU
+
+c_l_RB1_01.fill = l_RB
+c_l_RB1_02.fill = Ti316
+c_l_RB1_03.fill = Na_RR_Out
+
+u_RB = openmc.Universe()
+u_RB.add_cells([c_l_RB1_01,c_l_RB1_02,c_l_RB1_03])
+
+# -------------------------------------------------------
+# --- Na plenum
+# -------------------------------------------------------
+c_l_RB_SPL2 = openmc.Cell( name='c_l_RB_SPL2')
+c_l_RB_SPL3 = openmc.Cell( name='c_l_RB_SPL3')
+c_l_RB_SPL4 = openmc.Cell( name='c_l_RB_SPL4')
+
+c_l_RB_SPL2.region =  -hex_WR_IN
+c_l_RB_SPL3.region =  -hex_WR_OU &  +hex_WR_IN
+c_l_RB_SPL4.region =  +hex_WR_OU
+
+c_l_RB_SPL2.fill = Na_RR_In
+c_l_RB_SPL3.fill = Ti316
+c_l_RB_SPL4.fill = Na_RR_Out
+
+u_RB_SPL = openmc.Universe()
+u_RB_SPL.add_cells([c_l_RB_SPL2,c_l_RB_SPL3,c_l_RB_SPL4])
+
+# -------------------------------------------------------
+# --- Lower SS shield
+# -------------------------------------------------------
+c_l_RB_LSH1 = openmc.Cell( name='c_l_RB_LSH1')
+c_l_RB_LSH2 = openmc.Cell( name='c_l_RB_LSH2')
+c_l_RB_LSH3 = openmc.Cell( name='c_l_RB_LSH3')
+c_l_RB_LSH4 = openmc.Cell( name='c_l_RB_LSH4')
+
+c_l_RB_LSH1.region =  -cyl_CR_LSH
+c_l_RB_LSH2.region =  -hex_WR_IN & +cyl_CR_LSH
+c_l_RB_LSH3.region =  -hex_WR_OU &  +hex_WR_IN
+c_l_RB_LSH4.region =  +hex_WR_OU
+
+c_l_RB_LSH1.fill = Ti316
+c_l_RB_LSH2.fill = Na_RR_In
+c_l_RB_LSH3.fill = Ti316
+c_l_RB_LSH4.fill = Na_RR_Out
+
+u_RB_LSH = openmc.Universe()
+u_RB_LSH.add_cells([c_l_RB_LSH1,c_l_RB_LSH2,c_l_RB_LSH3,c_l_RB_LSH4])

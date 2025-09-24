@@ -1,0 +1,143 @@
+# -------------------------------------------------------
+# --- RR assemblies
+# -------------------------------------------------------
+# --- RR1 - Type I 
+# -------------------------------------------------------
+
+c_R1_OUT = openmc.Cell( name='c_R1_OUT')
+c_R1_SHU = openmc.Cell( name='c_R1_SHU')
+c_R1_USP = openmc.Cell( name='c_R1_USP')
+c_R1_SSR = openmc.Cell( name='c_R1_SSR')
+c_R1_LSP = openmc.Cell( name='c_R1_LSP')
+c_R1_SHL = openmc.Cell( name='c_R1_SHL')
+
+c_R1_OUT.region =               +pz_RR1_SHU  # Outside        
+c_R1_SHU.region = -pz_RR1_SHU & +pz_RR1_USP  # Upper shield                 
+c_R1_USP.region = -pz_RR1_USP & +pz_RR1_SSR  # Na plenum                    
+c_R1_SSR.region = -pz_RR1_SSR & +pz_RR1_LSP  # SS rods cluster              
+c_R1_LSP.region = -pz_RR1_LSP & +pz_RR1_SHL  # Na plenum                    
+c_R1_SHL.region = -pz_RR1_SHL                # Lower shield   
+
+c_R1_OUT.fill = u_RR_USH
+c_R1_SHU.fill = u_RR_USH
+c_R1_USP.fill = u_RR_SPL
+c_R1_SSR.fill = u_RR_T1 
+c_R1_LSP.fill = u_RR_SPL
+c_R1_SHL.fill = u_RR_LSH
+
+c_R1_OUT.rotation = [0, 0, 90]
+c_R1_SHU.rotation = [0, 0, 90]
+c_R1_USP.rotation = [0, 0, 90]
+c_R1_SSR.rotation = [0, 0, 90]
+c_R1_LSP.rotation = [0, 0, 90]
+c_R1_SHL.rotation = [0, 0, 90]
+
+a_R1 = openmc.Universe()
+a_R1.add_cells([c_R1_OUT,
+                c_R1_SHU,
+                c_R1_USP,
+                c_R1_SSR,
+                c_R1_LSP,
+                c_R1_SHL])
+
+
+# -------------------------------------------------------
+# --- RR2 - Type II
+# -------------------------------------------------------
+#
+c_R2_OUT = openmc.Cell( name='c_R2_OUT')
+c_R2_SHU = openmc.Cell( name='c_R2_SHU')
+c_R2_USP = openmc.Cell( name='c_R2_USP')
+c_R2_SSR = openmc.Cell( name='c_R2_SSR')
+c_R2_LSP = openmc.Cell( name='c_R2_LSP')
+c_R2_SHL = openmc.Cell( name='c_R2_SHL')
+
+c_R2_OUT.region =               +pz_RR1_SHU  # Outside        
+c_R2_SHU.region = -pz_RR1_SHU & +pz_RR1_USP  # Upper shield                 
+c_R2_USP.region = -pz_RR1_USP & +pz_RR1_SSR  # Na plenum                    
+c_R2_SSR.region = -pz_RR1_SSR & +pz_RR1_LSP  # SS rods cluster              
+c_R2_LSP.region = -pz_RR1_LSP & +pz_RR1_SHL  # Na plenum                    
+c_R2_SHL.region = -pz_RR1_SHL                # Lower shield   
+
+c_R2_OUT.fill = u_RR_USH
+c_R2_SHU.fill = u_RR_USH
+c_R2_USP.fill = u_RR_SPL
+c_R2_SSR.fill = u_RR_T2 
+c_R2_LSP.fill = u_RR_SPL
+c_R2_SHL.fill = u_RR_LSH
+
+c_R2_OUT.rotation = [0, 0, 90]
+c_R2_SHU.rotation = [0, 0, 90]
+c_R2_USP.rotation = [0, 0, 90]
+c_R2_SSR.rotation = [0, 0, 90]
+c_R2_LSP.rotation = [0, 0, 90]
+c_R2_SHL.rotation = [0, 0, 90]
+
+a_R2 = openmc.Universe()
+a_R2.add_cells([c_R2_OUT,
+                c_R2_SHU,
+                c_R2_USP,
+                c_R2_SSR,
+                c_R2_LSP,
+                c_R2_SHL])
+
+# -------------------------------------------------------
+# --- RR3 - Type III 
+# -------------------------------------------------------
+#
+c_R3_OUT = openmc.Cell( name='c_R3_OUT')
+c_R3_RR3 = openmc.Cell( name='c_R3_RR3')
+c_R3_LSP = openmc.Cell( name='c_R3_LSP')
+c_R3_SHL = openmc.Cell( name='c_R3_SHL')
+
+c_R3_OUT.region =               +pz_RR2_SHU   # Outside
+c_R3_RR3.region = -pz_RR2_SHU & +pz_RR2_LSP   # Upper shield
+c_R3_LSP.region = -pz_RR2_LSP & +pz_RR2_SHL   # Na plenum
+c_R3_SHL.region = -pz_RR2_SHL                 # Lower shield
+
+c_R3_OUT.fill = u_RR_USH
+c_R3_RR3.fill = u_RR_T3 
+c_R3_LSP.fill = u_RR_SPL
+c_R3_SHL.fill = u_RR_LSH
+
+c_R3_OUT.rotation = [0, 0, 90]
+c_R3_RR3.rotation = [0, 0, 90]
+c_R3_LSP.rotation = [0, 0, 90]
+c_R3_SHL.rotation = [0, 0, 90]
+
+a_R3 = openmc.Universe()
+a_R3.add_cells([c_R3_OUT,
+                c_R3_RR3,
+                c_R3_LSP,
+                c_R3_SHL])
+
+# -------------------------------------------------------
+# --- RR4 - Type IV 
+# -------------------------------------------------------
+#
+c_R4_OUT = openmc.Cell( name='c_R4_OUT')
+c_R4_RR3 = openmc.Cell( name='c_R4_RR3')
+c_R4_LSP = openmc.Cell( name='c_R4_LSP')
+c_R4_SHL = openmc.Cell( name='c_R4_SHL')
+
+c_R4_OUT.region =               +pz_RR2_SHU   # Outside
+c_R4_RR3.region = -pz_RR2_SHU & +pz_RR2_LSP   # Upper shield
+c_R4_LSP.region = -pz_RR2_LSP & +pz_RR2_SHL   # Na plenum
+c_R4_SHL.region = -pz_RR2_SHL                 # Lower shield
+
+c_R4_OUT.fill = u_RR_USH
+c_R4_RR3.fill = u_RR_T4 
+c_R4_LSP.fill = u_RR_SPL
+c_R4_SHL.fill = u_RR_LSH
+
+c_R4_OUT.rotation = [0, 0, 90]
+c_R4_RR3.rotation = [0, 0, 90]
+c_R4_LSP.rotation = [0, 0, 90]
+c_R4_SHL.rotation = [0, 0, 90]
+
+a_R4 = openmc.Universe()
+a_R4.add_cells([c_R4_OUT,
+                c_R4_RR3,
+                c_R4_LSP,
+                c_R4_SHL])
+

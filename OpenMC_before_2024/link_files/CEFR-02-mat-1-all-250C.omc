@@ -1,0 +1,284 @@
+###############################################################################
+#                 Exporting to OpenMC materials.xml file
+###############################################################################
+
+# Instantiate some Materials and register the appropriate Nuclides
+
+# UO2 for Fuel 
+# --- UOF at T=250.0 deg-C
+UOF = openmc.Material( name='UOF')
+UOF.temperature=523.15
+UOF.set_density('atom/b-cm',density=7.02131E-02)
+UOF.add_nuclide('U235',1.49981E-02) # 92235
+UOF.add_nuclide('U238',8.26381E-03) # 92238
+UOF.add_nuclide('O16', 4.69512E-02) # 8016
+
+# UO2 for Blanket
+# --- UOB at T=250.0 deg-C
+UOB = openmc.Material( name='UOB')
+UOB.temperature=523.15
+UOB.set_density('atom/b-cm',density=7.01095E-02)
+UOB.add_nuclide('U235',1.04432E-04) # 92235
+UOB.add_nuclide('U238',2.30457E-02) # 92238
+UOB.add_nuclide('O16', 4.69594E-02) # 8016
+
+# 15-15Ti Stainless Steel
+# --- SS at T=250.0 deg-C
+SS = openmc.Material( name='SS')
+SS.temperature=523.15
+SS.set_density('atom/b-cm',density=8.49843E-02)
+SS.add_nuclide('Fe54' ,3.18736E-03 ) # 26054
+SS.add_nuclide('Fe56' ,5.00347E-02 ) # 26056
+SS.add_nuclide('Fe57' ,1.15552E-03 ) # 26057
+SS.add_nuclide('Fe58' ,1.53779E-04 ) # 26058
+SS.add_nuclide('Cr50' ,6.43727E-04 ) # 24050
+SS.add_nuclide('Cr52' ,1.24136E-02 ) # 24052
+SS.add_nuclide('Cr53' ,1.40761E-03 ) # 24053
+SS.add_nuclide('Cr54' ,3.50383E-04 ) # 24054
+SS.add_nuclide('Ni58' ,8.11014E-03 ) # 28058
+SS.add_nuclide('Ni60' ,3.12399E-03 ) # 28060
+SS.add_nuclide('Ni61' ,1.35798E-04 ) # 28061
+SS.add_nuclide('Ni62' ,4.32997E-04 ) # 28062
+SS.add_nuclide('Ni64' ,1.10257E-04 ) # 28064
+SS.add_nuclide('Mo92' ,1.57916E-04 ) # 42092
+SS.add_nuclide('Mo94' ,9.94445E-05 ) # 42094
+SS.add_nuclide('Mo95' ,1.72153E-04 ) # 42095
+SS.add_nuclide('Mo96' ,1.81174E-04 ) # 42096
+SS.add_nuclide('Mo97' ,1.04335E-04 ) # 42097
+SS.add_nuclide('Mo98' ,2.65077E-04 ) # 42098
+SS.add_nuclide('Mo100',1.06726E-04 ) # 42100
+SS.add_nuclide('Mn55' ,1.29433E-03 ) # 25055
+SS.add_nuclide('C0'   ,2.37026E-04 ) # 6000
+SS.add_nuclide('Ti46' ,2.85966E-05 ) # 22046
+SS.add_nuclide('Ti47' ,2.57889E-05 ) # 22047
+SS.add_nuclide('Ti48' ,2.55532E-04 ) # 22048
+SS.add_nuclide('Ti49' ,1.87524E-05 ) # 22049
+SS.add_nuclide('Ti50' ,1.79552E-05 ) # 22050
+SS.add_nuclide('Si28' ,7.00451E-04 ) # 14028
+SS.add_nuclide('Si29' ,3.55834E-05 ) # 14029
+SS.add_nuclide('Si30' ,2.34843E-05 ) # 14030
+
+# Ti316 Stainless Steel
+# --- 316Ti at T=250.0 deg-C
+Ti316 = openmc.Material( name='Ti316')
+Ti316.temperature=523.15
+Ti316.set_density('atom/b-cm',density=8.54309E-02)
+Ti316.add_nuclide('Fe54' ,3.23855E-03 ) # 26054.03c
+Ti316.add_nuclide('Fe56' ,5.08384E-02 ) # 26056.03c
+Ti316.add_nuclide('Fe57' ,1.17408E-03 ) # 26057.03c
+Ti316.add_nuclide('Fe58' ,1.56248E-04 ) # 26058.03c
+Ti316.add_nuclide('Cr50' ,6.74283E-04 ) # 24050.03c
+Ti316.add_nuclide('Cr52' ,1.30029E-02 ) # 24052.03c
+Ti316.add_nuclide('Cr53' ,1.47442E-03 ) # 24053.03c
+Ti316.add_nuclide('Cr54' ,3.67015E-04 ) # 24054.03c
+Ti316.add_nuclide('Ni58' ,6.88162E-03 ) # 28058.03c
+Ti316.add_nuclide('Ni60' ,2.65077E-03 ) # 28060.03c
+Ti316.add_nuclide('Ni61' ,1.15228E-04 ) # 28061.03c
+Ti316.add_nuclide('Ni62' ,3.67407E-04 ) # 28062.03c
+Ti316.add_nuclide('Ni64' ,9.35550E-05 ) # 28064.03c
+Ti316.add_nuclide('Mo92' ,1.79675E-04 ) # 42092.03c
+Ti316.add_nuclide('Mo94' ,1.13147E-04 ) # 42094.03c
+Ti316.add_nuclide('Mo95' ,1.95874E-04 ) # 42095.03c
+Ti316.add_nuclide('Mo96' ,2.06138E-04 ) # 42096.03c
+Ti316.add_nuclide('Mo97' ,1.18712E-04 ) # 42097.03c
+Ti316.add_nuclide('Mo98' ,3.01602E-04 ) # 42098.03c
+Ti316.add_nuclide('Mo100',1.21432E-04 ) # 42100.03c
+Ti316.add_nuclide('Mn55' ,1.51194E-03 ) # 25055.03c
+Ti316.add_nuclide('C0'   ,2.37324E-04 ) #  6000.03c
+Ti316.add_nuclide('Ti46' ,3.27229E-05 ) # 22046.03c
+Ti316.add_nuclide('Ti47' ,2.95101E-05 ) # 22047.03c
+Ti316.add_nuclide('Ti48' ,2.92403E-04 ) # 22048.03c
+Ti316.add_nuclide('Ti49' ,2.14583E-05 ) # 22049.03c
+Ti316.add_nuclide('Ti50' ,2.05460E-05 ) # 22050.03c
+Ti316.add_nuclide('Si28' ,9.35106E-04 ) # 14028.03c
+Ti316.add_nuclide('Si29' ,4.75041E-05 ) # 14029.03c
+Ti316.add_nuclide('Si30' ,3.13517E-05 ) # 14030.03c
+
+# -------------------------------------------------------
+# --- B4C in different locations
+# -------------------------------------------------------
+# B4C 92.0 % for Control rod 
+# Enriched B for control rods (92.0%)
+# --- B4Cenr at T=250.0 deg-C
+B4Cenr = openmc.Material( name='B4Cenr')
+B4Cenr.temperature=523.15
+B4Cenr.set_density('atom/b-cm',density=1.14461E-01)
+B4Cenr.add_nuclide('B10',8.42435E-02) # 5010
+B4Cenr.add_nuclide('B11',7.32552E-03) # 5011
+B4Cenr.add_nuclide('C0', 2.28923E-02) # 6000
+
+# B4C 19.6 % (Nat.) for Control rod 
+# Natural B for control rods (19.6%)
+# --- B4Cnat at T=250.0 deg-C
+B4Cnat1 = openmc.Material( name='B4Cnat1')
+B4Cnat1.temperature=523.15
+B4Cnat1.set_density('atom/b-cm',density=1.07527E-01)
+B4Cnat1.add_nuclide('B10',1.68602E-02) # 5010
+B4Cnat1.add_nuclide('B11',6.91612E-02) # 5011
+B4Cnat1.add_nuclide('C0', 2.15054E-02) # 6000
+
+# B4C 19.8 % for Boron Shielding
+# Natural B for boron shielding (19.8%)
+# --- B4Cnat at T=250.0 deg-C
+B4Cnat2 = openmc.Material( name='B4Cnat2')
+B4Cnat2.temperature=523.15
+B4Cnat2.set_density('atom/b-cm',density=1.14405E-01)
+B4Cnat2.add_nuclide('B10',1.81217E-02) # 5010
+B4Cnat2.add_nuclide('B11',7.34021E-02) # 5011
+B4Cnat2.add_nuclide('C0', 2.28809E-02) # 6000
+
+# -------------------------------------------------------
+# --- AIR in different locations
+# -------------------------------------------------------
+He = openmc.Material( name='He')
+He.temperature=523.15
+He.set_density('sum')
+He.add_nuclide('O16',1.00000E-11)
+
+vacuum = openmc.Material( name='vacuum')
+vacuum.temperature=523.15
+vacuum.set_density('sum')
+vacuum.add_nuclide('O16',1.00000E-23)
+
+
+# -------------------------------------------------------
+# --- Sodium in different locations
+# -------------------------------------------------------
+#T       20°C        470°C     545°C
+#ND   2.48851E-02 2.19235E-02 2.14078E-02
+
+# --- Na in inner fuel
+# Outlet 
+Na_FU_Out = openmc.Material( name='Na_FU_Out')
+Na_FU_Out.temperature=523.15
+Na_FU_Out.set_density('sum')
+Na_FU_Out.add_nuclide('Na23',2.33599E-02)
+
+# Fissile
+Na_FU_FI = openmc.Material( name='Na_FU_FI')
+Na_FU_FI.temperature=523.15
+Na_FU_FI.set_density('sum')
+Na_FU_FI.add_nuclide('Na23',2.33599E-02)
+
+# Fertile
+Na_FU_FE = openmc.Material( name='Na_FU_FE')
+Na_FU_FE.temperature=523.15
+Na_FU_FE.set_density('sum')
+Na_FU_FE.add_nuclide('Na23',2.33599E-02)
+
+# Inlet
+Na_FU_In = openmc.Material( name='Na_FU_In')
+Na_FU_In.temperature=523.15
+Na_FU_In.set_density('sum')
+Na_FU_In.add_nuclide('Na23',2.33599E-02)
+
+# - Bypass Na outside S/A wrapper
+# Outlet 
+Na_FU_OUT_bypass = openmc.Material( name='Na_FU_OUT_bypass')
+Na_FU_OUT_bypass.temperature=523.15
+Na_FU_OUT_bypass.set_density('sum')
+Na_FU_OUT_bypass.add_nuclide('Na23',2.33599E-02)
+
+# Fissile
+Na_FU_FI_bypass = openmc.Material( name='Na_FU_FI_bypass')
+Na_FU_FI_bypass.temperature=523.15
+Na_FU_FI_bypass.set_density('sum')
+Na_FU_FI_bypass.add_nuclide('Na23',2.33599E-02)
+
+# Fertile
+Na_FU_FE_bypass = openmc.Material( name='Na_FU_FE_bypass')
+Na_FU_FE_bypass.temperature=523.15
+Na_FU_FE_bypass.set_density('sum')
+Na_FU_FE_bypass.add_nuclide('Na23',2.33599E-02)
+
+# Inlet
+Na_FU_In_bypass = openmc.Material( name='Na_FU_In_bypass')
+Na_FU_In_bypass.temperature=523.15
+Na_FU_In_bypass.set_density('sum')
+Na_FU_In_bypass.add_nuclide('Na23',2.33599E-02)
+
+
+# --- Na in CR
+# CSD Na outlet  
+Na_CR_Out = openmc.Material( name='Na_CR_Out')
+Na_CR_Out.temperature=523.15
+Na_CR_Out.set_density('sum')
+Na_CR_Out.add_nuclide('Na23',2.33599E-02)
+
+# CSD Na inlet
+Na_CR_In = openmc.Material( name='Na_CR_In')
+Na_CR_In.temperature=523.15
+Na_CR_In.set_density('sum')
+Na_CR_In.add_nuclide('Na23',2.33599E-02)
+
+# --- Na in R1(=R2) and R3
+# DSD Na outlet  
+Na_RR_In = openmc.Material( name='Na_RR_In')
+Na_RR_In.temperature=523.15
+Na_RR_In.set_density('sum')
+Na_RR_In.add_nuclide('Na23',2.33599E-02)
+
+# DSD Na inlet
+Na_RR_Out = openmc.Material( name='Na_RR_Out')
+Na_RR_Out.temperature=523.15
+Na_RR_Out.set_density('sum')
+Na_RR_Out.add_nuclide('Na23',2.33599E-02)
+
+# -------------------------------------------------------
+# --- Homogeneous mixtures
+# -------------------------------------------------------
+# ---    OpenMC format
+# ---    <matname> = openmc.Material.mix_materials ([<mat1>,<mat2>, ...], [<frac1>,<frac2>, ...], 'xx')
+# ---    'xx': Mass fractions are entered with 'wo', and volume fractions with 'vo'.
+#
+# SS Mixture 
+SS_R1 = openmc.Material.mix_materials([Ti316], [1.00], 'vo', name='SS_R1')
+SS_R1.temperature=523.15
+SS_R2 = openmc.Material.mix_materials([Ti316], [1.00], 'vo', name='SS_R2')
+SS_R2.temperature=523.15
+SS_R3 = openmc.Material.mix_materials([Ti316], [1.00], 'vo', name='SS_R3')
+SS_R3.temperature=523.15
+SS_R4 = openmc.Material.mix_materials([Ti316], [1.00], 'vo', name='SS_R3')
+SS_R4.temperature=523.15
+
+# --- Homogeneous spring-NA
+HOMOG_SPR_FU = openmc.Material.mix_materials([Ti316,He], [0.173,0.827], 'vo', name='HOMOG_SPR_FU')
+HOMOG_SPR_FU.temperature=523.15
+
+# --- Homogeneous SS-NA-connector
+HOMOG_CR_CON = openmc.Material.mix_materials([Ti316,Na_CR_In], [0.333333,0.666664], 'vo', name='HOMOG_CR_CON')  
+HOMOG_CR_CON.temperature=523.15
+
+materials_file = openmc.Materials([
+UOF,
+UOB,
+SS,
+Ti316,
+B4Cnat1,
+B4Cenr,
+B4Cnat2,
+He,
+vacuum,
+Na_FU_Out,
+Na_FU_FI,
+Na_FU_FE,
+Na_FU_In,
+Na_FU_OUT_bypass,
+Na_FU_FI_bypass,
+Na_FU_FE_bypass,
+Na_FU_In_bypass,
+Na_CR_Out,
+Na_CR_In,
+Na_RR_In,
+Na_RR_Out,
+SS_R1, 
+SS_R2, 
+SS_R3, 
+SS_R4, 
+HOMOG_SPR_FU,
+HOMOG_CR_CON
+])
+
+materials_file.cross_sections = '../../OpenMCLib/cross_sections.xml'
+materials_file.export_to_xml()
+

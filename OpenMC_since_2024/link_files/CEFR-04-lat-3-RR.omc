@@ -1,0 +1,184 @@
+# --- RR LATTICES and UNIVERSES
+#
+# -------------------------------------------------------
+# --- Upper shield
+c_l_RR_USH1 = openmc.Cell( name='c_l_RR_USH1')
+c_l_RR_USH2 = openmc.Cell( name='c_l_RR_USH2')
+c_l_RR_USH3 = openmc.Cell( name='c_l_RR_USH3')
+c_l_RR_USH4 = openmc.Cell( name='c_l_RR_USH4')
+
+c_l_RR_USH1.region = -cyl_RR_SS_T3
+c_l_RR_USH2.region = +cyl_RR_SS_T3 & -hex_WR_IN
+c_l_RR_USH3.region =  +hex_WR_IN    & -hex_WR_OU
+c_l_RR_USH4.region =  +hex_WR_OU
+
+c_l_RR_USH1.fill = Ti316
+c_l_RR_USH2.fill = Na_RR_In
+c_l_RR_USH3.fill = Ti316
+c_l_RR_USH4.fill = Na_RR_Out
+
+u_RR_USH = openmc.Universe()
+u_RR_USH.add_cells([
+c_l_RR_USH1,
+c_l_RR_USH2,
+c_l_RR_USH3,
+c_l_RR_USH4
+])
+
+# -------------------------------------------------------
+# --- Reflector rods T1 = Type   I(7 rods)
+# -------------------------------------------------------                                                                                                                                                                                                                   
+l_RR_T1 = openmc.HexLattice()
+l_RR_T1.center = [0., 0.]
+l_RR_T1.pitch  = [2.07]
+l_RR_T1.universes = \
+       [ [p_RR_T1]*6, [p_RR_T1] ]
+l_RR_T1.outer  = p_RR_NaOU
+
+c_l_RR1_01 = openmc.Cell( name='c_l_RR1_01')
+c_l_RR1_02 = openmc.Cell( name='c_l_RR1_02')
+c_l_RR1_03 = openmc.Cell( name='c_l_RR1_03')
+
+c_l_RR1_01.region =  -hex_WR_IN
+c_l_RR1_02.region =  -hex_WR_OU &  +hex_WR_IN 
+c_l_RR1_03.region =  +hex_WR_OU
+
+c_l_RR1_01.fill = l_RR_T1
+c_l_RR1_02.fill = Ti316
+c_l_RR1_03.fill = Na_RR_Out
+
+u_RR_T1 = openmc.Universe()
+u_RR_T1.add_cells([
+c_l_RR1_01,
+c_l_RR1_02,
+c_l_RR1_03
+])
+
+# -------------------------------------------------------
+# --- Reflector rods T2 = Type   II (7 rods)
+# -------------------------------------------------------                                                                                                                                                                                                                   
+l_RR_T2 = openmc.HexLattice()
+l_RR_T2.center = [0., 0.]
+l_RR_T2.pitch  = [2.07]
+l_RR_T2.universes = \
+       [ [p_RR_T2]*6, [p_RR_T2] ]
+l_RR_T2.outer  = p_RR_NaOU
+
+c_l_RR2_01 = openmc.Cell( name='c_l_RR2_01')
+c_l_RR2_02 = openmc.Cell( name='c_l_RR2_02')
+c_l_RR2_03 = openmc.Cell( name='c_l_RR2_03')
+
+c_l_RR2_01.region =  -hex_WR_IN
+c_l_RR2_02.region =  -hex_WR_OU &  +hex_WR_IN 
+c_l_RR2_03.region =  +hex_WR_OU
+
+c_l_RR2_01.fill = l_RR_T2
+c_l_RR2_02.fill = Ti316
+c_l_RR2_03.fill = Na_RR_Out
+
+u_RR_T2 = openmc.Universe()
+u_RR_T2.add_cells([
+c_l_RR2_01,
+c_l_RR2_02,
+c_l_RR2_03
+])
+
+# -------------------------------------------------------
+# --- Reflector rods T3 = Type III (Single rod)
+# -------------------------------------------------------                                                                                                                                                                                                                   
+c_l_RR3_01 = openmc.Cell( name='c_l_RR3_01')
+c_l_RR3_02 = openmc.Cell( name='c_l_RR3_02')
+c_l_RR3_03 = openmc.Cell( name='c_l_RR3_03')
+c_l_RR3_04 = openmc.Cell( name='c_l_RR3_04')
+
+c_l_RR3_01.region =  -cyl_RR_SS_T3
+c_l_RR3_02.region =  -hex_WR_IN & +cyl_RR_SS_T3
+c_l_RR3_03.region =  -hex_WR_OU &  +hex_WR_IN
+c_l_RR3_04.region =  +hex_WR_OU
+
+c_l_RR3_01.fill = SS_R3
+c_l_RR3_02.fill = Na_RR_In
+c_l_RR3_03.fill = Ti316
+c_l_RR3_04.fill = Na_RR_Out
+
+u_RR_T3 = openmc.Universe()
+u_RR_T3.add_cells([
+c_l_RR3_01,
+c_l_RR3_02,
+c_l_RR3_03,
+c_l_RR3_04
+])
+
+# -------------------------------------------------------
+# --- Reflector rods T4 = Type IV (Single rod)
+# -------------------------------------------------------                                                                                                                                                                                                                   
+c_l_RR4_01 = openmc.Cell( name='c_l_RR4_01')
+c_l_RR4_02 = openmc.Cell( name='c_l_RR4_02')
+c_l_RR4_03 = openmc.Cell( name='c_l_RR4_03')
+c_l_RR4_04 = openmc.Cell( name='c_l_RR4_04')
+
+c_l_RR4_01.region =  -cyl_RR_SS_T3
+c_l_RR4_02.region =  -hex_WR_IN & +cyl_RR_SS_T3
+c_l_RR4_03.region =  -hex_WR_OU &  +hex_WR_IN
+c_l_RR4_04.region =  +hex_WR_OU
+
+c_l_RR4_01.fill = SS_R4
+c_l_RR4_02.fill = Na_RR_In
+c_l_RR4_03.fill = Ti316
+c_l_RR4_04.fill = Na_RR_Out
+
+u_RR_T4 = openmc.Universe()
+u_RR_T4.add_cells([
+c_l_RR4_01,
+c_l_RR4_02,
+c_l_RR4_03,
+c_l_RR4_04
+])
+
+# -------------------------------------------------------
+# --- Na plenum
+# -------------------------------------------------------
+c_l_RR_SPL2 = openmc.Cell( name='c_l_RR_SPL2')
+c_l_RR_SPL3 = openmc.Cell( name='c_l_RR_SPL3')
+c_l_RR_SPL4 = openmc.Cell( name='c_l_RR_SPL4')
+
+c_l_RR_SPL2.region =  -hex_WR_IN
+c_l_RR_SPL3.region =  -hex_WR_OU &  +hex_WR_IN
+c_l_RR_SPL4.region =  +hex_WR_OU
+
+c_l_RR_SPL2.fill = Na_RR_In
+c_l_RR_SPL3.fill = Ti316
+c_l_RR_SPL4.fill = Na_RR_Out
+
+u_RR_SPL = openmc.Universe()
+u_RR_SPL.add_cells([
+c_l_RR_SPL2,
+c_l_RR_SPL3,
+c_l_RR_SPL4
+])
+
+# -------------------------------------------------------
+# --- Lower shield
+# -------------------------------------------------------
+c_l_RR_LSH1 = openmc.Cell( name='c_l_RR_LSH1')
+c_l_RR_LSH2 = openmc.Cell( name='c_l_RR_LSH2')
+c_l_RR_LSH3 = openmc.Cell( name='c_l_RR_LSH3')
+c_l_RR_LSH4 = openmc.Cell( name='c_l_RR_LSH4')
+
+c_l_RR_LSH1.region =  -cyl_CR_LSH
+c_l_RR_LSH2.region =  -hex_WR_IN & +cyl_CR_LSH
+c_l_RR_LSH3.region =  -hex_WR_OU &  +hex_WR_IN
+c_l_RR_LSH4.region =  +hex_WR_OU
+
+c_l_RR_LSH1.fill = Ti316
+c_l_RR_LSH2.fill = Na_RR_In
+c_l_RR_LSH3.fill = Ti316
+c_l_RR_LSH4.fill = Na_RR_Out
+
+u_RR_LSH = openmc.Universe()
+u_RR_LSH.add_cells([
+c_l_RR_LSH1,
+c_l_RR_LSH2,
+c_l_RR_LSH3,
+c_l_RR_LSH4
+])

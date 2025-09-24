@@ -1,0 +1,46 @@
+# -------------------------------------------------------
+# --- Neutron Source assembly
+# -------------------------------------------------------
+                                                            
+
+c_NS_OUT = openmc.Cell( name='c_NS_OUT')
+c_NS_SHU = openmc.Cell( name='c_NS_SHU')
+c_NS_USP = openmc.Cell( name='c_NS_USP')
+c_NS_SSR = openmc.Cell( name='c_NS_SSR')
+c_NS_NSR = openmc.Cell( name='c_NS_NSR')
+c_NS_LSP = openmc.Cell( name='c_NS_LSP')
+c_NS_SHL = openmc.Cell( name='c_NS_SHL')
+
+c_NS_OUT.region =              +pz_NS_SHU  # Outside
+c_NS_SHU.region = -pz_NS_SHU & +pz_NS_USP  # Upper shield
+c_NS_USP.region = -pz_NS_USP & +pz_NS_SSR  # Na plenum 
+c_NS_SSR.region = -pz_NS_SSR & +pz_NS_NSR  # SS rods cluster
+c_NS_NSR.region = -pz_NS_NSR & +pz_NS_LSP  # NS rods cluster
+c_NS_LSP.region = -pz_NS_LSP & +pz_NS_SHL  # Na plenum  
+c_NS_SHL.region = -pz_NS_SHL               # Lower shield 
+
+c_NS_OUT.fill = u_RR_USH
+c_NS_SHU.fill = u_RR_USH
+c_NS_USP.fill = u_RR_SPL
+c_NS_SSR.fill = u_RR_T1 
+c_NS_NSR.fill = u_NS    
+c_NS_LSP.fill = u_RR_SPL
+c_NS_SHL.fill = u_RR_LSH
+
+c_NS_OUT.rotation = [0, 0, 90]
+c_NS_SHU.rotation = [0, 0, 90]
+c_NS_USP.rotation = [0, 0, 90]
+c_NS_SSR.rotation = [0, 0, 90]
+c_NS_NSR.rotation = [0, 0, 90]
+c_NS_LSP.rotation = [0, 0, 90]
+c_NS_SHL.rotation = [0, 0, 90]
+
+a_NS = openmc.Universe()
+a_NS.add_cells([c_NS_OUT,
+                c_NS_SHU,
+                c_NS_USP,
+                c_NS_SSR,
+                c_NS_NSR,
+                c_NS_LSP,
+                c_NS_SHL])
+

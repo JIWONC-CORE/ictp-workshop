@@ -1,0 +1,84 @@
+# -------------------------------------------------------
+# --- 3D fuel assembly
+# -------------------------------------------------------
+#
+
+#cell  c_FU_OUT  a_FU  fill u_FU_HEA  pz_FUEL_HEA                 # 12. Outside             20 deg-C    250 deg-C      
+#cell  c_FU_HEA  a_FU  fill u_FU_HEA  pz_FUEL_USH -pz_FUEL_HEA    # 11. Head                26.00 cm    26.108 cm
+#cell  c_FU_USH  a_FU  fill u_FU_USH  pz_FUEL_UCN -pz_FUEL_USH    # 10. Upper shield        44.00 cm    44.182 cm
+#cell  c_FU_UCN  a_FU  fill u_FU_UCN  pz_FUEL_TEP -pz_FUEL_UCN    #  9. Upper connector      6.00 cm     6.025 cm
+#cell  c_FU_TEP  a_FU  fill u_FU_TEP  pz_FUEL_SPR -pz_FUEL_TEP    #  8. Top end plug         2.00 cm     2.008 cm
+#cell  c_FU_SPR  a_FU  fill u_FU_SPR  pz_FUEL_UBL -pz_FUEL_SPR    #  7. Spring               4.50 cm     4.519 cm
+#cell  c_FU_UBL  a_FU  fill u_FU_UBL  pz_FUEL_FIS -pz_FUEL_UBL    #  6. Upper blanket       10.00 cm    10.023 cm
+#cell  c_FU_FIS  a_FU  fill u_FU_FIS  pz_FUEL_LBL -pz_FUEL_FIS    #  5. Fissile             45.00 cm    45.114 cm
+#cell  c_FU_LBL  a_FU  fill u_FU_LBL  pz_FUEL_LGP -pz_FUEL_LBL    #  4. Lower blanket       25.00 cm    25.058 cm
+#cell  c_FU_LGP  a_FU  fill u_FU_LGP  pz_FUEL_BEP -pz_FUEL_LGP    #  3. Lower gas plenum    45.00 cm    45.186 cm
+#cell  c_FU_BEP  a_FU  fill u_FU_BEP  pz_FUEL_LCN -pz_FUEL_BEP    #  2. Bottom end plug      3.50 cm     3.514 cm
+#cell  c_FU_LCN  a_FU  fill u_FU_LCN              -pz_FUEL_LCN    #  1. Lower connector     10.00 cm    10.041 cm
+                                                    
+# 3D Universe - Fuel SA 
+c_FU_OUT = openmc.Cell( name='c_FU_OUT')
+c_FU_HEA = openmc.Cell( name='c_FU_HEA')
+c_FU_USH = openmc.Cell( name='c_FU_USH')
+c_FU_UCN = openmc.Cell( name='c_FU_UCN')
+c_FU_TEP = openmc.Cell( name='c_FU_TEP')
+c_FU_SPR = openmc.Cell( name='c_FU_SPR')
+c_FU_UBL = openmc.Cell( name='c_FU_UBL')
+c_FU_FIS = openmc.Cell( name='c_FU_FIS')
+c_FU_LBL = openmc.Cell( name='c_FU_LBL')
+c_FU_LGP = openmc.Cell( name='c_FU_LGP')
+c_FU_BEP = openmc.Cell( name='c_FU_BEP')
+c_FU_LCN = openmc.Cell( name='c_FU_LCN')
+
+c_FU_OUT.region =                +pz_FUEL_HEA # -pz_TOP & +pz_FUEL_HEA
+c_FU_HEA.region = -pz_FUEL_HEA & +pz_FUEL_USH 
+c_FU_USH.region = -pz_FUEL_USH & +pz_FUEL_UCN 
+c_FU_UCN.region = -pz_FUEL_UCN & +pz_FUEL_TEP 
+c_FU_TEP.region = -pz_FUEL_TEP & +pz_FUEL_SPR 
+c_FU_SPR.region = -pz_FUEL_SPR & +pz_FUEL_UBL 
+c_FU_UBL.region = -pz_FUEL_UBL & +pz_FUEL_FIS 
+c_FU_FIS.region = -pz_FUEL_FIS & +pz_FUEL_LBL 
+c_FU_LBL.region = -pz_FUEL_LBL & +pz_FUEL_LGP 
+c_FU_LGP.region = -pz_FUEL_LGP & +pz_FUEL_BEP 
+c_FU_BEP.region = -pz_FUEL_BEP & +pz_FUEL_LCN 
+c_FU_LCN.region = -pz_FUEL_LCN                # -pz_FUEL_LCN & +pz_BOT
+
+c_FU_OUT.fill = u_FU_HEA
+c_FU_HEA.fill = u_FU_HEA
+c_FU_USH.fill = u_FU_USH
+c_FU_UCN.fill = u_FU_UCN
+c_FU_TEP.fill = u_FU_TEP
+c_FU_SPR.fill = u_FU_SPR
+c_FU_UBL.fill = u_FU_UBL
+c_FU_FIS.fill = u_FU_FIS
+c_FU_LBL.fill = u_FU_LBL
+c_FU_LGP.fill = u_FU_LGP
+c_FU_BEP.fill = u_FU_BEP
+c_FU_LCN.fill = u_FU_LCN
+
+c_FU_OUT.rotation = [0, 0, 90]
+c_FU_HEA.rotation = [0, 0, 90]
+c_FU_USH.rotation = [0, 0, 90]
+c_FU_UCN.rotation = [0, 0, 90]
+c_FU_TEP.rotation = [0, 0, 90]
+c_FU_SPR.rotation = [0, 0, 90]
+c_FU_UBL.rotation = [0, 0, 90]
+c_FU_FIS.rotation = [0, 0, 90]
+c_FU_LBL.rotation = [0, 0, 90]
+c_FU_LGP.rotation = [0, 0, 90]
+c_FU_BEP.rotation = [0, 0, 90]
+c_FU_LCN.rotation = [0, 0, 90]
+
+a_FU = openmc.Universe()
+a_FU.add_cells([c_FU_OUT,
+                c_FU_HEA,
+                c_FU_USH,
+                c_FU_UCN,
+                c_FU_TEP,
+                c_FU_SPR,
+                c_FU_UBL,
+                c_FU_FIS,
+                c_FU_LBL,
+                c_FU_LGP,
+                c_FU_BEP,
+                c_FU_LCN ])

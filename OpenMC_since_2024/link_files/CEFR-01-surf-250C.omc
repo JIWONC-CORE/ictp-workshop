@@ -1,0 +1,197 @@
+# Instantiate ZCylinder surfaces
+
+#-----------------------------------------------------------------------------------
+# --- Pin surfaces - fuel
+#-----------------------------------------------------------------------------------       
+# --- 61 pin lattices (same inner/outer clad)
+#
+# ---  Fuel fissile
+cyl_FI_hole = openmc.ZCylinder( x0=0, y0=0, r=0.08020, name='cyl_FI_hole') # Fissile fuel pellet inner hole radius (cm)
+cyl_FI_fuel = openmc.ZCylinder( x0=0, y0=0, r=0.25565, name='cyl_FI_fuel') # Fissile fuel pellet radius (cm)
+# ---  Fuel fertile
+cyl_FE_fuel = openmc.ZCylinder( x0=0, y0=0, r=0.25559, name='cyl_FE_fuel') # Fertile fuel pellet radius (cm)
+# --- Cladding
+cyl_Clad61_IN = openmc.ZCylinder( x0=0, y0=0, r=0.27112, name='cyl_Clad61_IN') # Inner clad radius (cm)
+cyl_Clad61_OU = openmc.ZCylinder( x0=0, y0=0, r=0.30499, name='cyl_Clad61_OU') # Outer clad radius (cm)
+
+#-----------------------------------------------------------------------------------
+# --- Radial surfaces - Fuel assembly
+#-----------------------------------------------------------------------------------
+hex_HEA_IN   = openmc.model.HexagonalPrism(orientation='y', origin=(0.0, 0.0),edge_length= 2.909856904) # pitch = 2.52001, Head inner flat-to-flat/2 (cm)
+cyl_USH_hole = openmc.ZCylinder( x0=0, y0=0, r=1.60662, name='cyl_USH_hole')                       #                  Upper shield inner hole radius (cm)                       
+hex_UCN_IN   = openmc.model.HexagonalPrism(orientation='y', origin=(0.0, 0.0),edge_length= 3.234720353) # pitch = 2.80135, Upper connector inner flat-to-flat/2 (cm)             
+hex_LCN_IN   = openmc.model.HexagonalPrism(orientation='y', origin=(0.0, 0.0),edge_length= 3.310260862) # pitch = 2.86677, Lower connector inner flat-to-flat/2 (cm) 
+
+# --- SA wrapper hexagons
+hex_WR_IN    = openmc.model.HexagonalPrism(orientation='y', origin=(0.0, 0.0),edge_length= 3.281335614) # pitch=2.84172, Wrapper tube inner flat-to-flat/2 (cm) 
+hex_WR_OU    = openmc.model.HexagonalPrism(orientation='y', origin=(0.0, 0.0),edge_length= 3.420465482) # pitch=2.96221, Wrapper tube outer flat-to-flat/2 (cm) 
+hex_SA_PITCH = openmc.model.HexagonalPrism(orientation='y', origin=(0.0, 0.0),edge_length= 3.536385869) # pitch=3.06260, S/A Pitch          flat-to-flat/2 (cm)
+
+#-----------------------------------------------------------------------------------
+# --- Radial surfaces - CR assembly 
+#-----------------------------------------------------------------------------------
+# -------------- Movable part ------------
+# --- B4C cluster
+cyl_CR_B4C      = openmc.ZCylinder( x0=0, y0=0, r=0.61000, name='cyl_CR_B4C')      # B4C radius (cm)
+cyl_CR_Clad_IN  = openmc.ZCylinder( x0=0, y0=0, r=0.64767, name='cyl_CR_Clad_IN')  # Na radius (cm)
+cyl_CR_Clad_OU2 = openmc.ZCylinder( x0=0, y0=0, r=0.74808, name='cyl_CR_Clad_OU2') # Clad radius (cm) 
+cyl_CR_Clad_OU1 = openmc.ZCylinder( x0=0, y0=0, r=0.74940, name='cyl_CR_Clad_OU1') # Clad radius (cm) - central pin
+
+cyl_CR_SHAFT_IN = openmc.ZCylinder( x0=0, y0=0, r=0.75311, name='cyl_CR_SHAFT_IN') # Shaft inner radius 
+cyl_CR_CON_IN   = openmc.ZCylinder( x0=0, y0=0, r=2.00870, name='cyl_CR_CON_IN')   # Upper/lower connector inner radius 
+cyl_CR_CON_OU   = openmc.ZCylinder( x0=0, y0=0, r=2.46014, name='cyl_CR_CON_OU')   # Upper/lower connector inner radius 
+cyl_CR_WR_IN    = openmc.ZCylinder( x0=0, y0=0, r=2.35973, name='cyl_CR_WR_IN')    # Internal wrapper of CR inner radius 
+cyl_CR_WR_OU    = openmc.ZCylinder( x0=0, y0=0, r=2.46014, name='cyl_CR_WR_OU')    # Internal wrapper of CR outer radius
+cyl_CR_BAF_IN   = openmc.ZCylinder( x0=0, y0=0, r=2.05849, name='cyl_CR_BAF_IN')   # Baffle inner radius 
+cyl_CR_BAF_OU   = openmc.ZCylinder( x0=0, y0=0, r=2.46014, name='cyl_CR_BAF_OU')   # Baffle outer radius
+
+# --- Plenum = Empty internal wrapper of CR assembly 
+# --- Lower connector = Upper connector upper
+
+# -------------- NON-movable part ------------
+
+cyl_CR_HEA_IN = openmc.ZCylinder( x0=0, y0=0, r=2.10869, name='cyl_CR_HEA_IN')  # Head handling + gripper inner radius 
+cyl_CR_HEA_OU = openmc.ZCylinder( x0=0, y0=0, r=2.61076, name='cyl_CR_HEA_OU')  # Head handling + gripper outer radius
+cyl_CR_HCO_IN = openmc.ZCylinder( x0=0, y0=0, r=2.10869, name='cyl_CR_HCO_IN')  # Head connector inner radius 
+cyl_CR_HCO_OU = openmc.ZCylinder( x0=0, y0=0, r=2.61076, name='cyl_CR_HCO_OU')  # Head connector outer radius
+
+cyl_CR_UPL_IN = openmc.ZCylinder( x0=0, y0=0, r=2.65093, name='cyl_CR_UPL_IN')  # Upper plenum inner radius
+hex_CR_UPL_OU = openmc.model.HexagonalPrism(orientation='y', origin=(0.0, 0.0),edge_length= 3.420465482) # pitch=2.96221, Upper plenum outer radius
+cyl_CR_LSH    = openmc.ZCylinder( x0=0, y0=0, r=2.61076, name='cyl_CR_LSH')     # Lower shielding inner radius
+
+#cone_CR_PH_IN = openmc.ZCylinder( x0=0, y0=0, r=2.65093, name='cone_CR_PH_IN') # Approximate in OpenMC
+cone_CR_PH_IN = openmc.ZCone(x0=0, y0=0, z0=197.11268, r2=2.65093, name='cone_CR_PH_IN')
+#surf cone_CR_PH_IN cone  0.0 0.0 197.11268  # z1 = 196.300 Transition CR head plenum-connector
+#                                   2.65093   
+#                                   7.45925   
+#cone_CR_PH_OU = openmc.ZCylinder( x0=0, y0=0, r=2.96221, name='cone_CR_PH_OU') # Approximate in OpenMC
+cone_CR_PH_OU = openmc.ZCone(x0=0, y0=0, z0=197.11268, r2=2.96221, name='cone_CR_PH_OU')
+#surf cone_CR_PH_OU cone  0.0 0.0 197.11268  # z2 = 197.300 Transition CR head plenum-connector
+#                                   2.96221   
+#                                   8.46339   
+
+#-----------------------------------------------------------------------------------
+# --- Radial surfaces - Radial Reflector + Neutron Source SA
+#-----------------------------------------------------------------------------------
+cyl_NS_IN       = openmc.ZCylinder( x0=0, y0=0, r=0.90373, name='cyl_NS_IN')    # Inner radius - Central rod of neutron source
+cyl_RR_SS_T1    = openmc.ZCylinder( x0=0, y0=0, r=1.00414, name='cyl_RR_SS_T1') # RR rod radius (cm) - % Type   I & II
+cyl_RR_SS_T3    = openmc.ZCylinder( x0=0, y0=0, r=2.71118, name='cyl_RR_SS_T3') # RR rod radius (cm) - % Type III & IV
+
+# Upper shield in RR Type I,II,III,IV and Boron shield is EQUAL to rod in RR Type III & IV
+
+# RB upper shield == rod in RR Type III & IV
+# RB lower shield == CR lower shield --> cyl_CR_LSH
+
+#-----------------------------------------------------------------------------------
+# --- Radial surfaces - Radial Shield 
+#-----------------------------------------------------------------------------------
+cyl_RB_B4C      = openmc.ZCylinder( x0=0, y0=0, r=0.81078, name='cyl_RB_B4C')
+cyl_RB_He       = openmc.ZCylinder( x0=0, y0=0, r=0.86356, name='cyl_RB_He')
+cyl_RB_SS       = openmc.ZCylinder( x0=0, y0=0, r=0.96397, name='cyl_RB_SS')
+
+
+# RB upper shield == rod in RR Type III & IV
+# RB lower shield == CR lower shield --> cyl_CR_LSH
+
+#-----------------------------------------------------------------------------------
+# --- Axial surfaces - Fuel assembly 
+#-----------------------------------------------------------------------------------
+# --- fuel - axial s/a regions - upper boundary
+pz_FUEL_HEA = openmc.ZPlane( z0= 220.473 ,name='pz_FUEL_HEA') # 01 - Head
+pz_FUEL_USH = openmc.ZPlane( z0= 197.377 ,name='pz_FUEL_USH') # 02 - Upper shield
+pz_FUEL_UCN = openmc.ZPlane( z0= 150.183 ,name='pz_FUEL_UCN') # 03 - Upper connector
+pz_FUEL_TEP = openmc.ZPlane( z0= 144.158 ,name='pz_FUEL_TEP') # 04 - Top end plug
+pz_FUEL_SPR = openmc.ZPlane( z0= 143.154 ,name='pz_FUEL_SPR') # 05 - Spring
+pz_FUEL_UBL = openmc.ZPlane( z0= 137.631 ,name='pz_FUEL_UBL') # 06 - Upper blanket
+pz_FUEL_FIS = openmc.ZPlane( z0= 127.608 ,name='pz_FUEL_FIS') # 07 - Fissile
+pz_FUEL_LBL = openmc.ZPlane( z0= 82.494  ,name='pz_FUEL_LBL') # 08 - Lower blanket
+pz_FUEL_LGP = openmc.ZPlane( z0= 57.437  ,name='pz_FUEL_LGP') # 09 - Lower gas plenum
+pz_FUEL_BEP = openmc.ZPlane( z0= 12.251  ,name='pz_FUEL_BEP') # 10 - Bottom end plug
+pz_FUEL_LCN = openmc.ZPlane( z0= 8.736   ,name='pz_FUEL_LCN') # 11 - Lower connector
+
+#-----------------------------------------------------------------------------------
+# --- Axial surfaces - CR assembly
+#-----------------------------------------------------------------------------------
+# --- CR assembly - Movable part - upper boundary
+pz_CR_UCO = openmc.ZPlane( z0= 68.320, name='pz_CR_UCO') # Upper connector
+pz_CR_PLE = openmc.ZPlane( z0= 61.794, name='pz_CR_PLE') # Plenum
+pz_CR_ABS = openmc.ZPlane( z0= 58.681, name='pz_CR_ABS') # Absorber
+pz_CR_LCO = openmc.ZPlane( z0=  7.631, name='pz_CR_LCO') # Lower connector
+pz_CR_BAF = openmc.ZPlane( z0=  4.217, name='pz_CR_BAF') # Baffle
+pz_CR_BOT = openmc.ZPlane( z0=  0.000, name='pz_CR_BOT') # Bottom
+
+# --- CR assembly - NON-Movable part - upper boundary
+pz_CR_HEA = openmc.ZPlane( z0= 219.405, name='pz_CR_HEA') # Head handling +gripper
+pz_CR_HCO = openmc.ZPlane( z0= 206.451, name='pz_CR_HCO') # Head connector
+pz_CR_TRS = openmc.ZPlane( z0= 198.518, name='pz_CR_TRS') # Transition
+pz_CR_UPL = openmc.ZPlane( z0= 197.514, name='pz_CR_UPL') # Upper plenum
+pz_CR_WRA = openmc.ZPlane( z0= 130.839, name='pz_CR_WRA') # Normal wrapper
+pz_CR_SHL = openmc.ZPlane( z0=  65.872, name='pz_CR_SHL') # Lower shield
+
+#-----------------------------------------------------------------------------------
+# --- Axial surfaces - RR assembly Type I&II SS SA 
+#-----------------------------------------------------------------------------------
+pz_RR1_SHU = openmc.ZPlane( z0= 220.610 ,name='pz_RR1_SHU') # Upper shield
+pz_RR1_USP = openmc.ZPlane( z0= 145.801 ,name='pz_RR1_USP') # Na plenum
+pz_RR1_SSR = openmc.ZPlane( z0= 143.291 ,name='pz_RR1_SSR') # SS rods cluster
+pz_RR1_LSP = openmc.ZPlane( z0=  56.131 ,name='pz_RR1_LSP') # Na plenum
+pz_RR1_SHL = openmc.ZPlane( z0=  52.617 ,name='pz_RR1_SHL') # Lower shield
+
+#-----------------------------------------------------------------------------------
+# --- Axial surfaces - RR assembly Type III&IV SS SA 
+#-----------------------------------------------------------------------------------
+pz_RR2_SHU = openmc.ZPlane( z0= 220.610  ,name='pz_RR2_SHU') # Upper shield
+pz_RR2_LSP = openmc.ZPlane( z0=  56.131  ,name='pz_RR2_LSP') # Na plenum
+pz_RR2_SHL = openmc.ZPlane( z0=  52.617  ,name='pz_RR2_SHL') # Lower shield
+
+#-----------------------------------------------------------------------------------
+# --- Axial surfaces - Boron shielding SA
+#-----------------------------------------------------------------------------------
+pz_RB_SHU2 = openmc.ZPlane( z0=220.610  ,name='pz_RB_SHU2') # Upper shield
+pz_RB_USP  = openmc.ZPlane( z0=145.801  ,name='pz_RB_USP')  # Na plenum	
+pz_RB_SHU1 = openmc.ZPlane( z0=142.789  ,name='pz_RB_SHU1') # Upper shield
+pz_RB_RB   = openmc.ZPlane( z0=137.768  ,name='pz_RB_RB')   # Rod cluster	
+pz_RB_SHL2 = openmc.ZPlane( z0= 57.437  ,name='pz_RB_SHL2') # Lower shield
+pz_RB_LSP  = openmc.ZPlane( z0= 54.625  ,name='pz_RB_LSP')  # Na plenum	
+pz_RB_SHL1 = openmc.ZPlane( z0= 52.617  ,name='pz_RB_SHL1') # Lower shield
+
+#-----------------------------------------------------------------------------------
+# --- Axial surfaces - Neutron source SA
+#-----------------------------------------------------------------------------------
+pz_NS_SHU = openmc.ZPlane( z0= 220.610 ,name='pz_NS_SHU') # Upper shield
+pz_NS_USP = openmc.ZPlane( z0= 145.801 ,name='pz_NS_USP') # Na plenum
+pz_NS_SSR = openmc.ZPlane( z0= 143.291 ,name='pz_NS_SSR') # SS rods cluster
+pz_NS_NSR = openmc.ZPlane( z0= 105.133 ,name='pz_NS_NSR') # NS rods cluster
+pz_NS_LSP = openmc.ZPlane( z0=  56.131 ,name='pz_NS_LSP') # Na plenum
+pz_NS_SHL = openmc.ZPlane( z0=  52.617 ,name='pz_NS_SHL') # Lower shield
+
+#-----------------------------------------------------------------------------------
+# --- Axial surfaces - Mock-up SA
+#-----------------------------------------------------------------------------------
+pz_MU_SHU = openmc.ZPlane( z0= 220.610, name='pz_MU_SHU') # Upper shield
+pz_MU_USP = openmc.ZPlane( z0= 150.320, name='pz_MU_USP') # Na plenum
+pz_MU_SSR = openmc.ZPlane( z0= 142.186, name='pz_MU_SSR') # Filter
+pz_MU_SHL = openmc.ZPlane( z0= 114.271, name='pz_MU_SHL') # Lower shield
+
+##-----------------------------------------------------------------------------------
+## --- Axial surfaces - Na sealed SA
+##-----------------------------------------------------------------------------------
+#pz_VO_9 = openmc.ZPlane( z0= 149.316, name='pz_VO_9')
+#pz_VO_8 = openmc.ZPlane( z0= 143.291, name='pz_VO_8')
+#pz_VO_7 = openmc.ZPlane( z0= 142.287, name='pz_VO_7')
+#pz_VO_6 = openmc.ZPlane( z0= 137.631, name='pz_VO_6')
+#pz_VO_5 = openmc.ZPlane( z0= 127.608, name='pz_VO_5')
+#pz_VO_4 = openmc.ZPlane( z0= 82.494 , name='pz_VO_4')
+#pz_VO_3 = openmc.ZPlane( z0= 57.437 , name='pz_VO_3')
+#pz_VO_2 = openmc.ZPlane( z0= 12.251 , name='pz_VO_2')
+#pz_VO_1 = openmc.ZPlane( z0= 8.736  , name='pz_VO_1')
+
+#-----------------------------------------------------------------------------------
+# --- Core surfaces
+#-----------------------------------------------------------------------------------
+pz_BOT   = openmc.ZPlane( z0= 0.00    ,name='pz_BOT', boundary_type='vacuum') 
+pz_TOP   = openmc.ZPlane( z0= 221.778 ,name='pz_TOP', boundary_type='vacuum') # 221.778 
+
+# Surface define for CORE 
+hexcore = openmc.model.HexagonalPrism(orientation='y', origin=(0.0, 0.0),edge_length= 102.7683479, boundary_type='vacuum')                                  
+

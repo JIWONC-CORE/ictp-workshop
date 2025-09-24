@@ -1,0 +1,89 @@
+# -------------------------------------------------------
+# --- Mock-up assembly
+# -------------------------------------------------------
+
+# -- Quite approximate model !!!
+#same as Serpent#                                                           
+c_l_filter1 = openmc.Cell( name='c_l_filter1')
+c_l_filter2 = openmc.Cell( name='c_l_filter2')
+c_l_filter3 = openmc.Cell( name='c_l_filter3')
+
+c_l_filter1.region = -cyl_CR_BAF_IN
+c_l_filter2.region = +cyl_CR_BAF_IN & -cyl_CR_BAF_OU 
+c_l_filter3.region =                  +cyl_CR_BAF_OU
+
+c_l_filter1.fill = Na_CR_In
+c_l_filter2.fill = Ti316
+c_l_filter3.fill = Na_CR_In
+
+u_MU_FIL = openmc.Universe()
+u_MU_FIL.add_cells([
+c_l_filter1,
+c_l_filter2,
+c_l_filter3
+])
+
+# Add duct
+
+#c_l_filter1 = openmc.Cell( name='c_l_filter1')
+#c_l_filter2 = openmc.Cell( name='c_l_filter2')
+#c_l_filter3 = openmc.Cell( name='c_l_filter3')
+#c_l_filter4 = openmc.Cell( name='c_l_filter4')
+#c_l_filter5 = openmc.Cell( name='c_l_filter5')
+#
+#c_l_filter1.region = -cyl_CR_BAF_IN
+#c_l_filter2.region = +cyl_CR_BAF_IN & -cyl_CR_BAF_OU 
+#c_l_filter3.region = +cyl_CR_BAF_OU & -hex_WR_IN
+#c_l_filter4.region =  +hex_WR_IN     & -hex_WR_OU 
+#c_l_filter5.region =  +hex_WR_OU
+#
+#c_l_filter1.fill = Na_CR_In
+#c_l_filter2.fill = Ti316
+#c_l_filter3.fill = Na_CR_In
+#c_l_filter4.fill = Ti316
+#c_l_filter5.fill = Na_FU_OUT_bypass
+#
+#u_MU_FIL = openmc.Universe()
+#u_MU_FIL.add_cells([
+#c_l_filter1,
+#c_l_filter2,
+#c_l_filter3,
+#c_l_filter4, 
+#c_l_filter5
+#])
+
+
+# -- Stack Assembly
+
+c_MU_OUT = openmc.Cell( name='c_MU_OUT')
+c_MU_SHU = openmc.Cell( name='c_MU_SHU')
+c_MU_USP = openmc.Cell( name='c_MU_USP')
+c_MU_SSR = openmc.Cell( name='c_MU_SSR')
+c_MU_NSR = openmc.Cell( name='c_MU_NSR')
+
+c_MU_OUT.region =              +pz_MU_SHU   # Outside
+c_MU_SHU.region = -pz_MU_SHU & +pz_MU_USP   # Upper shield
+c_MU_USP.region = -pz_MU_USP & +pz_MU_SSR   # Na plenum
+c_MU_SSR.region = -pz_MU_SSR & +pz_MU_SHL   # Filter  
+c_MU_NSR.region = -pz_MU_SHL                # Lower shield
+
+c_MU_OUT.fill = u_FU_USH
+c_MU_SHU.fill = u_FU_USH
+c_MU_USP.fill = u_RR_SPL
+c_MU_SSR.fill = u_MU_FIL
+c_MU_NSR.fill = u_RR_LSH
+
+c_MU_OUT.rotation = [0, 0, 90]
+c_MU_SHU.rotation = [0, 0, 90]
+c_MU_USP.rotation = [0, 0, 90]
+c_MU_SSR.rotation = [0, 0, 90]
+c_MU_NSR.rotation = [0, 0, 90]
+
+a_MU = openmc.Universe()
+a_MU.add_cells([c_MU_OUT,
+                c_MU_SHU,
+                c_MU_USP,
+                c_MU_SSR,
+                c_MU_NSR])
+
+
