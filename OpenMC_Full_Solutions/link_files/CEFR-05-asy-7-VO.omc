@@ -1,0 +1,84 @@
+# -------------------------------------------------------
+# --- 3D fuel assembly
+# -------------------------------------------------------
+#
+
+#cell  c_VO_OUT  a_VO  fill u_VO_HEA  pz_FUEL_HEA                 # 12. Outside             20 deg-C    250 deg-C      
+#cell  c_VO_HEA  a_VO  fill u_VO_HEA  pz_FUEL_USH -pz_FUEL_HEA    # 11. Head                26.00 cm    26.108 cm
+#cell  c_VO_USH  a_VO  fill u_VO_USH  pz_FUEL_UCN -pz_FUEL_USH    # 10. Upper shield        44.00 cm    44.182 cm
+#cell  c_VO_UCN  a_VO  fill u_VO_UCN  pz_FUEL_TEP -pz_FUEL_UCN    #  9. Upper connector      6.00 cm     6.025 cm
+#cell  c_VO_TEP  a_VO  fill u_VO_TEP  pz_FUEL_SPR -pz_FUEL_TEP    #  8. Top end plug         2.00 cm     2.008 cm
+#cell  c_VO_SPR  a_VO  fill u_VO_SPR  pz_FUEL_UBL -pz_FUEL_SPR    #  7. Spring               4.50 cm     4.519 cm
+#cell  c_VO_UBL  a_VO  fill u_VO_UBL  pz_FUEL_FIS -pz_FUEL_UBL    #  6. Upper blanket       10.00 cm    10.023 cm
+#cell  c_VO_FIS  a_VO  fill u_VO_FIS  pz_FUEL_LBL -pz_FUEL_FIS    #  5. Fissile             45.00 cm    45.114 cm
+#cell  c_VO_LBL  a_VO  fill u_VO_LBL  pz_FUEL_LGP -pz_FUEL_LBL    #  4. Lower blanket       25.00 cm    25.058 cm
+#cell  c_VO_LGP  a_VO  fill u_VO_LGP  pz_FUEL_BEP -pz_FUEL_LGP    #  3. Lower gas plenum    45.00 cm    45.186 cm
+#cell  c_VO_BEP  a_VO  fill u_VO_BEP  pz_FUEL_LCN -pz_FUEL_BEP    #  2. Bottom end plug      3.50 cm     3.514 cm
+#cell  c_VO_LCN  a_VO  fill u_VO_LCN              -pz_FUEL_LCN    #  1. Lower connector     10.00 cm    10.041 cm
+                                                    
+# 3D Universe - Fuel SA 
+c_VO_OUT = openmc.Cell( name='c_VO_OUT')
+c_VO_HEA = openmc.Cell( name='c_VO_HEA')
+c_VO_USH = openmc.Cell( name='c_VO_USH')
+c_VO_UCN = openmc.Cell( name='c_VO_UCN')
+c_VO_TEP = openmc.Cell( name='c_VO_TEP')
+c_VO_SPR = openmc.Cell( name='c_VO_SPR')
+c_VO_UBL = openmc.Cell( name='c_VO_UBL')
+c_VO_FIS = openmc.Cell( name='c_VO_FIS')
+c_VO_LBL = openmc.Cell( name='c_VO_LBL')
+c_VO_LGP = openmc.Cell( name='c_VO_LGP')
+c_VO_BEP = openmc.Cell( name='c_VO_BEP')
+c_VO_LCN = openmc.Cell( name='c_VO_LCN')
+
+c_VO_OUT.region =                +pz_FUEL_HEA # -pz_TOP & +pz_FUEL_HEA
+c_VO_HEA.region = -pz_FUEL_HEA & +pz_FUEL_USH 
+c_VO_USH.region = -pz_FUEL_USH & +pz_FUEL_UCN 
+c_VO_UCN.region = -pz_FUEL_UCN & +pz_FUEL_TEP 
+c_VO_TEP.region = -pz_FUEL_TEP & +pz_FUEL_SPR 
+c_VO_SPR.region = -pz_FUEL_SPR & +pz_FUEL_UBL 
+c_VO_UBL.region = -pz_FUEL_UBL & +pz_FUEL_FIS 
+c_VO_FIS.region = -pz_FUEL_FIS & +pz_FUEL_LBL 
+c_VO_LBL.region = -pz_FUEL_LBL & +pz_FUEL_LGP 
+c_VO_LGP.region = -pz_FUEL_LGP & +pz_FUEL_BEP 
+c_VO_BEP.region = -pz_FUEL_BEP & +pz_FUEL_LCN 
+c_VO_LCN.region = -pz_FUEL_LCN                # -pz_FUEL_LCN & +pz_BOT
+
+c_VO_OUT.fill = u_VO_HEA
+c_VO_HEA.fill = u_VO_HEA
+c_VO_USH.fill = u_VO_USH
+c_VO_UCN.fill = u_VO_UCN
+c_VO_TEP.fill = u_VO_TEP
+c_VO_SPR.fill = u_VO_SPR
+c_VO_UBL.fill = u_VO_UBL
+c_VO_FIS.fill = u_VO_FIS
+c_VO_LBL.fill = u_VO_LBL
+c_VO_LGP.fill = u_VO_LGP
+c_VO_BEP.fill = u_VO_BEP
+c_VO_LCN.fill = u_VO_LCN
+
+c_VO_OUT.rotation = [0, 0, 90]
+c_VO_HEA.rotation = [0, 0, 90]
+c_VO_USH.rotation = [0, 0, 90]
+c_VO_UCN.rotation = [0, 0, 90]
+c_VO_TEP.rotation = [0, 0, 90]
+c_VO_SPR.rotation = [0, 0, 90]
+c_VO_UBL.rotation = [0, 0, 90]
+c_VO_FIS.rotation = [0, 0, 90]
+c_VO_LBL.rotation = [0, 0, 90]
+c_VO_LGP.rotation = [0, 0, 90]
+c_VO_BEP.rotation = [0, 0, 90]
+c_VO_LCN.rotation = [0, 0, 90]
+
+a_VO = openmc.Universe()
+a_VO.add_cells([c_VO_OUT,
+                c_VO_HEA,
+                c_VO_USH,
+                c_VO_UCN,
+                c_VO_TEP,
+                c_VO_SPR,
+                c_VO_UBL,
+                c_VO_FIS,
+                c_VO_LBL,
+                c_VO_LGP,
+                c_VO_BEP,
+                c_VO_LCN ])

@@ -1,0 +1,129 @@
+# -------------------------------------------------------
+# --- Pins - CR (regulating, safety,shim )
+# CR1 = B4Cnat (regulating) 
+# CR2 = B4Cenr (safety + shim)
+# -------------------------------------------------------
+
+# --- CR1 B4C enriched
+#pin10c
+c_CR11_ABS1 = openmc.Cell( name='c_CR11_ABS1')
+c_CR11_ABS2 = openmc.Cell( name='c_CR11_ABS2')
+c_CR11_ABS3 = openmc.Cell( name='c_CR11_ABS3')
+c_CR11_ABS4 = openmc.Cell( name='c_CR11_ABS4')
+
+c_CR11_ABS1.region = -cyl_CR_B4C 
+c_CR11_ABS2.region = +cyl_CR_B4C     & -cyl_CR_Clad_IN 
+c_CR11_ABS3.region = +cyl_CR_Clad_IN & -cyl_CR_Clad_OU1
+c_CR11_ABS4.region = +cyl_CR_Clad_OU1
+
+c_CR11_ABS1.fill = B4Cenr 
+c_CR11_ABS2.fill = Na_CR_Out
+c_CR11_ABS3.fill = SS 
+c_CR11_ABS4.fill = Na_CR_Out
+
+p_CR1_BENR= openmc.Universe() 
+p_CR1_BENR.add_cells([
+c_CR11_ABS1,
+c_CR11_ABS2, 
+c_CR11_ABS3, 
+c_CR11_ABS4
+])
+
+#pin10
+c_CR12_ABS1 = openmc.Cell( name='c_CR12_ABS1') 
+c_CR12_ABS2 = openmc.Cell( name='c_CR12_ABS2')
+c_CR12_ABS3 = openmc.Cell( name='c_CR12_ABS3')
+c_CR12_ABS4 = openmc.Cell( name='c_CR12_ABS4')
+
+c_CR12_ABS1.region = -cyl_CR_B4C
+c_CR12_ABS2.region = +cyl_CR_B4C     & -cyl_CR_Clad_IN 
+c_CR12_ABS3.region = +cyl_CR_Clad_IN & -cyl_CR_Clad_OU2
+c_CR12_ABS4.region = +cyl_CR_Clad_OU2
+
+c_CR12_ABS1.fill = B4Cenr   
+c_CR12_ABS2.fill = Na_CR_Out 
+c_CR12_ABS3.fill = SS     
+c_CR12_ABS4.fill = Na_CR_Out
+
+p_CR2_BENR = openmc.Universe()
+p_CR2_BENR.add_cells([
+c_CR12_ABS1, 
+c_CR12_ABS2, 
+c_CR12_ABS3, 
+c_CR12_ABS4
+])
+
+# --- CR2 B4C natural
+#pin9c
+c_CR13_ABS1 = openmc.Cell( name='c_CR13_ABS1')
+c_CR13_ABS2 = openmc.Cell( name='c_CR13_ABS2')
+c_CR13_ABS3 = openmc.Cell( name='c_CR13_ABS3')
+c_CR13_ABS4 = openmc.Cell( name='c_CR13_ABS4')
+
+c_CR13_ABS1.region = -cyl_CR_B4C
+c_CR13_ABS2.region = +cyl_CR_B4C     & -cyl_CR_Clad_IN 
+c_CR13_ABS3.region = +cyl_CR_Clad_IN & -cyl_CR_Clad_OU1
+c_CR13_ABS4.region = +cyl_CR_Clad_OU1
+
+c_CR13_ABS1.fill = B4Cnat1
+c_CR13_ABS2.fill = Na_CR_Out
+c_CR13_ABS3.fill = SS
+c_CR13_ABS4.fill = Na_CR_Out
+
+p_CR1_BNAT= openmc.Universe() 
+p_CR1_BNAT.add_cells([
+c_CR13_ABS1, 
+c_CR13_ABS2, 
+c_CR13_ABS3, 
+c_CR13_ABS4
+])
+
+# --- CR2 B4C natural
+c_CR14_ABS1 = openmc.Cell( name='c_CR14_ABS1')
+c_CR14_ABS2 = openmc.Cell( name='c_CR14_ABS2')
+c_CR14_ABS3 = openmc.Cell( name='c_CR14_ABS3')
+c_CR14_ABS4 = openmc.Cell( name='c_CR14_ABS4')
+
+c_CR14_ABS1.region = -cyl_CR_B4C
+c_CR14_ABS2.region = +cyl_CR_B4C     & -cyl_CR_Clad_IN  
+c_CR14_ABS3.region = +cyl_CR_Clad_IN & -cyl_CR_Clad_OU2 
+c_CR14_ABS4.region = +cyl_CR_Clad_OU2
+
+c_CR14_ABS1.fill = B4Cnat1   
+c_CR14_ABS2.fill = Na_CR_Out 
+c_CR14_ABS3.fill = SS
+c_CR14_ABS4.fill = Na_CR_Out
+
+p_CR2_BNAT = openmc.Universe()
+p_CR2_BNAT.add_cells([
+c_CR14_ABS1, 
+c_CR14_ABS2, 
+c_CR14_ABS3, 
+c_CR14_ABS4
+])
+
+# ___ Na pins
+# CR1 Na outlet 
+c_CR1_NaOU = openmc.Cell( name='c_CR1_NaOU')
+c_CR1_NaOU.fill = Na_CR_Out
+p_CR1_NaOU = openmc.Universe() 
+p_CR1_NaOU.add_cells([c_CR1_NaOU])
+
+# CR1 Na inlet
+c_CR1_NaIN = openmc.Cell( name='c_CR1_NaIN')
+c_CR1_NaIN.fill = Na_CR_In
+p_CR1_NaIN = openmc.Universe() 
+p_CR1_NaIN.add_cells([c_CR1_NaIN])
+
+# CR2 Na outlet 
+c_CR2_NaOU = openmc.Cell( name='c_CR2_NaOU')
+c_CR2_NaOU.fill = Na_CR_Out
+p_CR2_NaOU = openmc.Universe() 
+p_CR2_NaOU.add_cells([c_CR2_NaOU])
+
+# CR2 Na inlet
+c_CR2_NaIN = openmc.Cell( name='c_CR2_NaIN')
+c_CR2_NaIN.fill = Na_CR_In
+p_CR2_NaIN = openmc.Universe() 
+p_CR2_NaIN.add_cells([c_CR2_NaIN])
+

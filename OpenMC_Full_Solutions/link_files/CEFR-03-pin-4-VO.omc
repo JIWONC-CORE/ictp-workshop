@@ -1,0 +1,201 @@
+# -------------------------------------------------------
+# --- Pins - Fuel assemblies for sodium void 
+# -------------------------------------------------------
+
+# 11. Head                26.108 cm
+# 10. Upper shield        44.182 cm
+#  9. Upper connector      6.025 cm
+
+# ------ Fuel pin top ------------
+#  8. Top end plug        2.008 cm
+#  7. Spring              4.519 cm
+#  6. Upper blanket      10.023 cm
+#  5. Fissile            45.114 cm
+#  4. Lower blanket      25.058 cm
+#  3. Lower gas plenum   45.186 cm
+#  2. Bottom end plug     3.514 cm
+# ------ Fuel pin bottom ---------
+
+#  1. Lower connector     10.041 cm
+
+# --- Void
+# a_OU
+c_VOID = openmc.Cell( name='c_VOID')
+c_VOID.fill = None 
+a_OU = openmc.Universe() 
+a_OU.add_cells([c_VOID])
+
+# --- Top end plug (TEP)
+#pin02
+c_VO_TEP1 = openmc.Cell( name='c_VO_TEP1') 
+c_VO_TEP2 = openmc.Cell( name='c_VO_TEP2')
+
+c_VO_TEP1.region = -cyl_Clad61_OU
+c_VO_TEP2.region = +cyl_Clad61_OU
+
+c_VO_TEP1.fill = SS 
+c_VO_TEP2.fill = vacuum
+
+p_VO_TEP = openmc.Universe()
+p_VO_TEP.add_cells([
+c_VO_TEP1,
+c_VO_TEP2
+])
+
+# --- Spring (SPR)
+#pin06
+c_VO_SPR1 = openmc.Cell( name='c_VO_SPR1')
+c_VO_SPR2 = openmc.Cell( name='c_VO_SPR2')
+c_VO_SPR3 = openmc.Cell( name='c_VO_SPR3')
+
+c_VO_SPR1.region = -cyl_Clad61_IN
+c_VO_SPR2.region = +cyl_Clad61_IN & -cyl_Clad61_OU 
+c_VO_SPR3.region = +cyl_Clad61_OU
+
+c_VO_SPR1.fill = HOMOG_SPR_FU
+c_VO_SPR2.fill = SS    
+c_VO_SPR3.fill = vacuum
+
+p_VO_SPR = openmc.Universe()
+p_VO_SPR.add_cells([
+c_VO_SPR1,
+c_VO_SPR2,
+c_VO_SPR3
+])
+
+# --- Upper fuel fertile/blanket (UBL)
+#pin04
+c_VO_UBL_1 = openmc.Cell( name='c_VO_UBL_1')
+c_VO_UBL_2 = openmc.Cell( name='c_VO_UBL_2')
+c_VO_UBL_3 = openmc.Cell( name='c_VO_UBL_3')
+c_VO_UBL_4 = openmc.Cell( name='c_VO_UBL_4')
+
+c_VO_UBL_1.region = -cyl_FE_fuel
+c_VO_UBL_2.region = +cyl_FE_fuel   & -cyl_Clad61_IN 
+c_VO_UBL_3.region = +cyl_Clad61_IN & -cyl_Clad61_OU 
+c_VO_UBL_4.region = +cyl_Clad61_OU 
+
+c_VO_UBL_1.fill = UOB
+c_VO_UBL_2.fill = He 
+c_VO_UBL_3.fill = SS 
+c_VO_UBL_4.fill = vacuum  
+
+p_VO_UBL = openmc.Universe()
+p_VO_UBL.add_cells([c_VO_UBL_1, c_VO_UBL_2, c_VO_UBL_3, c_VO_UBL_4])
+
+# --- Fuel fissile (FIS)
+#pin05
+c_VO_FIS_0 = openmc.Cell( name='c_VO_FIS_0')
+c_VO_FIS_1 = openmc.Cell( name='c_VO_FIS_1')
+c_VO_FIS_2 = openmc.Cell( name='c_VO_FIS_2')
+c_VO_FIS_3 = openmc.Cell( name='c_VO_FIS_3')
+c_VO_FIS_4 = openmc.Cell( name='c_VO_FIS_4')
+
+c_VO_FIS_0.region = -cyl_FI_hole
+c_VO_FIS_1.region = +cyl_FI_hole   & -cyl_FI_fuel  
+c_VO_FIS_2.region = +cyl_FI_fuel   & -cyl_Clad61_IN
+c_VO_FIS_3.region = +cyl_Clad61_IN & -cyl_Clad61_OU
+c_VO_FIS_4.region = +cyl_Clad61_OU 
+
+c_VO_FIS_0.fill = He 
+c_VO_FIS_1.fill = UOF
+c_VO_FIS_2.fill = He 
+c_VO_FIS_3.fill = SS 
+c_VO_FIS_4.fill = vacuum  
+
+p_VO_FIS = openmc.Universe()
+p_VO_FIS.add_cells([
+c_VO_FIS_0,
+c_VO_FIS_1,
+c_VO_FIS_2,
+c_VO_FIS_3,
+c_VO_FIS_4
+])
+
+# --- Lower fuel fertile/blanket (LBL)
+#pin04
+c_VO_LBL_1 = openmc.Cell( name='c_VO_LBL_1')
+c_VO_LBL_2 = openmc.Cell( name='c_VO_LBL_2')
+c_VO_LBL_3 = openmc.Cell( name='c_VO_LBL_3')
+c_VO_LBL_4 = openmc.Cell( name='c_VO_LBL_4')
+
+c_VO_LBL_1.region = -cyl_FE_fuel
+c_VO_LBL_2.region = +cyl_FE_fuel   & -cyl_Clad61_IN 
+c_VO_LBL_3.region = +cyl_Clad61_IN & -cyl_Clad61_OU 
+c_VO_LBL_4.region = +cyl_Clad61_OU 
+
+c_VO_LBL_1.fill = UOB
+c_VO_LBL_2.fill = He 
+c_VO_LBL_3.fill = SS 
+c_VO_LBL_4.fill = vacuum  
+
+p_VO_LBL = openmc.Universe()
+p_VO_LBL.add_cells([
+c_VO_LBL_1,
+c_VO_LBL_2,
+c_VO_LBL_3,
+c_VO_LBL_4
+])
+
+# --- Lower gas plenum (LGP)
+#pin06
+c_VO_LGP1 = openmc.Cell( name='c_VO_LGP1')
+c_VO_LGP2 = openmc.Cell( name='c_VO_LGP2')
+c_VO_LGP3 = openmc.Cell( name='c_VO_LGP3')
+
+c_VO_LGP1.region = -cyl_Clad61_IN
+c_VO_LGP2.region = +cyl_Clad61_IN & -cyl_Clad61_OU
+c_VO_LGP3.region = +cyl_Clad61_OU
+
+c_VO_LGP1.fill = He
+c_VO_LGP2.fill = SS
+c_VO_LGP3.fill = vacuum  
+
+p_VO_LGP = openmc.Universe()
+p_VO_LGP.add_cells([
+c_VO_LGP1,
+c_VO_LGP2,
+c_VO_LGP3
+])
+
+# --- Bottop end plug (BEP)                     
+#pin02
+c_VO_BEP1 = openmc.Cell( name='c_VO_BEP1') 
+c_VO_BEP2 = openmc.Cell( name='c_VO_BEP2')
+
+c_VO_BEP1.region = -cyl_Clad61_OU
+c_VO_BEP2.region = +cyl_Clad61_OU
+
+c_VO_BEP1.fill = SS 
+c_VO_BEP2.fill = vacuum  
+
+p_VO_BEP = openmc.Universe()
+p_VO_BEP.add_cells([
+c_VO_BEP1,
+c_VO_BEP2
+])
+
+# --- Na pins
+# Outlet Na
+c_VO_VOU = openmc.Cell( name='c_VO_VOU')
+c_VO_VOU.fill = vacuum 
+p_VO_VOU = openmc.Universe() 
+p_VO_VOU.add_cells([c_VO_VOU])
+
+# Na in  fissile
+c_VO_VFI = openmc.Cell( name='c_VO_VFI')
+c_VO_VFI.fill = vacuum
+p_VO_VFI = openmc.Universe() 
+p_VO_VFI.add_cells([c_VO_VFI])
+
+# Na in  fertile
+c_VO_VFE = openmc.Cell( name='c_VO_VFE')
+c_VO_VFE.fill = vacuum  
+p_VO_VFE = openmc.Universe() 
+p_VO_VFE.add_cells([c_VO_VFE])
+
+# Inlet Na
+c_VO_VIN = openmc.Cell( name='c_VO_VIN')
+c_VO_VIN.fill = vacuum  
+p_VO_VIN = openmc.Universe() 
+p_VO_VIN.add_cells([c_VO_VIN])

@@ -1,0 +1,653 @@
+###############################################################################
+#                   Exporting to OpenMC plots.xml file
+###############################################################################
+
+plot_xy = openmc.Plot()
+plot_xy.filename = 'plot_xy_x00y00z080'
+plot_xy.origin = [0, 0,  80]
+plot_xy.width = [200.0, 200.0]
+plot_xy.pixels = [2000, 2000]
+plot_xy.color_by = 'material'
+plot_xy.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_xy2 = openmc.Plot()
+plot_xy2.filename = 'plot_xy_x00y00z120'
+plot_xy2.origin = [0, 0, 120]
+plot_xy2.width = [200., 200.]
+plot_xy2.pixels = [2000, 2000]
+plot_xy2.color_by = 'material'
+plot_xy2.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_mat = openmc.Plot()
+plot_mat.filename = 'plot_xy_x00y00z135'
+plot_mat.origin = [0, 0, 135]
+plot_mat.width = [200., 200.]
+plot_mat.pixels = [2000, 2000]
+plot_mat.color_by = 'material'
+plot_mat.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_xz = openmc.Plot()
+plot_xz.filename = 'plot_xz_x00y00z095'
+plot_xz.origin = [0, 0,95]
+plot_xz.width = [200., 200.]
+plot_xz.basis = 'xz'
+plot_xz.pixels = [2000, 2000]
+plot_xz.color_by = 'material'
+plot_xz.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_xz1 = openmc.Plot()
+plot_xz1.filename = 'plot_xz_x00-y30z095'
+plot_xz1.origin = [0, -30,95]
+plot_xz1.width = [200., 200.]
+plot_xz1.basis = 'xz'
+plot_xz1.pixels = [2000, 2000]
+plot_xz1.color_by = 'material'
+plot_xz1.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_xz2 = openmc.Plot()
+plot_xz2.filename = 'plot_xz_x00-y15z095'
+plot_xz2.origin = [0, -15,95]
+plot_xz2.width = [200., 200.]
+plot_xz2.basis = 'xz'
+plot_xz2.pixels = [2000, 2000]
+plot_xz2.color_by = 'material'
+plot_xz2.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_xz3 = openmc.Plot()
+plot_xz3.filename = 'plot_xz_x00y15z095'
+plot_xz3.origin = [0, 15,95]
+plot_xz3.width = [200., 200.]
+plot_xz3.basis = 'xz'
+plot_xz3.pixels = [2000, 2000]
+plot_xz3.color_by = 'material'
+plot_xz3.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_xz4 = openmc.Plot()
+plot_xz4.filename = 'plot_xz_x00y30z095'
+plot_xz4.origin = [0, 30,95]
+plot_xz4.width = [200., 200.]
+plot_xz4.basis = 'xz'
+plot_xz4.pixels = [2000, 2000]
+plot_xz4.color_by = 'material'
+plot_xz4.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_xz5 = openmc.Plot()
+plot_xz5.filename = 'plot_xz_x00y45z095'
+plot_xz5.origin = [0, 45,95]
+plot_xz5.width = [200., 200.]
+plot_xz5.basis = 'xz'
+plot_xz5.pixels = [2000, 2000]
+plot_xz5.color_by = 'material'
+plot_xz5.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_yz = openmc.Plot()
+plot_yz.filename = 'plot_yz_x00y00z095'
+plot_yz.origin = [0, 0,95]
+plot_yz.width = [200., 200.]
+plot_yz.basis = 'yz'
+plot_yz.pixels = [2000, 2000]
+plot_yz.color_by = 'material'
+plot_yz.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_yz1 = openmc.Plot()
+plot_yz1.filename = 'plot_yz_x06y00z095'
+plot_yz1.origin = [6.12, 0,95]
+plot_yz1.width = [200., 200.]
+plot_yz1.basis = 'yz'
+plot_yz1.pixels = [2000, 2000]
+plot_yz1.color_by = 'material'
+plot_yz1.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_yz2 = openmc.Plot()
+plot_yz2.filename = 'plot_yz_x18y00z095'
+plot_yz2.origin = [18, 0,95]
+plot_yz2.width = [200., 200.]
+plot_yz2.basis = 'yz'
+plot_yz2.pixels = [2000, 2000]
+plot_yz2.color_by = 'material'
+plot_yz2.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_yz3 = openmc.Plot()
+plot_yz3.filename = 'plot_yz_x30y00z095'
+plot_yz3.origin = [30, 0,95]
+plot_yz3.width = [200., 200.]
+plot_yz3.basis = 'yz'
+plot_yz3.pixels = [2000, 2000]
+plot_yz3.color_by = 'material'
+plot_yz3.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_yz4 = openmc.Plot()
+plot_yz4.filename = 'plot_yz_x42y00z095'
+plot_yz4.origin = [42, 0,95]
+plot_yz4.width = [200., 200.]
+plot_yz4.basis = 'yz'
+plot_yz4.pixels = [2000, 2000]
+plot_yz4.color_by = 'material'
+plot_yz4.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_yz5 = openmc.Plot()
+plot_yz5.filename = 'plot_yz_x54y00z095'
+plot_yz5.origin = [54, 0,95]
+plot_yz5.width = [200., 200.]
+plot_yz5.basis = 'yz'
+plot_yz5.pixels = [2000, 2000]
+plot_yz5.color_by = 'material'
+plot_yz5.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_yz6 = openmc.Plot()
+plot_yz6.filename = 'plot_yz_x66y00z095'
+plot_yz6.origin = [66, 0,95]
+plot_yz6.width = [200., 200.]
+plot_yz6.basis = 'yz'
+plot_yz6.pixels = [2000, 2000]
+plot_yz6.color_by = 'material'
+plot_yz6.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+plot_core = openmc.Plot()
+plot_core.filename = 'plot_core_x00y00z120'
+plot_core.origin = [0, 0, 120]
+plot_core.width = [100.0, 100.0]
+plot_core.pixels = [2000, 2000]
+plot_core.color_by = 'material'
+plot_core.colors={
+UOF             :(150,   0,   0),
+UOB             :(  0,   0, 150),
+SS              :(150, 150, 150),
+Ti316           :(101, 100, 100),
+B4Cenr          :(100, 180, 245),
+B4Cnat1         :( 80,  80,  80),
+B4Cnat2         :( 80,  80,  80),
+He              :(249, 249, 249),
+vacuum          :(254, 254, 254), #(255, 153,  51), 
+Na_FU_Out       :(230, 255, 255),
+Na_FU_FI        :(230, 255, 255),
+Na_FU_FE        :(230, 255, 255),
+Na_FU_In        :(230, 255, 255),
+Na_FU_OUT_bypass:(230, 255, 255),
+Na_FU_FI_bypass :(230, 255, 255),
+Na_FU_FE_bypass :(230, 255, 255),
+Na_FU_In_bypass :(230, 255, 255),
+Na_CR_Out       :(230, 255, 255),
+Na_CR_In        :(230, 255, 255),
+Na_RR_In        :(230, 255, 255),
+Na_RR_Out       :(230, 255, 255),
+SS_R1           :(255, 255,   0),
+SS_R2           :( 36, 255,  36),
+SS_R3           :( 88, 199, 255),
+SS_R4           :(230, 153, 255),
+HOMOG_SPR_FU    :(  0, 248,   0),
+HOMOG_CR_CON    :(100, 100, 100) 
+}
+
+
+# Instantiate a Plots collection, add plots, and export to XML
+plot_file = openmc.Plots([
+plot_xy,
+plot_xy2,
+plot_mat,
+plot_xz,
+plot_xz1,
+plot_xz2,
+plot_xz3,
+plot_xz4,
+plot_xz5,
+plot_yz,
+plot_yz1,
+plot_yz2,
+plot_yz3,
+plot_yz4,
+plot_yz5,
+plot_yz6,
+plot_core
+])
+
+plot_file.export_to_xml()
+

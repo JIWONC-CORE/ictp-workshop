@@ -1,0 +1,51 @@
+# -------------------------------------------------------
+# --- Radial boron shield assemblies
+# -------------------------------------------------------
+#
+
+c_RB_OUT  = openmc.Cell( name='c_RB_OUT')
+c_RB_SHU2 = openmc.Cell( name='c_RB_SHU2')
+c_RB_USP  = openmc.Cell( name='c_RB_USP')
+c_RB_SHU1 = openmc.Cell( name='c_RB_SHU1')
+c_RB_RB   = openmc.Cell( name='c_RB_RB')
+c_RB_SHL2 = openmc.Cell( name='c_RB_SHL2')
+c_RB_LSP  = openmc.Cell( name='c_RB_LSP')
+c_RB_SHL1 = openmc.Cell( name='c_RB_SHL1')
+
+c_RB_OUT.region  =               +pz_RB_SHU2 # Outside    
+c_RB_SHU2.region = -pz_RB_SHU2 & +pz_RB_USP  # Upper shield
+c_RB_USP.region  = -pz_RB_USP  & +pz_RB_SHU1 # Na plenum
+c_RB_SHU1.region = -pz_RB_SHU1 & +pz_RB_RB   # Upper shield
+c_RB_RB.region   = -pz_RB_RB   & +pz_RB_SHL2 # Rod cluster
+c_RB_SHL2.region = -pz_RB_SHL2 & +pz_RB_LSP  # Lower shield
+c_RB_LSP.region  = -pz_RB_LSP  & +pz_RB_SHL1 # Na plenum
+c_RB_SHL1.region = -pz_RB_SHL1               # Lower shield
+
+c_RB_OUT.fill  = u_RB_USH
+c_RB_SHU2.fill = u_RB_USH
+c_RB_USP.fill  = u_RB_SPL
+c_RB_SHU1.fill = u_RB_USH
+c_RB_RB.fill   = u_RB    
+c_RB_SHL2.fill = u_RB_LSH
+c_RB_LSP.fill  = u_RB_SPL
+c_RB_SHL1.fill = u_RB_LSH
+
+c_RB_OUT.rotation  = [0, 0, 90]
+c_RB_SHU2.rotation = [0, 0, 90]
+c_RB_USP.rotation  = [0, 0, 90]
+c_RB_SHU1.rotation = [0, 0, 90]
+c_RB_RB.rotation   = [0, 0, 90]
+c_RB_SHL2.rotation = [0, 0, 90]
+c_RB_LSP.rotation  = [0, 0, 90]
+c_RB_SHL1.rotation = [0, 0, 90]
+
+a_RB = openmc.Universe()
+a_RB.add_cells([c_RB_OUT,
+                c_RB_SHU2,
+                c_RB_USP,
+                c_RB_SHU1,
+                c_RB_RB,
+                c_RB_SHL2,
+                c_RB_LSP,
+                c_RB_SHL1])
+

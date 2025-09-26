@@ -1,0 +1,385 @@
+#  Non-movable    Movable    Uppler B   ARO       RE2=151mm   What's in ARO    What's in 151mm
+#  pz_CR_HEA      -          219.405    -         -           SHA_HEA          SHA_HEA
+#  pz_CR_HCO      -          206.451    -         -           SHA_HCO          SHA_HCO
+#  pz_CR_TRS      -          198.518    -         -           SHA_TRS          SHA_TRS
+#  pz_CR_UPL      -          197.514    -         -           SHA_UPL          SHA_UPL
+#  pz_CR_WRA      -          130.839    -         -           UCO_UPL          UCO_UPL
+#  -              pz_CR_UCO  68.32      193.183   158.283     PLE_UPL          PLE_UPL
+#  -              pz_CR_PLE  61.794     186.657   151.757     ABS_UPL          ABS_UPL
+#  -              pz_CR_ABS  58.681     183.544   148.644     LCO_UPL          ABS_WRA
+#  -              pz_CR_LCO  7.631      132.494   97.594      LCO_WRA          LCO_WRA
+#  -              pz_CR_BAF  4.217      129.08    94.18       BAF_WRA          BAF_WRA
+#  -              pz_CR_BOT  0          124.863   89.963      BOT_WRA          BOT_WRA
+#  pz_CR_SHL      -          65.872     -         -           -                -
+
+#  pz_CR_BOT ~ pz_CR_UCO = pz_CR_SHL+8.991+pz_CR_XXX
+
+# --- Enriched B4C - Safety rod (u_CR_move_SAFT)
+
+# --- Moving CR1 (B4C enr) by changing Z-coordinate in trans. Z=0 --> bottom of the system
+#trans u_CR_move_SAFT 0.0 0.0 124.863 % Based on 250 deg-C
+pz_CR1_SHA_HEA = openmc.ZPlane( z0= 219.405, name='pz_CR1_SHA_HEA')
+pz_CR1_SHA_HCO = openmc.ZPlane( z0= 206.451, name='pz_CR1_SHA_HCO')
+pz_CR1_SHA_TRS = openmc.ZPlane( z0= 198.518, name='pz_CR1_SHA_TRS')
+pz_CR1_SHA_UPL = openmc.ZPlane( z0= 197.514, name='pz_CR1_SHA_UPL')
+pz_CR1_UCO_UPL = openmc.ZPlane( z0= 193.183, name='pz_CR1_UCO_UPL')
+pz_CR1_PLE_UPL = openmc.ZPlane( z0= 186.657, name='pz_CR1_PLE_UPL')
+pz_CR1_ABS_UPL = openmc.ZPlane( z0= 183.544, name='pz_CR1_ABS_UPL')
+pz_CR1_LCO_UPL = openmc.ZPlane( z0= 132.494, name='pz_CR1_LCO_UPL')
+pz_CR1_LCO_WRA = openmc.ZPlane( z0= 130.839, name='pz_CR1_LCO_WRA')
+pz_CR1_BAF_WRA = openmc.ZPlane( z0= 129.080, name='pz_CR1_BAF_WRA')
+pz_CR1_BOT_WRA = openmc.ZPlane( z0= 124.863, name='pz_CR1_BOT_WRA')
+pz_CR1_SHL     = openmc.ZPlane( z0=  65.872, name='pz_CR1_SHL')    
+
+
+# --- Inside wrapper cells
+c_CR1_00 = openmc.Cell( name='c_CR1_00')
+c_CR1_01 = openmc.Cell( name='c_CR1_01')
+c_CR1_02 = openmc.Cell( name='c_CR1_02')
+c_CR1_03 = openmc.Cell( name='c_CR1_03')
+c_CR1_04 = openmc.Cell( name='c_CR1_04')
+c_CR1_05 = openmc.Cell( name='c_CR1_05')
+c_CR1_06 = openmc.Cell( name='c_CR1_06')
+c_CR1_07 = openmc.Cell( name='c_CR1_07')
+c_CR1_08 = openmc.Cell( name='c_CR1_08')
+c_CR1_09 = openmc.Cell( name='c_CR1_09')
+c_CR1_10 = openmc.Cell( name='c_CR1_10')
+c_CR1_11 = openmc.Cell( name='c_CR1_11')
+c_CR1_12 = openmc.Cell( name='c_CR1_12')
+
+# --- ARO
+c_CR1_00.region =                   +pz_CR1_SHA_HEA
+c_CR1_01.region = -pz_CR1_SHA_HEA & +pz_CR1_SHA_HCO
+c_CR1_02.region = -pz_CR1_SHA_HCO & +pz_CR1_SHA_TRS
+c_CR1_03.region = -pz_CR1_SHA_TRS & +pz_CR1_SHA_UPL
+c_CR1_04.region = -pz_CR1_SHA_UPL & +pz_CR1_UCO_UPL
+c_CR1_05.region = -pz_CR1_UCO_UPL & +pz_CR1_PLE_UPL
+c_CR1_06.region = -pz_CR1_PLE_UPL & +pz_CR1_ABS_UPL
+c_CR1_07.region = -pz_CR1_ABS_UPL & +pz_CR1_LCO_UPL
+c_CR1_08.region = -pz_CR1_LCO_UPL & +pz_CR1_LCO_WRA
+c_CR1_09.region = -pz_CR1_LCO_WRA & +pz_CR1_BAF_WRA
+c_CR1_10.region = -pz_CR1_BAF_WRA & +pz_CR1_BOT_WRA
+c_CR1_11.region = -pz_CR1_BOT_WRA & +pz_CR1_SHL    
+c_CR1_12.region = -pz_CR1_SHL     
+
+c_CR1_00.fill = u_CR_SHA_HEA_SAFT
+c_CR1_01.fill = u_CR_SHA_HEA_SAFT
+c_CR1_02.fill = u_CR_SHA_HCO_SAFT
+c_CR1_03.fill = u_CR_SHA_TRS_SAFT
+c_CR1_04.fill = u_CR_SHA_UPL_SAFT
+c_CR1_05.fill = u_CR_UCO_UPL_SAFT
+c_CR1_06.fill = u_CR_PLE_UPL_SAFT
+c_CR1_07.fill = u_CR_ABS_UPL_SAFT
+c_CR1_08.fill = u_CR_LCO_UPL_SAFT
+c_CR1_09.fill = u_CR_LCO_WRA_SAFT
+c_CR1_10.fill = u_CR_BAF_WRA_SAFT
+c_CR1_11.fill = u_CR_BOT_WRA_SAFT
+c_CR1_12.fill = u_CR_LSH
+
+c_CR1_00.rotation = [0, 0, 90]
+c_CR1_01.rotation = [0, 0, 90]
+c_CR1_02.rotation = [0, 0, 90]
+c_CR1_03.rotation = [0, 0, 90]
+c_CR1_04.rotation = [0, 0, 90]
+c_CR1_05.rotation = [0, 0, 90]
+c_CR1_06.rotation = [0, 0, 90]
+c_CR1_07.rotation = [0, 0, 90]
+c_CR1_08.rotation = [0, 0, 90]
+c_CR1_09.rotation = [0, 0, 90]
+c_CR1_10.rotation = [0, 0, 90]
+c_CR1_11.rotation = [0, 0, 90]
+c_CR1_12.rotation = [0, 0, 90]
+
+a_C1 = openmc.Universe()
+a_C1.add_cells([c_CR1_00,
+                c_CR1_01,
+                c_CR1_02,
+                c_CR1_03,
+                c_CR1_04,
+                c_CR1_05,
+                c_CR1_06,
+                c_CR1_07,
+                c_CR1_08,
+                c_CR1_09,
+                c_CR1_10,
+                c_CR1_11,
+                c_CR1_12])
+
+# --- Natural B4C - Regulating rod 1 (u_CR_move_REGL11)
+
+# --- Moving CR2-1 (B4C nat) by changing Z-coordinate in trans. Z=0 --> bottom of the system
+#trans u_CR_move_REGL1 0.0 0.0 124.863 % Based on 250 deg-C 
+pz_CR21_SHA_HEA = openmc.ZPlane( z0= 219.405, name='pz_CR21_SHA_HEA')
+pz_CR21_SHA_HCO = openmc.ZPlane( z0= 206.451, name='pz_CR21_SHA_HCO')
+pz_CR21_SHA_TRS = openmc.ZPlane( z0= 198.518, name='pz_CR21_SHA_TRS')
+pz_CR21_SHA_UPL = openmc.ZPlane( z0= 197.514, name='pz_CR21_SHA_UPL')
+pz_CR21_UCO_UPL = openmc.ZPlane( z0= 193.183, name='pz_CR21_UCO_UPL')
+pz_CR21_PLE_UPL = openmc.ZPlane( z0= 186.657, name='pz_CR21_PLE_UPL')
+pz_CR21_ABS_UPL = openmc.ZPlane( z0= 183.544, name='pz_CR21_ABS_UPL')
+pz_CR21_LCO_UPL = openmc.ZPlane( z0= 132.494, name='pz_CR21_LCO_UPL')
+pz_CR21_LCO_WRA = openmc.ZPlane( z0= 130.839, name='pz_CR21_LCO_WRA')
+pz_CR21_BAF_WRA = openmc.ZPlane( z0= 129.080, name='pz_CR21_BAF_WRA')
+pz_CR21_BOT_WRA = openmc.ZPlane( z0= 124.863, name='pz_CR21_BOT_WRA')
+pz_CR21_SHL     = openmc.ZPlane( z0=  65.872, name='pz_CR21_SHL')    
+
+
+# --- Inside wrapper cells
+c_CR21_00 = openmc.Cell( name='c_CR21_00')
+c_CR21_01 = openmc.Cell( name='c_CR21_01')
+c_CR21_02 = openmc.Cell( name='c_CR21_02')
+c_CR21_03 = openmc.Cell( name='c_CR21_03')
+c_CR21_04 = openmc.Cell( name='c_CR21_04')
+c_CR21_05 = openmc.Cell( name='c_CR21_05')
+c_CR21_06 = openmc.Cell( name='c_CR21_06')
+c_CR21_07 = openmc.Cell( name='c_CR21_07')
+c_CR21_08 = openmc.Cell( name='c_CR21_08')
+c_CR21_09 = openmc.Cell( name='c_CR21_09')
+c_CR21_10 = openmc.Cell( name='c_CR21_10')
+c_CR21_11 = openmc.Cell( name='c_CR21_11')
+c_CR21_12 = openmc.Cell( name='c_CR21_12')
+
+# --- ARO
+c_CR21_00.region =                   +pz_CR21_SHA_HEA
+c_CR21_01.region = -pz_CR21_SHA_HEA & +pz_CR21_SHA_HCO
+c_CR21_02.region = -pz_CR21_SHA_HCO & +pz_CR21_SHA_TRS
+c_CR21_03.region = -pz_CR21_SHA_TRS & +pz_CR21_SHA_UPL
+c_CR21_04.region = -pz_CR21_SHA_UPL & +pz_CR21_UCO_UPL
+c_CR21_05.region = -pz_CR21_UCO_UPL & +pz_CR21_PLE_UPL
+c_CR21_06.region = -pz_CR21_PLE_UPL & +pz_CR21_ABS_UPL
+c_CR21_07.region = -pz_CR21_ABS_UPL & +pz_CR21_LCO_UPL
+c_CR21_08.region = -pz_CR21_LCO_UPL & +pz_CR21_LCO_WRA
+c_CR21_09.region = -pz_CR21_LCO_WRA & +pz_CR21_BAF_WRA
+c_CR21_10.region = -pz_CR21_BAF_WRA & +pz_CR21_BOT_WRA
+c_CR21_11.region = -pz_CR21_BOT_WRA & +pz_CR21_SHL    
+c_CR21_12.region = -pz_CR21_SHL     
+
+c_CR21_00.fill = u_CR_SHA_HEA_REGL1
+c_CR21_01.fill = u_CR_SHA_HEA_REGL1
+c_CR21_02.fill = u_CR_SHA_HCO_REGL1
+c_CR21_03.fill = u_CR_SHA_TRS_REGL1
+c_CR21_04.fill = u_CR_SHA_UPL_REGL1
+c_CR21_05.fill = u_CR_UCO_UPL_REGL1
+c_CR21_06.fill = u_CR_PLE_UPL_REGL1
+c_CR21_07.fill = u_CR_ABS_UPL_REGL1
+c_CR21_08.fill = u_CR_LCO_UPL_REGL1
+c_CR21_09.fill = u_CR_LCO_WRA_REGL1
+c_CR21_10.fill = u_CR_BAF_WRA_REGL1
+c_CR21_11.fill = u_CR_BOT_WRA_REGL1
+c_CR21_12.fill = u_CR_LSH
+
+c_CR21_00.rotation = [0, 0, 90]
+c_CR21_01.rotation = [0, 0, 90]
+c_CR21_02.rotation = [0, 0, 90]
+c_CR21_03.rotation = [0, 0, 90]
+c_CR21_04.rotation = [0, 0, 90]
+c_CR21_05.rotation = [0, 0, 90]
+c_CR21_06.rotation = [0, 0, 90]
+c_CR21_07.rotation = [0, 0, 90]
+c_CR21_08.rotation = [0, 0, 90]
+c_CR21_09.rotation = [0, 0, 90]
+c_CR21_10.rotation = [0, 0, 90]
+c_CR21_11.rotation = [0, 0, 90]
+c_CR21_12.rotation = [0, 0, 90]
+
+a_C21 = openmc.Universe()
+a_C21.add_cells([c_CR21_00,
+                 c_CR21_01,
+                 c_CR21_02,
+                 c_CR21_03,
+                 c_CR21_04,
+                 c_CR21_05,
+                 c_CR21_06,
+                 c_CR21_07,
+                 c_CR21_08,
+                 c_CR21_09,
+                 c_CR21_10,
+                 c_CR21_11,
+                 c_CR21_12])
+
+
+
+
+# --- Natural B4C - Regulating rod 2 (u_CR_move_REGL2)
+
+# WP1 movable
+# --- Moving CR2-2 (B4C nat) by changing Z-coordinate in trans. Z=0 --> bottom of the system
+#trans u_CR_move_REGL2 0.0 0.0 81.863 % Based on 250 deg-C 
+pz_CR22_SHA_HEA = openmc.ZPlane( z0= 219.405, name='pz_CR22_SHA_HEA')
+pz_CR22_SHA_HCO = openmc.ZPlane( z0= 206.451, name='pz_CR22_SHA_HCO')
+pz_CR22_SHA_TRS = openmc.ZPlane( z0= 198.518, name='pz_CR22_SHA_TRS')
+pz_CR22_SHA_UPL = openmc.ZPlane( z0= 197.514, name='pz_CR22_SHA_UPL')
+pz_CR22_UCO_UPL = openmc.ZPlane( z0= 158.283, name='pz_CR22_UCO_UPL')
+pz_CR22_PLE_UPL = openmc.ZPlane( z0= 151.757, name='pz_CR22_PLE_UPL')
+pz_CR22_ABS_UPL = openmc.ZPlane( z0= 148.644, name='pz_CR22_ABS_UPL')
+pz_CR22_ABS_WRA = openmc.ZPlane( z0= 130.839, name='pz_CR22_ABS_WRA')
+pz_CR22_LCO_WRA = openmc.ZPlane( z0=  97.594, name='pz_CR22_LCO_WRA')
+pz_CR22_BAF_WRA = openmc.ZPlane( z0=  94.180, name='pz_CR22_BAF_WRA')
+pz_CR22_BOT_WRA = openmc.ZPlane( z0=  89.963, name='pz_CR22_BOT_WRA')
+pz_CR22_SHL     = openmc.ZPlane( z0=  65.872, name='pz_CR22_SHL')    
+
+# --- Inside wrapper cells
+c_CR22_00 = openmc.Cell( name='c_CR22_00')
+c_CR22_01 = openmc.Cell( name='c_CR22_01')
+c_CR22_02 = openmc.Cell( name='c_CR22_02')
+c_CR22_03 = openmc.Cell( name='c_CR22_03')
+c_CR22_04 = openmc.Cell( name='c_CR22_04')
+c_CR22_05 = openmc.Cell( name='c_CR22_05')
+c_CR22_06 = openmc.Cell( name='c_CR22_06')
+c_CR22_07 = openmc.Cell( name='c_CR22_07')
+c_CR22_08 = openmc.Cell( name='c_CR22_08')
+c_CR22_09 = openmc.Cell( name='c_CR22_09')
+c_CR22_10 = openmc.Cell( name='c_CR22_10')
+c_CR22_11 = openmc.Cell( name='c_CR22_11')
+c_CR22_12 = openmc.Cell( name='c_CR22_12')
+
+# --- ARO
+c_CR22_00.region =                   +pz_CR22_SHA_HEA
+c_CR22_01.region = -pz_CR22_SHA_HEA & +pz_CR22_SHA_HCO
+c_CR22_02.region = -pz_CR22_SHA_HCO & +pz_CR22_SHA_TRS
+c_CR22_03.region = -pz_CR22_SHA_TRS & +pz_CR22_SHA_UPL
+c_CR22_04.region = -pz_CR22_SHA_UPL & +pz_CR22_UCO_UPL
+c_CR22_05.region = -pz_CR22_UCO_UPL & +pz_CR22_PLE_UPL
+c_CR22_06.region = -pz_CR22_PLE_UPL & +pz_CR22_ABS_UPL
+c_CR22_07.region = -pz_CR22_ABS_UPL & +pz_CR22_ABS_WRA
+c_CR22_08.region = -pz_CR22_ABS_WRA & +pz_CR22_LCO_WRA
+c_CR22_09.region = -pz_CR22_LCO_WRA & +pz_CR22_BAF_WRA
+c_CR22_10.region = -pz_CR22_BAF_WRA & +pz_CR22_BOT_WRA
+c_CR22_11.region = -pz_CR22_BOT_WRA & +pz_CR22_SHL    
+c_CR22_12.region = -pz_CR22_SHL     
+
+c_CR22_00.fill = u_CR_SHA_HEA_REGL2
+c_CR22_01.fill = u_CR_SHA_HEA_REGL2
+c_CR22_02.fill = u_CR_SHA_HCO_REGL2
+c_CR22_03.fill = u_CR_SHA_TRS_REGL2
+c_CR22_04.fill = u_CR_SHA_UPL_REGL2
+c_CR22_05.fill = u_CR_UCO_UPL_REGL2
+c_CR22_06.fill = u_CR_PLE_UPL_REGL2
+c_CR22_07.fill = u_CR_ABS_UPL_REGL2
+c_CR22_08.fill = u_CR_ABS_WRA_REGL2
+c_CR22_09.fill = u_CR_LCO_WRA_REGL2
+c_CR22_10.fill = u_CR_BAF_WRA_REGL2
+c_CR22_11.fill = u_CR_BOT_WRA_REGL2
+c_CR22_12.fill = u_CR_LSH
+
+c_CR22_00.rotation = [0, 0, 90]
+c_CR22_01.rotation = [0, 0, 90]
+c_CR22_02.rotation = [0, 0, 90]
+c_CR22_03.rotation = [0, 0, 90]
+c_CR22_04.rotation = [0, 0, 90]
+c_CR22_05.rotation = [0, 0, 90]
+c_CR22_06.rotation = [0, 0, 90]
+c_CR22_07.rotation = [0, 0, 90]
+c_CR22_08.rotation = [0, 0, 90]
+c_CR22_09.rotation = [0, 0, 90]
+c_CR22_10.rotation = [0, 0, 90]
+c_CR22_11.rotation = [0, 0, 90]
+c_CR22_12.rotation = [0, 0, 90]
+
+a_C22 = openmc.Universe()
+a_C22.add_cells([c_CR22_00,
+                 c_CR22_01,
+                 c_CR22_02,
+                 c_CR22_03,
+                 c_CR22_04,
+                 c_CR22_05,
+                 c_CR22_06,
+                 c_CR22_07,
+                 c_CR22_08,
+                 c_CR22_09,
+                 c_CR22_10,
+                 c_CR22_11,
+                 c_CR22_12])
+
+
+
+# --- Enriched B4C - Shim rod (u_CR_move_SHIM)
+
+# --- Moving CR3 (B4C enr) by changing Z-coordinate in trans. Z=0 --> bottom of the system
+#trans u_CR_move_SHIM 0.0 0.0 124.863 %  Based on 250 deg-C
+pz_CR3_SHA_HEA = openmc.ZPlane( z0= 219.405, name='pz_CR3_SHA_HEA')
+pz_CR3_SHA_HCO = openmc.ZPlane( z0= 206.451, name='pz_CR3_SHA_HCO')
+pz_CR3_SHA_TRS = openmc.ZPlane( z0= 198.518, name='pz_CR3_SHA_TRS')
+pz_CR3_SHA_UPL = openmc.ZPlane( z0= 197.514, name='pz_CR3_SHA_UPL')
+pz_CR3_UCO_UPL = openmc.ZPlane( z0= 193.183, name='pz_CR3_UCO_UPL')
+pz_CR3_PLE_UPL = openmc.ZPlane( z0= 186.657, name='pz_CR3_PLE_UPL')
+pz_CR3_ABS_UPL = openmc.ZPlane( z0= 183.544, name='pz_CR3_ABS_UPL')
+pz_CR3_LCO_UPL = openmc.ZPlane( z0= 132.494, name='pz_CR3_LCO_UPL')
+pz_CR3_LCO_WRA = openmc.ZPlane( z0= 130.839, name='pz_CR3_LCO_WRA')
+pz_CR3_BAF_WRA = openmc.ZPlane( z0= 129.080, name='pz_CR3_BAF_WRA')
+pz_CR3_BOT_WRA = openmc.ZPlane( z0= 124.863, name='pz_CR3_BOT_WRA')
+pz_CR3_SHL     = openmc.ZPlane( z0=  65.872, name='pz_CR3_SHL')    
+
+
+# --- Inside wrapper cells
+c_CR3_00 = openmc.Cell( name='c_CR3_00')
+c_CR3_01 = openmc.Cell( name='c_CR3_01')
+c_CR3_02 = openmc.Cell( name='c_CR3_02')
+c_CR3_03 = openmc.Cell( name='c_CR3_03')
+c_CR3_04 = openmc.Cell( name='c_CR3_04')
+c_CR3_05 = openmc.Cell( name='c_CR3_05')
+c_CR3_06 = openmc.Cell( name='c_CR3_06')
+c_CR3_07 = openmc.Cell( name='c_CR3_07')
+c_CR3_08 = openmc.Cell( name='c_CR3_08')
+c_CR3_09 = openmc.Cell( name='c_CR3_09')
+c_CR3_10 = openmc.Cell( name='c_CR3_10')
+c_CR3_11 = openmc.Cell( name='c_CR3_11')
+c_CR3_12 = openmc.Cell( name='c_CR3_12')
+
+# --- ARO
+c_CR3_00.region =                   +pz_CR3_SHA_HEA
+c_CR3_01.region = -pz_CR3_SHA_HEA & +pz_CR3_SHA_HCO
+c_CR3_02.region = -pz_CR3_SHA_HCO & +pz_CR3_SHA_TRS
+c_CR3_03.region = -pz_CR3_SHA_TRS & +pz_CR3_SHA_UPL
+c_CR3_04.region = -pz_CR3_SHA_UPL & +pz_CR3_UCO_UPL
+c_CR3_05.region = -pz_CR3_UCO_UPL & +pz_CR3_PLE_UPL
+c_CR3_06.region = -pz_CR3_PLE_UPL & +pz_CR3_ABS_UPL
+c_CR3_07.region = -pz_CR3_ABS_UPL & +pz_CR3_LCO_UPL
+c_CR3_08.region = -pz_CR3_LCO_UPL & +pz_CR3_LCO_WRA
+c_CR3_09.region = -pz_CR3_LCO_WRA & +pz_CR3_BAF_WRA
+c_CR3_10.region = -pz_CR3_BAF_WRA & +pz_CR3_BOT_WRA
+c_CR3_11.region = -pz_CR3_BOT_WRA & +pz_CR3_SHL    
+c_CR3_12.region = -pz_CR3_SHL     
+
+c_CR3_00.fill = u_CR_SHA_HEA_SHIM
+c_CR3_01.fill = u_CR_SHA_HEA_SHIM
+c_CR3_02.fill = u_CR_SHA_HCO_SHIM
+c_CR3_03.fill = u_CR_SHA_TRS_SHIM
+c_CR3_04.fill = u_CR_SHA_UPL_SHIM
+c_CR3_05.fill = u_CR_UCO_UPL_SHIM
+c_CR3_06.fill = u_CR_PLE_UPL_SHIM
+c_CR3_07.fill = u_CR_ABS_UPL_SHIM
+c_CR3_08.fill = u_CR_LCO_UPL_SHIM
+c_CR3_09.fill = u_CR_LCO_WRA_SHIM
+c_CR3_10.fill = u_CR_BAF_WRA_SHIM
+c_CR3_11.fill = u_CR_BOT_WRA_SHIM
+c_CR3_12.fill = u_CR_LSH
+
+c_CR3_00.rotation = [0, 0, 90]
+c_CR3_01.rotation = [0, 0, 90]
+c_CR3_02.rotation = [0, 0, 90]
+c_CR3_03.rotation = [0, 0, 90]
+c_CR3_04.rotation = [0, 0, 90]
+c_CR3_05.rotation = [0, 0, 90]
+c_CR3_06.rotation = [0, 0, 90]
+c_CR3_07.rotation = [0, 0, 90]
+c_CR3_08.rotation = [0, 0, 90]
+c_CR3_09.rotation = [0, 0, 90]
+c_CR3_10.rotation = [0, 0, 90]
+c_CR3_11.rotation = [0, 0, 90]
+c_CR3_12.rotation = [0, 0, 90]
+
+a_C3 = openmc.Universe()
+a_C3.add_cells([c_CR3_00,
+                c_CR3_01,
+                c_CR3_02,
+                c_CR3_03,
+                c_CR3_04,
+                c_CR3_05,
+                c_CR3_06,
+                c_CR3_07,
+                c_CR3_08,
+                c_CR3_09,
+                c_CR3_10,
+                c_CR3_11,
+                c_CR3_12])
+

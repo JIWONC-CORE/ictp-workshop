@@ -1,0 +1,57 @@
+#CORE Lattice
+l_core = openmc.HexLattice()
+l_core.center = [0., 0.]
+l_core.pitch  = [6.12525]
+# List of universes in the map:
+# OpenMC -Serpent- Explain                      | Amount
+# a_FU   - a_FU  - Fuel Assembly                | 78   
+# a_R1   - a_R1  - 1-Steel Shielding Assembly   | 2    
+# a_R2   - a_R2  - 2-Steel Shielding Assembly   | 37   
+# a_R3   - a_R3  - 3-Steel Shielding Assembly   | 132  
+# a_R4   - a_R4  - 4-Steel Shielding Assembly   | 223  
+# a_RB   - a_RB  - Boron Shielding Assembly     | 230  
+# a_C1   - a_C1  - Safety Rod Assembly, SA1     | 1    
+# a_C1   - a_C1  - Safety Rod Assembly, SA1     | 1    
+# a_C1   - a_C1  - Safety Rod Assembly, SA3     | 1    
+# a_C21  - a_C21 - Regulating Rod Assembly, RE1 | 1    
+# a_C22  - a_C22 - Regulating Rod Assembly, RE2 | 1    
+# a_C3   - a_C3  - Shim Rod Assembly, SH1       | 1    
+# a_C3   - a_C3  - Shim Rod Assembly, SH2       | 1    
+# a_C3   - a_C3  - Shim Rod Assembly, SH3       | 1    
+# a_NS   - a_NS  - Neutron Source Assembly      | 1    
+# a_OU   - a_OU                                 | 515  
+# a_VO   - a_VO  - Na Void Assembly             | 1    
+# a_MU   - a_MU  - Mock-up Assembly             | 0    
+# 
+l_core.universes = \
+       [ 
+         [a_OU]*102,
+         [a_OU]*4 +[a_R4]   +[a_RB]*8 +[a_OU]*7 +[a_RB]*9 +[a_OU]*7 +[a_RB]*3 +[a_OU]*19+[a_RB]*3 +[a_OU]*7 +[a_RB]*9 +[a_OU]*7 +[a_RB]*8 +[a_R4]   +[a_OU]*3 ,
+         [a_OU]*2 +[a_R4]*3 +[a_RB]*3 +[a_R4]*5 +[a_RB]   +[a_OU]*3 +[a_RB]   +[a_R4]*10+[a_RB]   +[a_OU]*3 +[a_RB]   +[a_R4]*3 +[a_RB]*2 +[a_OU]*15+[a_RB]*2 +[a_R4]*3 +[a_RB]   +[a_OU]*3 +[a_RB]   +[a_R4]*10+[a_RB]   +[a_OU]*3 +[a_RB]   +[a_R4]*5 +[a_RB]*3 +[a_R4]*3 +[a_OU]   ,
+         [a_R4]*5 +[a_RB]*7 +[a_R4]*2 +[a_RB]   +[a_R4]*2 +[a_RB]*9 +[a_R4]*2 +[a_RB]   +[a_R4]*2 +[a_RB]*5 +[a_R4]   +[a_OU]*11+[a_R4]   +[a_RB]*5 +[a_R4]*2 +[a_RB]   +[a_R4]*2 +[a_RB]*9 +[a_R4]*2 +[a_RB]   +[a_R4]*2 +[a_RB]*7 +[a_R4]*4 ,
+         [a_R4]*5 +[a_RB]*8 +[a_R4]   +[a_RB]*12+[a_R4]   +[a_RB]*6 +[a_R4]*3 +[a_OU]*7 +[a_R4]*3 +[a_RB]*6 +[a_R4]   +[a_RB]*12+[a_R4]   +[a_RB]*8 +[a_R4]*4 ,
+         [a_R4]*5 +[a_RB]*25+[a_R4]*5 +[a_OU]*3 +[a_R4]*5 +[a_RB]*25+[a_R4]*4 ,
+         [a_R4]*9 +[a_RB]*5 +[a_R4]*6 +[a_RB]*5 +[a_R4]*17+[a_RB]*5 +[a_R4]*6 +[a_RB]*5 +[a_R4]*8 ,
+         [a_R4]*3 +[a_R3]*2 +[a_R4]*5 +[a_RB]   +[a_R4]*2 +[a_R3]*2 +[a_R4]*5 +[a_RB]   +[a_R4]*2 +[a_R3]*2 +[a_R4]*8 +[a_R3]*2 +[a_R4]*5 +[a_RB]   +[a_R4]*2 +[a_R3]*2 +[a_R4]*5 +[a_RB]   +[a_R4]*2 +[a_R3]*2 +[a_R4]*5 , 
+         [a_R4]*2 +[a_R3]*5 +[a_R4]*4 +[a_R3]*5 +[a_R4]*4 +[a_R3]*5 +[a_R4]*4 +[a_R3]*5 +[a_R4]*4 +[a_R3]*5 +[a_R4]*4 +[a_R3]*5 +[a_R4]*2 ,
+         [a_R3]*48,
+         [a_R3]*42,
+         [a_R2]*8 +[a_C21]  +[a_R2]*19+[a_C22]  +[a_R2]*7 ,
+         [a_FU]*5 +[a_R2]   +[a_FU]*9 +[a_R2]   +[a_FU]*9 +[a_R2]   +[a_FU]*4 ,
+         [a_C1]  +[a_FU]*5 +[a_R1]   +[a_FU]   +[a_C1]  +[a_FU]*7 +[a_C1]    +[a_FU]   +[a_R1]   +[a_FU]*5 ,
+         [a_FU]*18,                                     
+         [a_FU]*2 +[a_C3]  +[a_FU]*3 +[a_C3]  +[a_FU]*3 +[a_C3]  +[a_FU]   ,
+         [a_VO]  +[a_FU]*5 ,
+         [a_NS]
+       ]
+
+l_core.outer = a_OU 
+
+cell1000 = openmc.Cell(name='cell1000')
+
+cell1000.region = hexcore & -pz_TOP & +pz_BOT
+
+cell1000.fill = l_core
+
+root = openmc.Universe(name='root universe')
+root.add_cells([cell1000])
