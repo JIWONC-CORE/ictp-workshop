@@ -1,0 +1,1908 @@
+ ============================>     TALLY 1     <============================
+
+ Distributed Cell u159->c510->l158(1,-5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5291.01 +/- 17.2925
+     Flux                                 0.063775 +/- 8.52739e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5679.48 +/- 19.0552
+     Flux                                 0.0660798 +/- 8.62949e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5624.1 +/- 17.9026
+     Flux                                 0.0653267 +/- 9.08745e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,-5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5185.77 +/- 17.6399
+     Flux                                 0.0610961 +/- 8.42474e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   4544.06 +/- 16.7341
+     Flux                                 0.0559983 +/- 8.16125e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5284.49 +/- 17.0861
+     Flux                                 0.0637531 +/- 8.81991e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,-4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6254.65 +/- 19.359
+     Flux                                 0.0704463 +/- 9.03024e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6906.12 +/- 20.3208
+     Flux                                 0.0744508 +/- 8.87582e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7050.51 +/- 21.6055
+     Flux                                 0.0755407 +/- 9.1621e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6702.69 +/- 20.2174
+     Flux                                 0.0721727 +/- 9.16267e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5031.5 +/- 17.6042
+     Flux                                 0.0605542 +/- 8.71676e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,-3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5697.8 +/- 17.9416
+     Flux                                 0.0660293 +/- 9.06374e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6899.09 +/- 20.3734
+     Flux                                 0.074437 +/- 9.13656e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,-3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7630.32 +/- 22.1114
+     Flux                                 0.0795094 +/- 9.47226e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7966.72 +/- 22.448
+     Flux                                 0.0823272 +/- 9.3335e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7893.65 +/- 23.4782
+     Flux                                 0.0823604 +/- 9.84214e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7337.42 +/- 21.9819
+     Flux                                 0.0778958 +/- 9.25446e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,-3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6296.68 +/- 19.4644
+     Flux                                 0.0711805 +/- 9.05655e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5119.63 +/- 17.7253
+     Flux                                 0.0635695 +/- 8.6322e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,-2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5634.66 +/- 18.8284
+     Flux                                 0.0653849 +/- 8.61946e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,-2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7033.73 +/- 20.517
+     Flux                                 0.0753782 +/- 9.43866e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7926.89 +/- 22.1267
+     Flux                                 0.082303 +/- 9.48351e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8558.84 +/- 23.4627
+     Flux                                 0.0881633 +/- 0.000101398
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8359.85 +/- 23.4544
+     Flux                                 0.0872119 +/- 9.53232e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7606.59 +/- 21.8473
+     Flux                                 0.0816575 +/- 9.59226e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5072.94 +/- 17.1847
+     Flux                                 0.0635579 +/- 8.57715e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5220.67 +/- 17.7837
+     Flux                                 0.0612488 +/- 8.48281e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6664.76 +/- 19.6684
+     Flux                                 0.0721179 +/- 8.97455e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7893.52 +/- 21.6894
+     Flux                                 0.0822411 +/- 9.23449e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8541.09 +/- 23.1682
+     Flux                                 0.0881715 +/- 9.92184e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8716.3 +/- 22.9833
+     Flux                                 0.091408 +/- 0.000100845
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8750.78 +/- 23.889
+     Flux                                 0.0922072 +/- 0.000103692
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8443.61 +/- 22.8436
+     Flux                                 0.0878728 +/- 9.81103e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7584.78 +/- 21.2626
+     Flux                                 0.0811291 +/- 9.77205e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6375.53 +/- 19.6348
+     Flux                                 0.0723816 +/- 9.54543e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   4919.88 +/- 16.8145
+     Flux                                 0.0613191 +/- 8.38062e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,0)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   4524.69 +/- 16.1815
+     Flux                                 0.0559032 +/- 8.01312e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,0)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7286.42 +/- 21.0456
+     Flux                                 0.0776674 +/- 9.2181e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,0)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8349.48 +/- 23.5644
+     Flux                                 0.0871539 +/- 9.81875e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,0)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8793.9 +/- 23.6747
+     Flux                                 0.0921684 +/- 0.000104901
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,0)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8690.36 +/- 23.846
+     Flux                                 0.0912654 +/- 9.97569e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,0)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7395.5 +/- 20.8086
+     Flux                                 0.0783869 +/- 9.42574e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,0)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6066.69 +/- 18.7324
+     Flux                                 0.0690754 +/- 8.87164e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   4974.71 +/- 16.9229
+     Flux                                 0.0603367 +/- 8.31608e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6322.51 +/- 19.3307
+     Flux                                 0.0711376 +/- 8.63399e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7587.88 +/- 20.5035
+     Flux                                 0.0816596 +/- 9.67237e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8410.56 +/- 23.6902
+     Flux                                 0.0878005 +/- 9.6307e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8693.11 +/- 22.2228
+     Flux                                 0.0912412 +/- 9.97302e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8735.96 +/- 23.183
+     Flux                                 0.0921486 +/- 0.000104158
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8526.69 +/- 22.452
+     Flux                                 0.0881394 +/- 9.82146e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7914.92 +/- 23.0038
+     Flux                                 0.0819137 +/- 9.85933e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6785.57 +/- 20.4351
+     Flux                                 0.0737453 +/- 9.40507e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,1)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5183.35 +/- 17.5079
+     Flux                                 0.063025 +/- 8.81224e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5120.48 +/- 17.5605
+     Flux                                 0.0632931 +/- 8.99232e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7583.43 +/- 20.9605
+     Flux                                 0.0809925 +/- 9.46937e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8493.66 +/- 23.1649
+     Flux                                 0.087846 +/- 9.58194e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   8476.69 +/- 22.3146
+     Flux                                 0.087445 +/- 9.76668e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7935.53 +/- 21.9853
+     Flux                                 0.0825437 +/- 9.74037e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7060.45 +/- 20.0053
+     Flux                                 0.0754182 +/- 9.38941e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,2)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5663.01 +/- 17.4215
+     Flux                                 0.0658888 +/- 8.57647e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5087.9 +/- 17.5819
+     Flux                                 0.063073 +/- 8.76576e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6414.9 +/- 19.9056
+     Flux                                 0.0723734 +/- 9.4034e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7408.84 +/- 21.4238
+     Flux                                 0.0783879 +/- 9.26184e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7885.2 +/- 21.858
+     Flux                                 0.0817986 +/- 9.31072e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7903.67 +/- 22.3413
+     Flux                                 0.0824718 +/- 9.40143e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7507.17 +/- 20.9001
+     Flux                                 0.0784914 +/- 9.13662e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6797.48 +/- 21.2447
+     Flux                                 0.072764 +/- 8.68576e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,3)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5670.12 +/- 17.9789
+     Flux                                 0.0655664 +/- 9.01017e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   4897.29 +/- 16.9065
+     Flux                                 0.0610054 +/- 8.31124e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6037.64 +/- 18.6418
+     Flux                                 0.0687315 +/- 8.74122e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6800.36 +/- 19.9427
+     Flux                                 0.0735566 +/- 8.68803e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   7051.68 +/- 20.3394
+     Flux                                 0.0752742 +/- 9.13424e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   6744.5 +/- 20.364
+     Flux                                 0.0725724 +/- 9.13531e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,4)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5341.76 +/- 18.6958
+     Flux                                 0.0622501 +/- 8.43901e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5149.7 +/- 17.4931
+     Flux                                 0.0626572 +/- 8.63311e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5665.84 +/- 19.3027
+     Flux                                 0.0657073 +/- 8.76584e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5652.57 +/- 18.8042
+     Flux                                 0.0655833 +/- 8.72977e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   5313.21 +/- 18.0215
+     Flux                                 0.0621311 +/- 8.52243e-05
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,5)->u144->c397
+   Total Material
+     Kappa-Fission Rate                   4685.59 +/- 16.0798
+     Flux                                 0.0572629 +/- 8.35725e-05
+     Recoverable fission power            0 +/- 0
+ ============================>     TALLY 2     <============================
+
+ Distributed Cell u159->c510->l158(1,-5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   859136 +/- 634.83
+     Flux                                 0.511273 +/- 0.000286635
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   878303 +/- 615.06
+     Flux                                 0.540099 +/- 0.000290735
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   871733 +/- 567.89
+     Flux                                 0.536967 +/- 0.000281462
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,-5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   834074 +/- 615.752
+     Flux                                 0.505589 +/- 0.000286046
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   788529 +/- 637.626
+     Flux                                 0.456037 +/- 0.000273367
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   859597 +/- 629.932
+     Flux                                 0.511753 +/- 0.00028832
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,-4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   922832 +/- 583.691
+     Flux                                 0.587801 +/- 0.000305919
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   971934 +/- 546.84
+     Flux                                 0.633695 +/- 0.000303293
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   986181 +/- 564.064
+     Flux                                 0.645963 +/- 0.000306487
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   952202 +/- 549.899
+     Flux                                 0.618043 +/- 0.000301996
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   824537 +/- 606.122
+     Flux                                 0.498391 +/- 0.000290067
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,-3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   878481 +/- 573.02
+     Flux                                 0.540063 +/- 0.000287413
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   972815 +/- 548.579
+     Flux                                 0.63423 +/- 0.000303795
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,-3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.05393e+06 +/- 548.241
+     Flux                                 0.694574 +/- 0.000311541
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.09276e+06 +/- 543.599
+     Flux                                 0.723243 +/- 0.000308117
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.08616e+06 +/- 565.626
+     Flux                                 0.720745 +/- 0.000324826
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.02654e+06 +/- 530.175
+     Flux                                 0.673472 +/- 0.00029973
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,-3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   939104 +/- 555.06
+     Flux                                 0.603759 +/- 0.000292538
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   848453 +/- 593.992
+     Flux                                 0.5151 +/- 0.000283878
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,-2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   871626 +/- 589
+     Flux                                 0.536841 +/- 0.000287354
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,-2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   986092 +/- 546.354
+     Flux                                 0.64609 +/- 0.000302497
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.09218e+06 +/- 561.515
+     Flux                                 0.723019 +/- 0.000315003
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.17363e+06 +/- 566.838
+     Flux                                 0.780303 +/- 0.000325751
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.15223e+06 +/- 564.97
+     Flux                                 0.767033 +/- 0.000329488
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.07552e+06 +/- 581.454
+     Flux                                 0.707766 +/- 0.000325542
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   850641 +/- 604.347
+     Flux                                 0.509952 +/- 0.000274167
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   833549 +/- 573.153
+     Flux                                 0.505322 +/- 0.000272476
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   950901 +/- 512.74
+     Flux                                 0.61777 +/- 0.000282255
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.08598e+06 +/- 561.267
+     Flux                                 0.720739 +/- 0.000319219
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.17435e+06 +/- 560.399
+     Flux                                 0.780496 +/- 0.000326053
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.21633e+06 +/- 594.285
+     Flux                                 0.805803 +/- 0.000337295
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.22011e+06 +/- 594.855
+     Flux                                 0.810589 +/- 0.00033387
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.16798e+06 +/- 575.527
+     Flux                                 0.774474 +/- 0.00032099
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.07664e+06 +/- 562.482
+     Flux                                 0.706069 +/- 0.000305544
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   947512 +/- 544.524
+     Flux                                 0.610073 +/- 0.000293003
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   834074 +/- 619.998
+     Flux                                 0.48968 +/- 0.000278305
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,0)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   785394 +/- 622.871
+     Flux                                 0.454599 +/- 0.00026536
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,0)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.02538e+06 +/- 574.237
+     Flux                                 0.673153 +/- 0.00032256
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,0)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.15135e+06 +/- 563.449
+     Flux                                 0.766385 +/- 0.000326018
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,0)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.22101e+06 +/- 581.46
+     Flux                                 0.811213 +/- 0.0003271
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,0)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.21197e+06 +/- 572.133
+     Flux                                 0.802636 +/- 0.000320707
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,0)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.03993e+06 +/- 539.192
+     Flux                                 0.682909 +/- 0.000299861
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,0)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   905603 +/- 572.067
+     Flux                                 0.574465 +/- 0.000292012
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   823806 +/- 604.894
+     Flux                                 0.497886 +/- 0.00027821
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   939135 +/- 530.591
+     Flux                                 0.603553 +/- 0.00029005
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.07515e+06 +/- 580.172
+     Flux                                 0.707608 +/- 0.000327024
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.16797e+06 +/- 547.009
+     Flux                                 0.774607 +/- 0.000314264
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.21253e+06 +/- 585.899
+     Flux                                 0.802948 +/- 0.000329369
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.22177e+06 +/- 585.38
+     Flux                                 0.811922 +/- 0.000325283
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.17278e+06 +/- 585.695
+     Flux                                 0.779293 +/- 0.000325581
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.0877e+06 +/- 555.327
+     Flux                                 0.719176 +/- 0.000309659
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   963035 +/- 554.655
+     Flux                                 0.627346 +/- 0.000306087
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,1)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   848209 +/- 622.359
+     Flux                                 0.504201 +/- 0.000277761
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   847772 +/- 574.211
+     Flux                                 0.514556 +/- 0.000273933
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.07662e+06 +/- 553.424
+     Flux                                 0.706063 +/- 0.000309256
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.17286e+06 +/- 558.821
+     Flux                                 0.779103 +/- 0.000310221
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.15799e+06 +/- 536.993
+     Flux                                 0.77207 +/- 0.000306178
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.09008e+06 +/- 554.427
+     Flux                                 0.723508 +/- 0.000312706
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   985731 +/- 549.879
+     Flux                                 0.645881 +/- 0.000307208
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,2)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   874436 +/- 585.593
+     Flux                                 0.53749 +/- 0.000284509
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   848481 +/- 613.414
+     Flux                                 0.509333 +/- 0.000284934
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   946975 +/- 545.754
+     Flux                                 0.609831 +/- 0.000302898
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.03881e+06 +/- 568.763
+     Flux                                 0.682355 +/- 0.000322697
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.08612e+06 +/- 555.059
+     Flux                                 0.718249 +/- 0.000320721
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.08825e+06 +/- 571.772
+     Flux                                 0.722396 +/- 0.0003242
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   1.03864e+06 +/- 561.215
+     Flux                                 0.68366 +/- 0.000316393
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   960681 +/- 533.37
+     Flux                                 0.624349 +/- 0.000293185
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,3)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   876696 +/- 598.94
+     Flux                                 0.53974 +/- 0.00029692
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   831778 +/- 616.641
+     Flux                                 0.48859 +/- 0.000274187
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   903417 +/- 580.674
+     Flux                                 0.573215 +/- 0.000295136
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   962144 +/- 547.788
+     Flux                                 0.626643 +/- 0.000306122
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   986167 +/- 551.49
+     Flux                                 0.645805 +/- 0.000314345
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   959102 +/- 560.201
+     Flux                                 0.623489 +/- 0.000313098
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,4)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   846689 +/- 566.408
+     Flux                                 0.513702 +/- 0.000272897
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   845724 +/- 606.037
+     Flux                                 0.503103 +/- 0.000286943
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   873006 +/- 582.747
+     Flux                                 0.536686 +/- 0.000278851
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   875653 +/- 587.656
+     Flux                                 0.539182 +/- 0.00028961
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   846568 +/- 600.662
+     Flux                                 0.513607 +/- 0.000284581
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,5)->u144->c398
+   Total Material
+     Kappa-Fission Rate                   805358 +/- 628.17
+     Flux                                 0.466469 +/- 0.000269626
+     Recoverable fission power            0 +/- 0
+ ============================>     TALLY 3     <============================
+
+ Distributed Cell u159->c510->l158(1,-5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8700.71 +/- 23.3911
+     Flux                                 0.123677 +/- 0.000143322
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9267.27 +/- 25.1337
+     Flux                                 0.128528 +/- 0.000145616
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9310.37 +/- 24.6793
+     Flux                                 0.128613 +/- 0.000145647
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,-5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8913.87 +/- 23.9736
+     Flux                                 0.124522 +/- 0.000142239
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8056.53 +/- 22.8778
+     Flux                                 0.115445 +/- 0.000138916
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8748.66 +/- 24.461
+     Flux                                 0.123707 +/- 0.000151391
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,-4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10107.2 +/- 25.9716
+     Flux                                 0.13697 +/- 0.000147746
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   11037.3 +/- 27.1297
+     Flux                                 0.145421 +/- 0.000154202
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   11253.2 +/- 27.6476
+     Flux                                 0.147758 +/- 0.000150839
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10914.8 +/- 27.3803
+     Flux                                 0.144301 +/- 0.000150354
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8757.73 +/- 23.6695
+     Flux                                 0.123861 +/- 0.000146283
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,-3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9256.56 +/- 24.1084
+     Flux                                 0.128497 +/- 0.00014076
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10967.7 +/- 26.7276
+     Flux                                 0.14527 +/- 0.000157818
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,-3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12346.8 +/- 29.0037
+     Flux                                 0.158948 +/- 0.000157387
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12886.6 +/- 29.5188
+     Flux                                 0.164561 +/- 0.00015529
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12614.3 +/- 29.5683
+     Flux                                 0.162681 +/- 0.000159362
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   11859.7 +/- 27.3443
+     Flux                                 0.155183 +/- 0.000148719
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,-3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10527 +/- 26.0883
+     Flux                                 0.143474 +/- 0.000154458
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8698.81 +/- 23.096
+     Flux                                 0.126735 +/- 0.000140987
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,-2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9228.12 +/- 25.6268
+     Flux                                 0.128487 +/- 0.000143412
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,-2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   11222.9 +/- 26.5696
+     Flux                                 0.14781 +/- 0.00014908
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12894.2 +/- 29.9583
+     Flux                                 0.164665 +/- 0.000160412
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   13854.7 +/- 31.4201
+     Flux                                 0.176679 +/- 0.000164987
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   13402.2 +/- 28.6145
+     Flux                                 0.172225 +/- 0.000162731
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12275.3 +/- 28.9462
+     Flux                                 0.162017 +/- 0.000161098
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8679.88 +/- 23.8083
+     Flux                                 0.125977 +/- 0.000144801
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8934.48 +/- 23.9528
+     Flux                                 0.124536 +/- 0.000143714
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10901 +/- 26.8102
+     Flux                                 0.144474 +/- 0.000144478
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12611 +/- 30.0806
+     Flux                                 0.162876 +/- 0.000159971
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   13828.2 +/- 30.0781
+     Flux                                 0.17662 +/- 0.000160852
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   14238.8 +/- 31.0967
+     Flux                                 0.183324 +/- 0.000163405
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   14118.5 +/- 30.5815
+     Flux                                 0.18309 +/- 0.000174565
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   13705.5 +/- 30.7752
+     Flux                                 0.176312 +/- 0.000158577
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12514.2 +/- 28.1932
+     Flux                                 0.163663 +/- 0.000157971
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10479.1 +/- 26.644
+     Flux                                 0.14345 +/- 0.000152721
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(5,-1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8396.06 +/- 24.0097
+     Flux                                 0.121405 +/- 0.00014154
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,0)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8052.59 +/- 22.4478
+     Flux                                 0.115641 +/- 0.00014445
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,0)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   11901.2 +/- 27.7672
+     Flux                                 0.155382 +/- 0.000157645
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,0)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   13410.1 +/- 29.9577
+     Flux                                 0.172252 +/- 0.000164227
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,0)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   14095.4 +/- 30.8215
+     Flux                                 0.182822 +/- 0.000171976
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,0)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   14151.4 +/- 31.5522
+     Flux                                 0.183332 +/- 0.000165404
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,0)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12114.7 +/- 30.25
+     Flux                                 0.157858 +/- 0.000158048
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,0)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9838.12 +/- 26.3324
+     Flux                                 0.135315 +/- 0.00014735
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8760.97 +/- 23.9022
+     Flux                                 0.123704 +/- 0.000139319
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10580.9 +/- 27.0364
+     Flux                                 0.143344 +/- 0.00015
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12317.7 +/- 28.6569
+     Flux                                 0.162089 +/- 0.000156253
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   13681 +/- 31.283
+     Flux                                 0.176133 +/- 0.000171356
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   14113 +/- 31.1744
+     Flux                                 0.182844 +/- 0.000165817
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   14040.5 +/- 29.7702
+     Flux                                 0.183017 +/- 0.000160866
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   13825.6 +/- 31.2775
+     Flux                                 0.176885 +/- 0.000165132
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12823.2 +/- 29.6324
+     Flux                                 0.164597 +/- 0.000160111
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10844.6 +/- 27.6548
+     Flux                                 0.144648 +/- 0.000155113
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(4,1)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8585.68 +/- 22.9699
+     Flux                                 0.122587 +/- 0.000140358
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8728.82 +/- 24.2931
+     Flux                                 0.126727 +/- 0.000138116
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12447.5 +/- 28.6272
+     Flux                                 0.16354 +/- 0.000157925
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   13837.7 +/- 30.2781
+     Flux                                 0.176704 +/- 0.000163207
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   13519.3 +/- 31.103
+     Flux                                 0.173051 +/- 0.000164015
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12691.8 +/- 30.064
+     Flux                                 0.163394 +/- 0.000163123
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   11254.1 +/- 27.447
+     Flux                                 0.147972 +/- 0.000152708
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(3,2)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9245.29 +/- 25.1251
+     Flux                                 0.128381 +/- 0.000148541
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8676.05 +/- 23.2199
+     Flux                                 0.125879 +/- 0.000139462
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10512.8 +/- 26.6524
+     Flux                                 0.143595 +/- 0.000152115
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12126.7 +/- 27.5607
+     Flux                                 0.157859 +/- 0.000152721
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12846.2 +/- 30.1612
+     Flux                                 0.164477 +/- 0.000164566
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12728.3 +/- 29.2192
+     Flux                                 0.163303 +/- 0.000156014
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   12128 +/- 29.6456
+     Flux                                 0.156714 +/- 0.000156172
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   11067 +/- 27.5383
+     Flux                                 0.145582 +/- 0.000154721
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(2,3)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9344.73 +/- 25.575
+     Flux                                 0.129125 +/- 0.000149466
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-5,4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8447.13 +/- 22.3547
+     Flux                                 0.121381 +/- 0.000140174
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9912.23 +/- 27.5436
+     Flux                                 0.135602 +/- 0.000151621
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   10887.9 +/- 27.2913
+     Flux                                 0.14486 +/- 0.000149173
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   11260.9 +/- 28.352
+     Flux                                 0.147832 +/- 0.000152939
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   11089 +/- 28.8231
+     Flux                                 0.145578 +/- 0.000146961
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(1,4)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9156.18 +/- 24.7453
+     Flux                                 0.125983 +/- 0.000144742
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-4,5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8614.4 +/- 22.9756
+     Flux                                 0.12264 +/- 0.000143991
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-3,5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9194.19 +/- 25.1012
+     Flux                                 0.128328 +/- 0.00014531
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-2,5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9323.41 +/- 24.4523
+     Flux                                 0.129142 +/- 0.000142307
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(-1,5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   9142.32 +/- 24.7672
+     Flux                                 0.126084 +/- 0.000145283
+     Recoverable fission power            0 +/- 0
+ Distributed Cell u159->c510->l158(0,5)->u144->c399
+   Total Material
+     Kappa-Fission Rate                   8322.25 +/- 22.9601
+     Flux                                 0.11767 +/- 0.000139074
+     Recoverable fission power            0 +/- 0
+ ============================>     TALLY 4     <============================
+
+ Distributed Cell u159->c510
+   Incoming Energy [1e-05, 0.0001)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.0001, 0.0005)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.0005, 0.00075)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.00075, 0.001)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.001, 0.0012)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.0012, 0.0015)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.0015, 0.002)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.002, 0.0025)
+     Total Material
+       Flux                                 8.87436e-09 +/- 7.75215e-09
+   Incoming Energy [0.0025, 0.003)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.003, 0.004)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.004, 0.005)
+     Total Material
+       Flux                                 0 +/- 0
+   Incoming Energy [0.005, 0.0075)
+     Total Material
+       Flux                                 2.40769e-07 +/- 1.02237e-07
+   Incoming Energy [0.0075, 0.01)
+     Total Material
+       Flux                                 1.01626e-07 +/- 3.94417e-08
+   Incoming Energy [0.01, 0.0253)
+     Total Material
+       Flux                                 5.67503e-06 +/- 5.84518e-07
+   Incoming Energy [0.0253, 0.03)
+     Total Material
+       Flux                                 3.5431e-06 +/- 3.89746e-07
+   Incoming Energy [0.03, 0.04)
+     Total Material
+       Flux                                 1.34809e-05 +/- 8.70168e-07
+   Incoming Energy [0.04, 0.05)
+     Total Material
+       Flux                                 2.21311e-05 +/- 1.18259e-06
+   Incoming Energy [0.05, 0.06)
+     Total Material
+       Flux                                 3.57791e-05 +/- 1.65623e-06
+   Incoming Energy [0.06, 0.07)
+     Total Material
+       Flux                                 4.58439e-05 +/- 1.74708e-06
+   Incoming Energy [0.07, 0.08)
+     Total Material
+       Flux                                 5.9325e-05 +/- 2.05363e-06
+   Incoming Energy [0.08, 0.09)
+     Total Material
+       Flux                                 7.82327e-05 +/- 2.37977e-06
+   Incoming Energy [0.09, 0.1)
+     Total Material
+       Flux                                 9.42269e-05 +/- 2.47836e-06
+   Incoming Energy [0.1, 0.125)
+     Total Material
+       Flux                                 0.000337406 +/- 5.85566e-06
+   Incoming Energy [0.125, 0.15)
+     Total Material
+       Flux                                 0.000478298 +/- 6.79178e-06
+   Incoming Energy [0.15, 0.175)
+     Total Material
+       Flux                                 0.00064831 +/- 7.80757e-06
+   Incoming Energy [0.175, 0.2)
+     Total Material
+       Flux                                 0.000822643 +/- 8.64334e-06
+   Incoming Energy [0.2, 0.225)
+     Total Material
+       Flux                                 0.00101428 +/- 9.15651e-06
+   Incoming Energy [0.225, 0.25)
+     Total Material
+       Flux                                 0.00118757 +/- 9.8866e-06
+   Incoming Energy [0.25, 0.275)
+     Total Material
+       Flux                                 0.00136991 +/- 1.08293e-05
+   Incoming Energy [0.275, 0.3)
+     Total Material
+       Flux                                 0.00154709 +/- 1.16993e-05
+   Incoming Energy [0.3, 0.325)
+     Total Material
+       Flux                                 0.00172265 +/- 1.18713e-05
+   Incoming Energy [0.325, 0.35)
+     Total Material
+       Flux                                 0.00187233 +/- 1.14532e-05
+   Incoming Energy [0.35, 0.375)
+     Total Material
+       Flux                                 0.00205085 +/- 1.21105e-05
+   Incoming Energy [0.375, 0.4)
+     Total Material
+       Flux                                 0.00220245 +/- 1.25268e-05
+   Incoming Energy [0.4, 0.45)
+     Total Material
+       Flux                                 0.00487027 +/- 2.20982e-05
+   Incoming Energy [0.45, 0.5)
+     Total Material
+       Flux                                 0.00535517 +/- 2.29477e-05
+   Incoming Energy [0.5, 0.55)
+     Total Material
+       Flux                                 0.00585534 +/- 2.43422e-05
+   Incoming Energy [0.55, 0.6)
+     Total Material
+       Flux                                 0.00629211 +/- 2.39343e-05
+   Incoming Energy [0.6, 0.625)
+     Total Material
+       Flux                                 0.00328929 +/- 1.44619e-05
+   Incoming Energy [0.625, 0.65)
+     Total Material
+       Flux                                 0.0033725 +/- 1.45668e-05
+   Incoming Energy [0.65, 0.7)
+     Total Material
+       Flux                                 0.00701006 +/- 2.48592e-05
+   Incoming Energy [0.7, 0.75)
+     Total Material
+       Flux                                 0.00729431 +/- 2.47304e-05
+   Incoming Energy [0.75, 0.8)
+     Total Material
+       Flux                                 0.00760781 +/- 2.46788e-05
+   Incoming Energy [0.8, 0.85)
+     Total Material
+       Flux                                 0.0077868 +/- 2.32923e-05
+   Incoming Energy [0.85, 0.9)
+     Total Material
+       Flux                                 0.00797911 +/- 2.43683e-05
+   Incoming Energy [0.9, 0.925)
+     Total Material
+       Flux                                 0.00403941 +/- 1.56483e-05
+   Incoming Energy [0.925, 0.95)
+     Total Material
+       Flux                                 0.00408814 +/- 1.56403e-05
+   Incoming Energy [0.95, 0.975)
+     Total Material
+       Flux                                 0.00413744 +/- 1.50437e-05
+   Incoming Energy [0.975, 1)
+     Total Material
+       Flux                                 0.0041622 +/- 1.53734e-05
+   Incoming Energy [1, 1.01)
+     Total Material
+       Flux                                 0.00165308 +/- 9.08895e-06
+   Incoming Energy [1.01, 1.02)
+     Total Material
+       Flux                                 0.00167854 +/- 8.74873e-06
+   Incoming Energy [1.02, 1.03)
+     Total Material
+       Flux                                 0.00167251 +/- 8.42449e-06
+   Incoming Energy [1.03, 1.04)
+     Total Material
+       Flux                                 0.00168862 +/- 8.75431e-06
+   Incoming Energy [1.04, 1.05)
+     Total Material
+       Flux                                 0.00169473 +/- 8.7135e-06
+   Incoming Energy [1.05, 1.06)
+     Total Material
+       Flux                                 0.00169712 +/- 8.88243e-06
+   Incoming Energy [1.06, 1.07)
+     Total Material
+       Flux                                 0.00171613 +/- 8.92385e-06
+   Incoming Energy [1.07, 1.08)
+     Total Material
+       Flux                                 0.0017131 +/- 8.64596e-06
+   Incoming Energy [1.08, 1.09)
+     Total Material
+       Flux                                 0.00169903 +/- 8.84051e-06
+   Incoming Energy [1.09, 1.1)
+     Total Material
+       Flux                                 0.00171084 +/- 8.70881e-06
+   Incoming Energy [1.1, 1.11)
+     Total Material
+       Flux                                 0.00172275 +/- 8.63112e-06
+   Incoming Energy [1.11, 1.12)
+     Total Material
+       Flux                                 0.00172632 +/- 9.2091e-06
+   Incoming Energy [1.12, 1.13)
+     Total Material
+       Flux                                 0.00171827 +/- 8.52092e-06
+   Incoming Energy [1.13, 1.14)
+     Total Material
+       Flux                                 0.00174347 +/- 8.99312e-06
+   Incoming Energy [1.14, 1.15)
+     Total Material
+       Flux                                 0.00173449 +/- 8.78573e-06
+   Incoming Energy [1.15, 1.175)
+     Total Material
+       Flux                                 0.0043889 +/- 1.5e-05
+   Incoming Energy [1.175, 1.2)
+     Total Material
+       Flux                                 0.00442739 +/- 1.51189e-05
+   Incoming Energy [1.2, 1.225)
+     Total Material
+       Flux                                 0.00439763 +/- 1.4581e-05
+   Incoming Energy [1.225, 1.25)
+     Total Material
+       Flux                                 0.00443249 +/- 1.56747e-05
+   Incoming Energy [1.25, 1.3)
+     Total Material
+       Flux                                 0.00892189 +/- 2.28833e-05
+   Incoming Energy [1.3, 1.35)
+     Total Material
+       Flux                                 0.00901494 +/- 2.40469e-05
+   Incoming Energy [1.35, 1.4)
+     Total Material
+       Flux                                 0.00905126 +/- 2.36699e-05
+   Incoming Energy [1.4, 1.45)
+     Total Material
+       Flux                                 0.00906387 +/- 2.29269e-05
+   Incoming Energy [1.45, 1.5)
+     Total Material
+       Flux                                 0.00913543 +/- 2.39977e-05
+   Incoming Energy [1.5, 1.59)
+     Total Material
+       Flux                                 0.0165033 +/- 3.47348e-05
+   Incoming Energy [1.59, 1.68)
+     Total Material
+       Flux                                 0.0165142 +/- 3.38602e-05
+   Incoming Energy [1.68, 1.77)
+     Total Material
+       Flux                                 0.0166256 +/- 3.38618e-05
+   Incoming Energy [1.77, 1.86)
+     Total Material
+       Flux                                 0.0165289 +/- 3.2636e-05
+   Incoming Energy [1.86, 1.94)
+     Total Material
+       Flux                                 0.0147269 +/- 3.03824e-05
+   Incoming Energy [1.94, 2)
+     Total Material
+       Flux                                 0.0109783 +/- 2.48748e-05
+   Incoming Energy [2, 2.12)
+     Total Material
+       Flux                                 0.0219616 +/- 3.96333e-05
+   Incoming Energy [2.12, 2.21)
+     Total Material
+       Flux                                 0.0164505 +/- 3.19987e-05
+   Incoming Energy [2.21, 2.3)
+     Total Material
+       Flux                                 0.0163811 +/- 3.15943e-05
+   Incoming Energy [2.3, 2.38)
+     Total Material
+       Flux                                 0.0145259 +/- 2.90204e-05
+   Incoming Energy [2.38, 2.47)
+     Total Material
+       Flux                                 0.0162667 +/- 3.11131e-05
+   Incoming Energy [2.47, 2.57)
+     Total Material
+       Flux                                 0.018026 +/- 3.24501e-05
+   Incoming Energy [2.57, 2.67)
+     Total Material
+       Flux                                 0.0179127 +/- 3.23272e-05
+   Incoming Energy [2.67, 2.77)
+     Total Material
+       Flux                                 0.0177573 +/- 3.17975e-05
+   Incoming Energy [2.77, 2.87)
+     Total Material
+       Flux                                 0.0175935 +/- 3.17323e-05
+   Incoming Energy [2.87, 2.97)
+     Total Material
+       Flux                                 0.0174819 +/- 3.23117e-05
+   Incoming Energy [2.97, 3)
+     Total Material
+       Flux                                 0.00524555 +/- 1.6333e-05
+   Incoming Energy [3, 3.05)
+     Total Material
+       Flux                                 0.00874328 +/- 2.09676e-05
+   Incoming Energy [3.05, 3.15)
+     Total Material
+       Flux                                 0.017297 +/- 3.07612e-05
+   Incoming Energy [3.15, 3.5)
+     Total Material
+       Flux                                 0.0596732 +/- 6.96851e-05
+   Incoming Energy [3.5, 3.73)
+     Total Material
+       Flux                                 0.0384331 +/- 5.15117e-05
+   Incoming Energy [3.73, 4)
+     Total Material
+       Flux                                 0.044382 +/- 5.60354e-05
+   Incoming Energy [4, 4.75)
+     Total Material
+       Flux                                 0.118462 +/- 0.00011475
+   Incoming Energy [4.75, 5)
+     Total Material
+       Flux                                 0.0379786 +/- 4.7322e-05
+   Incoming Energy [5, 5.4)
+     Total Material
+       Flux                                 0.0595002 +/- 6.45645e-05
+   Incoming Energy [5.4, 6)
+     Total Material
+       Flux                                 0.0860852 +/- 8.51528e-05
+   Incoming Energy [6, 6.25)
+     Total Material
+       Flux                                 0.0348574 +/- 4.41606e-05
+   Incoming Energy [6.25, 6.5)
+     Total Material
+       Flux                                 0.0342176 +/- 4.36231e-05
+   Incoming Energy [6.5, 6.75)
+     Total Material
+       Flux                                 0.0336116 +/- 4.42488e-05
+   Incoming Energy [6.75, 7)
+     Total Material
+       Flux                                 0.0333113 +/- 4.18861e-05
+   Incoming Energy [7, 7.15)
+     Total Material
+       Flux                                 0.0198945 +/- 3.11616e-05
+   Incoming Energy [7.15, 8.1)
+     Total Material
+       Flux                                 0.123066 +/- 0.000101097
+   Incoming Energy [8.1, 9.1)
+     Total Material
+       Flux                                 0.122436 +/- 9.96997e-05
+   Incoming Energy [9.1, 10)
+     Total Material
+       Flux                                 0.104951 +/- 8.93765e-05
+   Incoming Energy [10, 11.5)
+     Total Material
+       Flux                                 0.164744 +/- 0.000123948
+   Incoming Energy [11.5, 11.9)
+     Total Material
+       Flux                                 0.0418974 +/- 4.7126e-05
+   Incoming Energy [11.9, 12.9)
+     Total Material
+       Flux                                 0.102066 +/- 8.12154e-05
+   Incoming Energy [12.9, 13.75)
+     Total Material
+       Flux                                 0.0841309 +/- 7.31935e-05
+   Incoming Energy [13.75, 14.4)
+     Total Material
+       Flux                                 0.0623187 +/- 5.79778e-05
+   Incoming Energy [14.4, 15.1)
+     Total Material
+       Flux                                 0.0654689 +/- 6.05236e-05
+   Incoming Energy [15.1, 16)
+     Total Material
+       Flux                                 0.081544 +/- 7.14374e-05
+   Incoming Energy [16, 17)
+     Total Material
+       Flux                                 0.0869187 +/- 7.17437e-05
+   Incoming Energy [17, 18.5)
+     Total Material
+       Flux                                 0.12964 +/- 9.47361e-05
+   Incoming Energy [18.5, 19)
+     Total Material
+       Flux                                 0.0403629 +/- 4.33337e-05
+   Incoming Energy [19, 20)
+     Total Material
+       Flux                                 0.0785811 +/- 6.4276e-05
+   Incoming Energy [20, 21)
+     Total Material
+       Flux                                 0.0760955 +/- 6.46002e-05
+   Incoming Energy [21, 22.5)
+     Total Material
+       Flux                                 0.111281 +/- 7.73885e-05
+   Incoming Energy [22.5, 25)
+     Total Material
+       Flux                                 0.176788 +/- 0.000113854
+   Incoming Energy [25, 27.5)
+     Total Material
+       Flux                                 0.166148 +/- 0.000110729
+   Incoming Energy [27.5, 30)
+     Total Material
+       Flux                                 0.156728 +/- 0.000100691
+   Incoming Energy [30, 31.25)
+     Total Material
+       Flux                                 0.0750252 +/- 6.43246e-05
+   Incoming Energy [31.25, 31.75)
+     Total Material
+       Flux                                 0.0294853 +/- 3.62401e-05
+   Incoming Energy [31.75, 33.25)
+     Total Material
+       Flux                                 0.0866602 +/- 6.77058e-05
+   Incoming Energy [33.25, 33.75)
+     Total Material
+       Flux                                 0.0282974 +/- 3.6918e-05
+   Incoming Energy [33.75, 34.6)
+     Total Material
+       Flux                                 0.0473676 +/- 4.75919e-05
+   Incoming Energy [34.6, 35.5)
+     Total Material
+       Flux                                 0.0492585 +/- 4.88115e-05
+   Incoming Energy [35.5, 37)
+     Total Material
+       Flux                                 0.0800957 +/- 6.48579e-05
+   Incoming Energy [37, 38)
+     Total Material
+       Flux                                 0.0524609 +/- 4.9405e-05
+   Incoming Energy [38, 39.1)
+     Total Material
+       Flux                                 0.0574866 +/- 5.00999e-05
+   Incoming Energy [39.1, 39.6)
+     Total Material
+       Flux                                 0.0255086 +/- 3.31472e-05
+   Incoming Energy [39.6, 41)
+     Total Material
+       Flux                                 0.0721654 +/- 6.06505e-05
+   Incoming Energy [41, 42.4)
+     Total Material
+       Flux                                 0.0674466 +/- 5.61247e-05
+   Incoming Energy [42.4, 44)
+     Total Material
+       Flux                                 0.0857357 +/- 6.30839e-05
+   Incoming Energy [44, 45.2)
+     Total Material
+       Flux                                 0.0348653 +/- 3.09062e-05
+   Incoming Energy [45.2, 47)
+     Total Material
+       Flux                                 0.0994913 +/- 6.67477e-05
+   Incoming Energy [47, 48.3)
+     Total Material
+       Flux                                 0.0755506 +/- 5.86284e-05
+   Incoming Energy [48.3, 49.2)
+     Total Material
+       Flux                                 0.0519078 +/- 4.71835e-05
+   Incoming Energy [49.2, 50.6)
+     Total Material
+       Flux                                 0.0796291 +/- 6.12037e-05
+   Incoming Energy [50.6, 52)
+     Total Material
+       Flux                                 0.0781648 +/- 6.0355e-05
+   Incoming Energy [52, 53.4)
+     Total Material
+       Flux                                 0.076951 +/- 6.09396e-05
+   Incoming Energy [53.4, 59)
+     Total Material
+       Flux                                 0.294478 +/- 0.000143977
+   Incoming Energy [59, 61)
+     Total Material
+       Flux                                 0.100578 +/- 7.00782e-05
+   Incoming Energy [61, 65)
+     Total Material
+       Flux                                 0.194225 +/- 0.000105275
+   Incoming Energy [65, 67.5)
+     Total Material
+       Flux                                 0.116091 +/- 7.37965e-05
+   Incoming Energy [67.5, 72)
+     Total Material
+       Flux                                 0.203598 +/- 0.000107003
+   Incoming Energy [72, 76)
+     Total Material
+       Flux                                 0.177377 +/- 9.9412e-05
+   Incoming Energy [76, 80)
+     Total Material
+       Flux                                 0.170783 +/- 0.000100765
+   Incoming Energy [80, 82)
+     Total Material
+       Flux                                 0.0824499 +/- 6.07839e-05
+   Incoming Energy [82, 90)
+     Total Material
+       Flux                                 0.318725 +/- 0.000148637
+   Incoming Energy [90, 100)
+     Total Material
+       Flux                                 0.370791 +/- 0.000165648
+   Incoming Energy [100, 108)
+     Total Material
+       Flux                                 0.2772 +/- 0.000133513
+   Incoming Energy [108, 115)
+     Total Material
+       Flux                                 0.231938 +/- 0.000120976
+   Incoming Energy [115, 119)
+     Total Material
+       Flux                                 0.126741 +/- 7.89156e-05
+   Incoming Energy [119, 122)
+     Total Material
+       Flux                                 0.0959635 +/- 6.71066e-05
+   Incoming Energy [122, 186)
+     Total Material
+       Flux                                 1.74115 +/- 0.000574582
+   Incoming Energy [186, 192.5)
+     Total Material
+       Flux                                 0.153283 +/- 8.39598e-05
+   Incoming Energy [192.5, 207.5)
+     Total Material
+       Flux                                 0.339671 +/- 0.000149058
+   Incoming Energy [207.5, 210)
+     Total Material
+       Flux                                 0.0533055 +/- 4.86263e-05
+   Incoming Energy [210, 240)
+     Total Material
+       Flux                                 0.615252 +/- 0.000229166
+   Incoming Energy [240, 285)
+     Total Material
+       Flux                                 0.785036 +/- 0.000272488
+   Incoming Energy [285, 305)
+     Total Material
+       Flux                                 0.275855 +/- 0.000119112
+   Incoming Energy [305, 550)
+     Total Material
+       Flux                                 2.57592 +/- 0.000705341
+   Incoming Energy [550, 670)
+     Total Material
+       Flux                                 1.34438 +/- 0.000401276
+   Incoming Energy [670, 683)
+     Total Material
+       Flux                                 0.1325 +/- 7.81383e-05
+   Incoming Energy [683, 950)
+     Total Material
+       Flux                                 2.50776 +/- 0.000665955
+   Incoming Energy [950, 1150)
+     Total Material
+       Flux                                 1.37401 +/- 0.000390076
+   Incoming Energy [1150, 1500)
+     Total Material
+       Flux                                 2.6784 +/- 0.000623784
+   Incoming Energy [1500, 1550)
+     Total Material
+       Flux                                 0.329971 +/- 0.000131416
+   Incoming Energy [1550, 1800)
+     Total Material
+       Flux                                 1.50681 +/- 0.000366433
+   Incoming Energy [1800, 2200)
+     Total Material
+       Flux                                 1.60909 +/- 0.000350105
+   Incoming Energy [2200, 2290)
+     Total Material
+       Flux                                 0.19433 +/- 7.80322e-05
+   Incoming Energy [2290, 2580)
+     Total Material
+       Flux                                 0.356456 +/- 9.55994e-05
+   Incoming Energy [2580, 3000)
+     Total Material
+       Flux                                 0.336202 +/- 0.000105164
+   Incoming Energy [3000, 3740)
+     Total Material
+       Flux                                 1.17254 +/- 0.000257673
+   Incoming Energy [3740, 3900)
+     Total Material
+       Flux                                 0.284654 +/- 9.33914e-05
+   Incoming Energy [3900, 6000)
+     Total Material
+       Flux                                 3.47017 +/- 0.000672476
+   Incoming Energy [6000, 8030)
+     Total Material
+       Flux                                 2.44552 +/- 0.00047977
+   Incoming Energy [8030, 9500)
+     Total Material
+       Flux                                 1.54858 +/- 0.000340805
+   Incoming Energy [9500, 13000)
+     Total Material
+       Flux                                 4.60826 +/- 0.000844037
+   Incoming Energy [13000, 17000)
+     Total Material
+       Flux                                 3.51369 +/- 0.000640578
+   Incoming Energy [17000, 25000)
+     Total Material
+       Flux                                 9.58764 +/- 0.00151696
+   Incoming Energy [25000, 30000)
+     Total Material
+       Flux                                 3.32718 +/- 0.000575907
+   Incoming Energy [30000, 45000)
+     Total Material
+       Flux                                 9.31768 +/- 0.0012905
+   Incoming Energy [45000, 50000)
+     Total Material
+       Flux                                 3.50586 +/- 0.000651002
+   Incoming Energy [50000, 52000)
+     Total Material
+       Flux                                 0.675316 +/- 0.000189414
+   Incoming Energy [52000, 60000)
+     Total Material
+       Flux                                 4.03938 +/- 0.000686048
+   Incoming Energy [60000, 73000)
+     Total Material
+       Flux                                 7.01844 +/- 0.000996984
+   Incoming Energy [73000, 75000)
+     Total Material
+       Flux                                 0.645938 +/- 0.000231532
+   Incoming Energy [75000, 82000)
+     Total Material
+       Flux                                 4.12424 +/- 0.000740259
+   Incoming Energy [82000, 85000)
+     Total Material
+       Flux                                 1.19353 +/- 0.000361516
+   Incoming Energy [85000, 100000)
+     Total Material
+       Flux                                 5.10946 +/- 0.000778535
+   Incoming Energy [100000, 128300)
+     Total Material
+       Flux                                 10.9961 +/- 0.00152993
+   Incoming Energy [128300, 150000)
+     Total Material
+       Flux                                 7.05025 +/- 0.00108088
+   Incoming Energy [150000, 200000)
+     Total Material
+       Flux                                 12.2003 +/- 0.00154087
+   Incoming Energy [200000, 270000)
+     Total Material
+       Flux                                 12.9955 +/- 0.00169723
+   Incoming Energy [270000, 330000)
+     Total Material
+       Flux                                 9.99521 +/- 0.00153368
+   Incoming Energy [330000, 400000)
+     Total Material
+       Flux                                 7.72546 +/- 0.00125134
+   Incoming Energy [400000, 420000)
+     Total Material
+       Flux                                 1.33623 +/- 0.000340329
+   Incoming Energy [420000, 440000)
+     Total Material
+       Flux                                 1.36978 +/- 0.000370163
+   Incoming Energy [440000, 470000)
+     Total Material
+       Flux                                 2.44304 +/- 0.000548652
+   Incoming Energy [470000, 499520)
+     Total Material
+       Flux                                 2.49147 +/- 0.000574064
+   Incoming Energy [499520, 550000)
+     Total Material
+       Flux                                 4.18052 +/- 0.000851863
+   Incoming Energy [550000, 573000)
+     Total Material
+       Flux                                 1.73886 +/- 0.000496366
+   Incoming Energy [573000, 600000)
+     Total Material
+       Flux                                 2.02472 +/- 0.000592997
+   Incoming Energy [600000, 670000)
+     Total Material
+       Flux                                 4.3828 +/- 0.000965979
+   Incoming Energy [670000, 679000)
+     Total Material
+       Flux                                 0.385503 +/- 0.00018845
+   Incoming Energy [679000, 750000)
+     Total Material
+       Flux                                 3.04576 +/- 0.000691142
+   Incoming Energy [750000, 820000)
+     Total Material
+       Flux                                 2.4449 +/- 0.000606025
+   Incoming Energy [820000, 861100)
+     Total Material
+       Flux                                 1.30483 +/- 0.000433261
+   Incoming Energy [861100, 875000)
+     Total Material
+       Flux                                 0.354089 +/- 0.000211728
+   Incoming Energy [875000, 900000)
+     Total Material
+       Flux                                 0.673413 +/- 0.000319158
+   Incoming Energy [900000, 920000)
+     Total Material
+       Flux                                 0.437279 +/- 0.000233246
+   Incoming Energy [920000, 1010000)
+     Total Material
+       Flux                                 1.82372 +/- 0.000596909
+   Incoming Energy [1010000, 1100000)
+     Total Material
+       Flux                                 1.60998 +/- 0.000524274
+   Incoming Energy [1100000, 1200000)
+     Total Material
+       Flux                                 1.93141 +/- 0.000630992
+   Incoming Energy [1200000, 1250000)
+     Total Material
+       Flux                                 0.818119 +/- 0.000363981
+   Incoming Energy [1250000, 1317000)
+     Total Material
+       Flux                                 0.914666 +/- 0.000384126
+   Incoming Energy [1317000, 1356000)
+     Total Material
+       Flux                                 0.48902 +/- 0.00027477
+   Incoming Energy [1356000, 1400000)
+     Total Material
+       Flux                                 0.594113 +/- 0.00031701
+   Incoming Energy [1400000, 1500000)
+     Total Material
+       Flux                                 1.16682 +/- 0.000473061
+   Incoming Energy [1500000, 1850000)
+     Total Material
+       Flux                                 3.15179 +/- 0.000880421
+   Incoming Energy [1850000, 2354000)
+     Total Material
+       Flux                                 3.01569 +/- 0.00089759
+   Incoming Energy [2354000, 2479000)
+     Total Material
+       Flux                                 0.631621 +/- 0.00034431
+   Incoming Energy [2479000, 3000000)
+     Total Material
+       Flux                                 1.897 +/- 0.000657828
+   Incoming Energy [3000000, 4304000)
+     Total Material
+       Flux                                 2.12338 +/- 0.000732737
+   Incoming Energy [4304000, 4800000)
+     Total Material
+       Flux                                 0.407334 +/- 0.000312653
+   Incoming Energy [4800000, 6434000)
+     Total Material
+       Flux                                 0.667911 +/- 0.000421724
+   Incoming Energy [6434000, 8187300)
+     Total Material
+       Flux                                 0.206838 +/- 0.000241258
+   Incoming Energy [8187300, 10000000)
+     Total Material
+       Flux                                 0.0555581 +/- 0.000115935
+   Incoming Energy [10000000, 12840000)
+     Total Material
+       Flux                                 0.0166404 +/- 6.50749e-05
+   Incoming Energy [12840000, 13840000)
+     Total Material
+       Flux                                 0.00116014 +/- 1.67706e-05
+   Incoming Energy [13840000, 14550000)
+     Total Material
+       Flux                                 0.000424143 +/- 1.01793e-05
+   Incoming Energy [14550000, 15683000)
+     Total Material
+       Flux                                 0.000333724 +/- 9.28224e-06
+   Incoming Energy [15683000, 17333000)
+     Total Material
+       Flux                                 0.000173585 +/- 6.49254e-06
+   Incoming Energy [17333000, 20000000)
+     Total Material
+       Flux                                 6.72215e-05 +/- 4.41324e-06
